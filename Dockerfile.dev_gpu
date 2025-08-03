@@ -103,25 +103,20 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /home/ubuntu/.bashrc
 
 
 # PX4 프로젝트 세팅
-
-# px4_nav2_slam 프로젝트 디렉토리 생성
-RUN mkdir -p /home/ubuntu/px4_nav2_slam
-
-
 RUN apt update
 RUN apt install -y ros-humble-joint-state-publisher ros-humble-joint-state-publisher-gui
 RUN apt install -y ros-humble-topic-tools
 
 
-# px4_nav2_slam 프로젝트 클론
-RUN git clone https://github.com/pilsu-choi/nav2_slam_px4.git /home/ubuntu/px4_nav2_slam
+# 프로젝트 클론
+RUN git clone https://github.com/pilsu-choi/nav2_slam_px4.git /home/ubuntu/nav2_slam_px4
 
 
 # src 폴더에 px4_msgs, px4_offboard, ros_gz clone
-RUN git clone https://github.com/PX4/px4_msgs.git /home/ubuntu/px4_nav2_slam/src/px4_msgs
-RUN git clone https://github.com/Jaeyoung-Lim/px4-offboard /home/ubuntu/px4_nav2_slam/src/px4_offboard
+RUN git clone https://github.com/PX4/px4_msgs.git /home/ubuntu/nav2_slam_px4/src/px4_msgs
+RUN git clone https://github.com/Jaeyoung-Lim/px4-offboard /home/ubuntu/nav2_slam_px4/src/px4_offboard
 ENV GZ_VERSION=harmonic
-RUN git clone https://github.com/gazebosim/ros_gz.git -b humble /home/ubuntu/px4_nav2_slam/src/ros_gz
+RUN git clone https://github.com/gazebosim/ros_gz.git -b humble /home/ubuntu/nav2_slam_px4/src/ros_gz
 
 # ros gz 브릿지에 필요한 추가 패키지들 설치
 RUN sudo apt install -y ros-humble-actuator-msgs
@@ -136,13 +131,13 @@ RUN apt install -y ros-humble-rtabmap-ros
 
 # PX4 시뮬레이션 모델 및 설정 파일 복사 및 설정
 # nav2_px4 패키지에서 모델들 복사
-RUN cp -r /home/ubuntu/px4_nav2_slam/src/rtabmap_nav2_px4/model/lidar_2d_v2 /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
-RUN cp -r /home/ubuntu/px4_nav2_slam/src/rtabmap_nav2_px4/model/OakD-Lite /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
-RUN cp -r /home/ubuntu/px4_nav2_slam/src/rtabmap_nav2_px4/model/turtlebot3_world /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
-RUN cp -r /home/ubuntu/px4_nav2_slam/src/rtabmap_nav2_px4/model/x500_rtab /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
+RUN cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/lidar_2d_v2 /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
+RUN cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/OakD-Lite /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
+RUN cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/turtlebot3_world /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
+RUN cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/x500_rtab /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
 
 # 월드 파일 복사
-RUN cp /home/ubuntu/px4_nav2_slam/src/rtabmap_nav2_px4/world/turtlebot3_world.sdf /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/worlds/
+RUN cp /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/world/turtlebot3_world.sdf /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/worlds/
 
 # 4015_gz_x500_rtab airframe 파일 생성
 RUN mkdir -p /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes
@@ -181,9 +176,9 @@ RUN chown -R ubuntu:ubuntu /home/ubuntu
 USER ubuntu
 
 # px4 build시 필요한 패키지 설치
-RUN pip3 install kconfiglib && pip3 install --user jsonschema && pip3 install --user jinja2 && pip3 install --user pyros-genmsg
-# TODO: 호윤님 rtabmap.db 다운로드? https://drive.google.com/drive/folders/10nP2gtEj7PCql3SgiOLGmmP9n3ZzYQve
+RUN pip3 install kconfiglib && pip3 install --user jsonschema && pip3 install --user jinja2 && pip3 install --user pyros-genmsg && pip3 install transforms3d
 
+# 호윤님 rtabmap.db 다운로드? https://drive.google.com/drive/folders/10nP2gtEj7PCql3SgiOLGmmP9n3ZzYQve -> rtabmap_pull.sh 참고
 
 # Set default working directory
 WORKDIR /home/ubuntu
