@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version='1.9'>
-  <model name='x500_depth'>
+  <model name='x500_rtab'>
     <include merge='true'>
       <uri>x500</uri>
     </include>
@@ -49,7 +49,7 @@
           <iyz>0.0</iyz>
         </inertia>
       </inertial>
-      <sensor name='lidar' type='gpu_lidar'>"
+      <sensor name='lidar' type='gpu_lidar'>
         <pose>0 0 0 3.14 0 0</pose>
         <update_rate>50</update_rate>
         <ray>
@@ -77,10 +77,10 @@
         <visualize>true</visualize>
       </sensor>
     </link>
-      <plugin
-        filename="gz-sim-odometry-publisher-system"
-        name="gz::sim::systems::OdometryPublisher">
-        <dimensions>3</dimensions>
-      </plugin>
+    <plugin
+      filename="gz-sim-odometry-publisher-system"
+      name="gz::sim::systems::OdometryPublisher">
+      <dimensions>3</dimensions>
+    </plugin>
   </model>
 </sdf>
