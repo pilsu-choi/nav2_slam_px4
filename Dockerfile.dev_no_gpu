@@ -1,0 +1,84 @@
+# Use Ubuntu 22.04 as base image
+FROM ubuntu:22.04
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LANG=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+
+# Create ubuntu user and set up home directory
+RUN apt update && apt install -y sudo \
+    && useradd -m -s /bin/bash ubuntu \
+    && echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && mkdir -p /home/ubuntu
+
+# 1. Install ROS2 Humble
+RUN apt update && apt install -y locales \
+    && locale-gen en_US en_US.UTF-8 \
+    && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
+RUN apt install -y software-properties-common \
+    && add-apt-repository universe \
+    && apt update && apt install -y curl
+
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+RUN apt update && apt upgrade -y \
+    && apt install -y ros-humble-desktop \
+    && apt install -y ros-dev-tools
+
+# 2. Install PX4
+RUN apt install -y git build-essential cmake ninja-build \
+    && git clone https://github.com/PX4/PX4-Autopilot.git --recursive /home/ubuntu/PX4-Autopilot
+
+# Install PX4 dependencies
+RUN bash /home/ubuntu/PX4-Autopilot/Tools/setup/ubuntu.sh
+
+# Set working directory for PX4
+WORKDIR /home/ubuntu/PX4-Autopilot
+
+# 3. Install Micro-XRCE-DDS-Agent
+RUN apt install -y python3-pip \
+    && pip3 install --user -U empy pyros-genmsg setuptools
+
+RUN git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git /home/ubuntu/Micro-XRCE-DDS-Agent \
+    && cd /home/ubuntu/Micro-XRCE-DDS-Agent \
+    && mkdir build \
+    && cd build \
+    && cmake .. \
+    && make \
+    && make install \
+    && ldconfig /usr/local/lib/
+
+# 4. Install QGroundControl dependencies
+RUN apt install -y gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl \
+    && apt install -y libqt5gui5 \
+    && apt install -y libfuse2 \
+    && apt install -y wget
+
+# Download QGroundControl
+RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage -P /home/ubuntu/QGroundControl.AppImage \
+    && chmod +x /home/ubuntu/QGroundControl.AppImage
+
+# 5. Install Gazebo Harmonic
+RUN apt install -y wget lsb-release gnupg \
+    && wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
+    && apt update \
+    && apt install -y gazebo-harmonic
+
+# Set up ROS2 environment
+RUN echo "source /opt/ros/humble/setup.bash" >> /home/ubuntu/.bashrc
+
+# Change ownership to ubuntu user
+RUN chown -R ubuntu:ubuntu /home/ubuntu
+
+# Switch to ubuntu user
+USER ubuntu
+
+# Set default working directory
+WORKDIR /home/ubuntu
+
+# Default command
+CMD ["/bin/bash"]
