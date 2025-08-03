@@ -90,7 +90,7 @@ def generate_launch_description():
             condition=IfCondition(localization),
             package='rtabmap_slam', executable='rtabmap', output='screen',
             parameters=[parameters,
-              {'Mem/IncrementalMemory':'False',
+              {'Mem/IncrementalMemory':'True',#'False',
                'Mem/InitWMWithAllNodes':'True'}],
             remappings=remappings),
 
