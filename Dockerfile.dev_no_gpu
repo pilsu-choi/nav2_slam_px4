@@ -9,10 +9,19 @@ ENV LC_ALL=en_US.UTF-8
 # Create ubuntu user and set up home directory
 RUN apt update && apt install -y sudo \
     && useradd -m -s /bin/bash ubuntu \
+    && usermod -aG sudo ubuntu \
     && echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/ubuntu \
     && mkdir -p /home/ubuntu
 
-# 1. Install ROS2 Humble
+# 1. Install Gazebo Harmonic with GPU support  ref: https://gazebosim.org/docs/harmonic/install_ubuntu/
+RUN apt-get update && apt-get install -y curl lsb-release gnupg \
+    && curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
+    && apt-get update \
+    && apt-get install -y gz-harmonic
+
+# 2. Install ROS2 Humble ref: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 RUN apt update && apt install -y locales \
     && locale-gen en_US en_US.UTF-8 \
     && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
@@ -28,17 +37,15 @@ RUN apt update && apt upgrade -y \
     && apt install -y ros-humble-desktop \
     && apt install -y ros-dev-tools
 
-# 2. Install PX4
+# 3. Install PX4
 RUN apt install -y git build-essential cmake ninja-build \
     && git clone https://github.com/PX4/PX4-Autopilot.git --recursive /home/ubuntu/PX4-Autopilot
 
 # Install PX4 dependencies
 RUN bash /home/ubuntu/PX4-Autopilot/Tools/setup/ubuntu.sh
 
-# Set working directory for PX4
-WORKDIR /home/ubuntu/PX4-Autopilot
 
-# 3. Install Micro-XRCE-DDS-Agent
+# 4. Install Micro-XRCE-DDS-Agent
 RUN apt install -y python3-pip \
     && pip3 install --user -U empy pyros-genmsg setuptools
 
@@ -48,28 +55,107 @@ RUN git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git /home/ubuntu/
     && cd build \
     && cmake .. \
     && make \
-    && make install \
-    && ldconfig /usr/local/lib/
+    && sudo make install \
+    && sudo ldconfig /usr/local/lib/
 
-# 4. Install QGroundControl dependencies
-RUN apt install -y gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl \
-    && apt install -y libqt5gui5 \
-    && apt install -y libfuse2 \
-    && apt install -y wget
+# 5. Install QGroundControl dependencies
+RUN sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y \
+    && sudo apt install libfuse2 -y \
+    && sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
 
 # Download QGroundControl
-RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage -P /home/ubuntu/QGroundControl.AppImage \
-    && chmod +x /home/ubuntu/QGroundControl.AppImage
+RUN wget https://github.com/mavlink/qgroundcontrol/releases/download/v5.0.1/QGroundControl-x86_64.AppImage -P /home/ubuntu/ \
+    && chmod +x /home/ubuntu/QGroundControl-x86_64.AppImage
 
-# 5. Install Gazebo Harmonic
-RUN apt install -y wget lsb-release gnupg \
-    && wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
-    && apt update \
-    && apt install -y gazebo-harmonic
+RUN sudo apt update && sudo apt install fuse
+
+
+
+# Set up environment variables for CUDA
+ENV CUDA_HOME=/usr/local/cuda
+ENV PATH=${CUDA_HOME}/bin:${PATH}
+ENV LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 
 # Set up ROS2 environment
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/ubuntu/.bashrc
+
+# Set up CUDA environment for ubuntu user
+# RUN echo "export CUDA_HOME=/usr/local/cuda" >> /home/ubuntu/.bashrc \
+    # && echo "export PATH=\${CUDA_HOME}/bin:\${PATH}" >> /home/ubuntu/.bashrc \
+    # && echo "export LD_LIBRARY_PATH=\${CUDA_HOME}/lib64:\${LD_LIBRARY_PATH}" >> /home/ubuntu/.bashrc
+
+
+# PX4 프로젝트 세팅
+RUN apt update \
+    && apt install -y ros-humble-joint-state-publisher ros-humble-joint-state-publisher-gui \
+    && apt install -y ros-humble-topic-tools
+
+
+# 프로젝트 클론
+RUN git clone https://github.com/pilsu-choi/nav2_slam_px4.git -b feat/dockerize /home/ubuntu/nav2_slam_px4
+
+
+# src 폴더에 px4_msgs, px4_offboard, ros_gz clone
+RUN git clone https://github.com/PX4/px4_msgs.git /home/ubuntu/nav2_slam_px4/src/px4_msgs \
+    && git clone https://github.com/Jaeyoung-Lim/px4-offboard /home/ubuntu/nav2_slam_px4/src/px4_offboard 
+
+ENV GZ_VERSION=harmonic 
+RUN git clone https://github.com/gazebosim/ros_gz.git -b humble /home/ubuntu/nav2_slam_px4/src/ros_gz
+
+# ros gz 브릿지에 필요한 추가 패키지들 설치
+RUN sudo rosdep init && rosdep update
+RUN cd /home/ubuntu/nav2_slam_px4 && rosdep install -r --from-paths src -i -y --rosdistro humble
+
+# RUN sudo apt install -y ros-humble-actuator-msgs
+# RUN sudo apt install -y libcli11-dev
+# RUN sudo apt install -y ros-humble-gps-msgs
+# RUN sudo apt install -y ros-humble-vision-msgs
+# RUN sudo apt update && sudo apt install -y ros-humble-xacro
+
+# install rtabmap_ros - ref: https://github.com/introlab/rtabmap_ros
+RUN apt install -y ros-humble-rtabmap-ros
+
+
+# PX4 시뮬레이션 모델 및 설정 파일 복사 및 설정
+# nav2_px4 패키지에서 모델들 복사
+RUN cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/lidar_2d_v2 /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/ \
+    && cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/OakD-Lite /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/ \
+    && cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/turtlebot3_world /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/ \
+    && cp -r /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/model/x500_rtab /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models/
+
+# 월드 파일 복사
+RUN cp /home/ubuntu/nav2_slam_px4/src/rtabmap_nav2_px4/world/turtlebot3_world.sdf /home/ubuntu/PX4-Autopilot/Tools/simulation/gz/worlds/
+
+# 4015_gz_x500_rtab airframe 파일 생성
+RUN mkdir -p /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes \
+    && echo '#!/bin/sh' > /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '#' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '# @name Gazebo x500 mono cam' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '#' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '# @type Quadrotor' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '#' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo 'PX4_SIM_MODEL=${PX4_SIM_MODEL:=x500_rtab}' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && echo '. ${R}etc/init.d-posix/airframes/4001_gz_x500' >> /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab \
+    && chmod +x /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/4015_gz_x500_rtab
+
+# CMakeLists.txt에 4015_gz_x500_rtab 타겟 추가 - 올바른 형식으로 수정
+RUN sed -i '/4001_gz_x500/a\    4015_gz_x500_rtab' /home/ubuntu/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/CMakeLists.txt
+
+# GZ_SIM_RESOURCE_PATH 환경변수 설정
+RUN echo 'export GZ_SIM_RESOURCE_PATH=/home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models' >> /home/ubuntu/.bashrc
+
+# editor, 네트워크 util 설치
+RUN sudo apt update \
+    && sudo apt install -y vim \
+    && sudo apt install -y lsof 
+
+# build는 컨테이너 생성 후 진입해서 수동으로 해야 할듯 
+# RUN cd /home/ubuntu/px4_nav2_slam
+# RUN colcon build 
+
+
 
 # Change ownership to ubuntu user
 RUN chown -R ubuntu:ubuntu /home/ubuntu
@@ -77,8 +163,18 @@ RUN chown -R ubuntu:ubuntu /home/ubuntu
 # Switch to ubuntu user
 USER ubuntu
 
+# px4 build시 필요한 패키지 설치
+RUN pip3 install kconfiglib \
+    && pip3 install --user jsonschema \
+    && pip3 install --user jinja2 \
+    && pip3 install --user pyros-genmsg \
+    && pip3 install transforms3d \
+    && sudo apt install -y ros-humble-tf-transformations
+
+# 호윤님 rtabmap.db 다운로드? https://drive.google.com/drive/folders/10nP2gtEj7PCql3SgiOLGmmP9n3ZzYQve -> rtabmap_pull.sh 참고
+
 # Set default working directory
 WORKDIR /home/ubuntu
 
-# Default command
-CMD ["/bin/bash"]
+# Default command - 컨테이너가 계속 실행되도록 설정
+CMD ["tail", "-f", "/dev/null"] 
