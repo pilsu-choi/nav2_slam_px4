@@ -71,7 +71,7 @@ else
     echo "💻 CPU 모드로 실행합니다."
 fi
 
-gpu 사용 여부에 따라 다른 이미지 사용
+# gpu 사용 여부에 따라 다른 이미지 사용
 if [ "$GPU_AVAILABLE" = true ]; then
     echo "1. with GPU Docker 이미지 빌드 중..."
     sudo docker build -f Dockerfile.dev_gpu -t ${IMAGE_NAME}:${IMAGE_TAG} .
@@ -147,17 +147,17 @@ fi
 docker container exec -it nav2_slam_px4 bash 터미널 4개 실행
 
 # Terminal 1 
-cd ~/ && ./QGroundControl-x86_64.AppImage -> qgroundcontrol 실행
+cd ~/ && ./QGroundControl-x86_64.AppImage #qgroundcontrol 실행
 
 # Terminal 2
-cd ~/Micro-XRCE-DDS-Agent/ && MicroXRCEAgent udp4 -p 8888 -> 마이크로 XRCE 실행
+cd ~/Micro-XRCE-DDS-Agent/ && MicroXRCEAgent udp4 -p 8888 #마이크로 XRCE 실행
 
 # Terminal 3
-cd ~/PX4-Autopilot && PX4_GZ_WORLD=turtlebot3_world make px4_sitl gz_x500_rtab -> 가제보 and px4 실행 param set SYS_HAS_MAG 0
+cd ~/PX4-Autopilot && PX4_GZ_WORLD=turtlebot3_world make px4_sitl gz_x500_rtab #가제보 and px4 실행
 
 # Terminal 4
-cd ~/px4_nav2_slam && colcon build
-cd ~/px4_nav2_slam && export GZ_SIM_RESOURCE_PATH=/home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models && source install/setup.bash && ros2 launch rtabmap_nav2_px4 bringup.launch.py use_sim_time:=true
+cd ~/nav2_slam_px4 && colcon build
+cd ~/nav2_slam_px4 && export GZ_SIM_RESOURCE_PATH=/home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models && source install/setup.bash && ros2 launch rtabmap_nav2_px4 bringup.launch.py use_sim_time:=true
 '''
 
 # X11 권한 복원
