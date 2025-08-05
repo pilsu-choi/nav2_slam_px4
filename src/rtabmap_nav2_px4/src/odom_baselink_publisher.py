@@ -40,7 +40,7 @@ class OdometryToTransformNode(Node):
         # Create a subscriber to the /px4_1/fmu/out/vehicle_local_position topic
         self.loc_pos_sub = self.create_subscription(
             VehicleLocalPosition,
-            '/fmu/out/vehicle_local_position',
+            '/fmu/out/vehicle_local_position_v1', # 컨테이너 환경에서는 v1 생김
             self.loc_pos_callback,
             self.qos)
 
