@@ -50,7 +50,7 @@ def generate_launch_description():
     offboard_vel_ctrl = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             PathJoinSubstitution([px4_off_pkg_share,
-                                  'offboard_velocity_control.launch.py'])
+                                  'offboard_position_control.launch.py'])
         ),
         launch_arguments={
             'use_sim_time': use_sim_time,

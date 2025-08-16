@@ -1,0 +1,59 @@
+# GPU 연결 테스트를 위한 간단한 Dockerfile
+FROM nvidia/cuda:11.8.0-base-ubuntu22.04
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LANG=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+
+# Update and install basic tools
+RUN apt update && apt install -y \
+    curl \
+    wget \
+    git \
+    build-essential \
+    python3 \
+    python3-pip \
+    vim \
+    htop \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install NVIDIA utilities for testing
+RUN apt update && apt install -y \
+    nvidia-utils-525 \
+    nvidia-settings \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set up CUDA environment
+ENV CUDA_HOME=/usr/local/cuda
+ENV PATH=${CUDA_HOME}/bin:${PATH}
+ENV LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+
+# Create a simple GPU test script
+RUN echo '#!/bin/bash' > /usr/local/bin/gpu_test.sh && \
+    echo 'echo "=== GPU Connection Test ==="' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo "1. Checking nvidia-smi..."' >> /usr/local/bin/gpu_test.sh && \
+    echo 'nvidia-smi' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo ""' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo "2. Checking CUDA version..."' >> /usr/local/bin/gpu_test.sh && \
+    echo 'nvcc --version' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo ""' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo "3. Checking GPU devices..."' >> /usr/local/bin/gpu_test.sh && \
+    echo 'python3 -c "import torch; print(f\"PyTorch CUDA available: {torch.cuda.is_available()}\"); print(f\"GPU count: {torch.cuda.device_count()}\"); [print(f\"GPU {i}: {torch.cuda.get_device_name(i)}\") for i in range(torch.cuda.device_count())]"' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo ""' >> /usr/local/bin/gpu_test.sh && \
+    echo 'echo "4. Running CUDA device query..."' >> /usr/local/bin/gpu_test.sh && \
+    echo 'if [ -f /usr/local/cuda/samples/1_Utilities/deviceQuery/deviceQuery ]; then' >> /usr/local/bin/gpu_test.sh && \
+    echo '    /usr/local/cuda/samples/1_Utilities/deviceQuery/deviceQuery' >> /usr/local/bin/gpu_test.sh && \
+    echo 'else' >> /usr/local/bin/gpu_test.sh && \
+    echo '    echo "CUDA samples not found, skipping device query"' >> /usr/local/bin/gpu_test.sh && \
+    echo 'fi' >> /usr/local/bin/gpu_test.sh && \
+    chmod +x /usr/local/bin/gpu_test.sh
+
+# Install PyTorch for GPU testing
+RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Set working directory
+WORKDIR /workspace
+
+# Default command
+CMD ["/bin/bash"] 
