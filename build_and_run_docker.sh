@@ -77,7 +77,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
     sudo docker build -f Dockerfile.dev_gpu -t ${IMAGE_NAME}:${IMAGE_TAG} .
 else
     echo "1. without GPU Docker 이미지 빌드 중..."
-    sudo docker build -f Dockerfile.dev -t ${IMAGE_NAME}:${IMAGE_TAG} .
+    sudo docker build -f Dockerfile.dev_no_gpu -t ${IMAGE_NAME}:${IMAGE_TAG} .
 fi
 
 if [ $? -ne 0 ]; then
