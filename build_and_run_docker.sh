@@ -59,8 +59,32 @@ check_gpu_availability() {
     fi
 }
 
+# GUI 터미널 설치 확인
+check_gui_terminal() {
+    echo "🔍 GUI 터미널 설치 확인 중..."
+    
+    if command -v gnome-terminal &> /dev/null; then
+        echo "✅ gnome-terminal이 설치되어 있습니다."
+        return 0
+    elif command -v xterm &> /dev/null; then
+        echo "✅ xterm이 설치되어 있습니다."
+        return 0
+    elif command -v konsole &> /dev/null; then
+        echo "✅ konsole이 설치되어 있습니다."
+        return 0
+    else
+        echo "❌ GUI 터미널이 설치되지 않았습니다."
+        echo "다음 명령어로 설치하세요:"
+        echo "sudo apt install gnome-terminal"
+        return 1
+    fi
+}
+
 # Docker 데몬 설정 실행
 setup_docker_runtime
+
+# GUI 터미널 설치 확인
+check_gui_terminal
 
 # GPU 사용 가능 여부 확인
 GPU_AVAILABLE=false
@@ -77,7 +101,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
     sudo docker build -f Dockerfile.dev_gpu -t ${IMAGE_NAME}:${IMAGE_TAG} .
 else
     echo "1. without GPU Docker 이미지 빌드 중..."
-    sudo docker build -f Dockerfile.dev -t ${IMAGE_NAME}:${IMAGE_TAG} .
+    sudo docker build -f Dockerfile.dev_no_gpu -t ${IMAGE_NAME}:${IMAGE_TAG} .
 fi
 
 if [ $? -ne 0 ]; then
@@ -160,9 +184,41 @@ cd ~/nav2_slam_px4 && colcon build
 cd ~/nav2_slam_px4 && export GZ_SIM_RESOURCE_PATH=/home/ubuntu/PX4-Autopilot/Tools/simulation/gz/models && source install/setup.bash && ros2 launch rtabmap_nav2_px4 bringup.launch.py use_sim_time:=true
 '''
 
-# X11 권한 복원
+# X11 소켓 권한 복원
 echo "4. X11 소켓 권한 복원 중..."
 xhost -local:docker
+
+# 실시간 좌표 정보 모니터링 터미널 자동 실행
+echo "5. 실시간 좌표 정보 모니터링 터미널 실행 중..."
+if command -v gnome-terminal &> /dev/null; then
+    echo "✅ gnome-terminal으로 모니터링 터미널 실행 중..."
+    gnome-terminal -- bash -c "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run rtabmap_nav2_px4 tracking_log.py'; exec bash" &
+elif command -v xterm &> /dev/null; then
+    echo "✅ xterm으로 모니터링 터미널 실행 중..."
+    xterm -e "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run rtabmap_nav2_px4 tracking_log.py'" &
+elif command -v konsole &> /dev/null; then
+    echo "✅ konsole으로 모니터링 터미널 실행 중..."
+    konsole --new-tab -e "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run rtabmap_nav2_px4 tracking_log.py'" &
+else
+    echo "⚠️  GUI 터미널을 찾을 수 없습니다. 수동으로 실행하세요:"
+    echo "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run rtabmap_nav2_px4 tracking_log.py'"
+fi
+
+# Teleop 키보드 제어 터미널 자동 실행
+echo "6. Teleop 키보드 제어 터미널 실행 중..."
+if command -v gnome-terminal &> /dev/null; then
+    echo "✅ gnome-terminal으로 teleop 터미널 실행 중..."
+    gnome-terminal -- bash -c "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run teleop_twist_keyboard teleop_twist_keyboard'; exec bash" &
+elif command -v xterm &> /dev/null; then
+    echo "✅ xterm으로 teleop 터미널 실행 중..."
+    xterm -e "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run teleop_twist_keyboard teleop_twist_keyboard'" &
+elif command -v konsole &> /dev/null; then
+    echo "✅ konsole으로 teleop 터미널 실행 중..."
+    konsole --new-tab -e "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run teleop_twist_keyboard teleop_twist_keyboard'" &
+else
+    echo "⚠️  GUI 터미널을 찾을 수 없습니다. 수동으로 실행하세요:"
+    echo "sudo docker exec -it ${IMAGE_NAME}_container bash -c 'cd /home/ubuntu/nav2_slam_px4 && source install/setup.bash && ros2 run teleop_twist_keyboard teleop_twist_keyboard'"
+fi
 
 echo "✅ 컨테이너 실행 완료!" 
 
