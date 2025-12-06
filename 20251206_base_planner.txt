@@ -1,0 +1,805 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2025-12-06-07-13-13-347133-pilsu-H610M-K-V2-62490
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [gnome-terminal-8]: exception occurred while executing process:
+Traceback (most recent call last):
+  File "/opt/ros/humble/lib/python3.10/site-packages/launch/actions/execute_local.py", line 551, in __execute_process
+    transport, self._subprocess_protocol = await async_execute_process(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 139, in async_execute_process
+    transport, protocol = await _async_execute_process_nopty(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 45, in _async_execute_process_nopty
+    transport, protocol = await loop.subprocess_exec(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1681, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 207, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+  File "/usr/lib/python3.10/asyncio/base_subprocess.py", line 36, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 799, in _start
+    self._proc = subprocess.Popen(
+  File "/usr/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'gnome-terminal'
+
+[INFO] [robot_state_publisher-1]: process started with pid [62492]
+[INFO] [joint_state_publisher-2]: process started with pid [62494]
+[INFO] [odom_baselink_publisher.py-3]: process started with pid [62496]
+[INFO] [parameter_bridge-4]: process started with pid [62498]
+[INFO] [relay-5]: process started with pid [62500]
+[INFO] [image_transform.py-6]: process started with pid [62502]
+[INFO] [velocity_transform.py-7]: process started with pid [62504]
+[INFO] [rgbd_sync-9]: process started with pid [62507]
+[INFO] [rtabmap-10]: process started with pid [62509]
+[INFO] [rtabmap_viz-11]: process started with pid [62511]
+[INFO] [rviz2-12]: process started with pid [62513]
+[INFO] [controller_server-13]: process started with pid [62515]
+[INFO] [smoother_server-14]: process started with pid [62517]
+[INFO] [planner_server-15]: process started with pid [62519]
+[INFO] [behavior_server-16]: process started with pid [62521]
+[INFO] [bt_navigator-17]: process started with pid [62523]
+[INFO] [waypoint_follower-18]: process started with pid [62526]
+[INFO] [lifecycle_manager-19]: process started with pid [62532]
+[smoother_server-14] [INFO] [1765005193.754249340] [smoother_server]: 
+[smoother_server-14] 	smoother_server lifecycle node launched. 
+[smoother_server-14] 	Waiting on external lifecycle transitions to activate
+[smoother_server-14] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-14] [INFO] [1765005193.760451610] [smoother_server]: Creating smoother server
+[rviz2-12] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[planner_server-15] [INFO] [1765005193.776874673] [planner_server]: 
+[planner_server-15] 	planner_server lifecycle node launched. 
+[planner_server-15] 	Waiting on external lifecycle transitions to activate
+[planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-19] [INFO] [1765005193.777519811] [lifecycle_manager_navigation]: Creating
+[planner_server-15] [INFO] [1765005193.778784240] [planner_server]: Creating
+[robot_state_publisher-1] [INFO] [1765005193.791733373] [robot_state_publisher]: got segment body
+[robot_state_publisher-1] [INFO] [1765005193.791861455] [robot_state_publisher]: got segment camera_link_optical
+[robot_state_publisher-1] [INFO] [1765005193.791870424] [robot_state_publisher]: got segment depth_camera_link_optical
+[robot_state_publisher-1] [INFO] [1765005193.791874813] [robot_state_publisher]: got segment rotor_0
+[robot_state_publisher-1] [INFO] [1765005193.791878689] [robot_state_publisher]: got segment rotor_1
+[robot_state_publisher-1] [INFO] [1765005193.791882378] [robot_state_publisher]: got segment rotor_2
+[robot_state_publisher-1] [INFO] [1765005193.791886376] [robot_state_publisher]: got segment rotor_3
+[robot_state_publisher-1] [INFO] [1765005193.791889857] [robot_state_publisher]: got segment x500_rtab_0/OakD-Lite/base_link/IMX214
+[robot_state_publisher-1] [INFO] [1765005193.791893821] [robot_state_publisher]: got segment x500_rtab_0/OakD-Lite/base_link/StereoOV7251
+[robot_state_publisher-1] [INFO] [1765005193.791897603] [robot_state_publisher]: got segment x500_rtab_0/base_footprint
+[robot_state_publisher-1] [INFO] [1765005193.791901478] [robot_state_publisher]: got segment x500_rtab_0/base_link/imu_sensor
+[robot_state_publisher-1] [INFO] [1765005193.791905157] [robot_state_publisher]: got segment x500_rtab_0/base_link/navsat_sensor
+[robot_state_publisher-1] [INFO] [1765005193.791909174] [robot_state_publisher]: got segment x500_rtab_0/link/lidar_2d_v2
+[lifecycle_manager-19] [INFO] [1765005193.801610689] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[parameter_bridge-4] [INFO] [1765005193.801607520] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005193.803992889] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/clock (rosgraph_msgs/msg/Clock) -> /clock (gz.msgs.Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005193.808251337] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/x500_rtab_0/odometry (gz.msgs.Odometry) -> /model/x500_rtab_0/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[controller_server-13] [INFO] [1765005193.812007474] [controller_server]: 
+[controller_server-13] 	controller_server lifecycle node launched. 
+[controller_server-13] 	Waiting on external lifecycle transitions to activate
+[controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[parameter_bridge-4] [INFO] [1765005193.813486531] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/x500_rtab_0/odometry (nav_msgs/msg/Odometry) -> /model/x500_rtab_0/odometry (gz.msgs.Odometry)] (Lazy 0)
+[bt_navigator-17] [INFO] [1765005193.814285667] [bt_navigator]: 
+[bt_navigator-17] 	bt_navigator lifecycle node launched. 
+[bt_navigator-17] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-17] [INFO] [1765005193.814421269] [bt_navigator]: Creating
+[waypoint_follower-18] [INFO] [1765005193.814925497] [waypoint_follower]: 
+[waypoint_follower-18] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-18] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-18] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-18] [INFO] [1765005193.819002811] [waypoint_follower]: Creating
+[controller_server-13] [INFO] [1765005193.821956120] [controller_server]: Creating controller server
+[parameter_bridge-4] [INFO] [1765005193.827057499] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera (gz.msgs.Image) -> /camera (sensor_msgs/msg/Image)] (Lazy 0)
+[planner_server-15] [INFO] [1765005193.829421213] [global_costmap.global_costmap]: 
+[planner_server-15] 	global_costmap lifecycle node launched. 
+[planner_server-15] 	Waiting on external lifecycle transitions to activate
+[planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-15] [INFO] [1765005193.830038962] [global_costmap.global_costmap]: Creating Costmap
+[behavior_server-16] [INFO] [1765005193.832765722] [behavior_server]: 
+[behavior_server-16] 	behavior_server lifecycle node launched. 
+[behavior_server-16] 	Waiting on external lifecycle transitions to activate
+[behavior_server-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-19] [INFO] [1765005193.837385741] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-19] [INFO] [1765005193.837429631] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-13] [INFO] [1765005193.852211932] [local_costmap.local_costmap]: 
+[controller_server-13] 	local_costmap lifecycle node launched. 
+[controller_server-13] 	Waiting on external lifecycle transitions to activate
+[controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-13] [INFO] [1765005193.854222362] [local_costmap.local_costmap]: Creating Costmap
+[rtabmap_viz-11] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[parameter_bridge-4] [INFO] [1765005194.168822874] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/camera (sensor_msgs/msg/Image) -> /camera (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.179677201] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/depth_camera (gz.msgs.Image) -> /depth_camera (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.190365450] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/depth_camera (sensor_msgs/msg/Image) -> /depth_camera (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.201911612] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera_info (gz.msgs.CameraInfo) -> /camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.216070240] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/camera_info (sensor_msgs/msg/CameraInfo) -> /camera_info (gz.msgs.CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.224310801] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/depth_camera/points (gz.msgs.PointCloudPacked) -> /depth_camera/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.228363269] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/depth_camera/points (sensor_msgs/msg/PointCloud2) -> /depth_camera/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.237695158] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (gz.msgs.NavSat) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (sensor_msgs/msg/NavSatFix)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.250280228] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (sensor_msgs/msg/NavSatFix) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (gz.msgs.NavSat)] (Lazy 0)
+[rgbd_sync-9] [INFO] [1765005194.251474202] [rgbd_sync]: rgbd_sync: approx_sync = true
+[rgbd_sync-9] [INFO] [1765005194.251652786] [rgbd_sync]: rgbd_sync: approx_sync_max_interval = 0.020000
+[rgbd_sync-9] [INFO] [1765005194.251673614] [rgbd_sync]: rgbd_sync: topic_queue_size  = 10
+[rgbd_sync-9] [INFO] [1765005194.251679305] [rgbd_sync]: rgbd_sync: sync_queue_size  = 10
+[rgbd_sync-9] [INFO] [1765005194.251683851] [rgbd_sync]: rgbd_sync: qos             = 0
+[rgbd_sync-9] [INFO] [1765005194.251689004] [rgbd_sync]: rgbd_sync: qos_camera_info = 0
+[rgbd_sync-9] [INFO] [1765005194.251693880] [rgbd_sync]: rgbd_sync: depth_scale = 1.000000
+[rgbd_sync-9] [INFO] [1765005194.251699436] [rgbd_sync]: rgbd_sync: decimation = 1
+[rgbd_sync-9] [INFO] [1765005194.251704364] [rgbd_sync]: rgbd_sync: compressed_rate = 0.000000
+[parameter_bridge-4] [INFO] [1765005194.264367386] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (gz.msgs.IMU) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1765005194.270491030] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (sensor_msgs/msg/Imu) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (gz.msgs.IMU)] (Lazy 0)
+[rtabmap-10] [INFO] [1765005194.271481153] [rtabmap]: rtabmap(maps): latch                      = true
+[rtabmap-10] [INFO] [1765005194.271673919] [rtabmap]: rtabmap(maps): map_filter_radius          = 0.000000
+[rtabmap-10] [INFO] [1765005194.271698350] [rtabmap]: rtabmap(maps): map_filter_angle           = 30.000000
+[rtabmap-10] [INFO] [1765005194.271704686] [rtabmap]: rtabmap(maps): map_cleanup                = true
+[rtabmap-10] [INFO] [1765005194.271708669] [rtabmap]: rtabmap(maps): map_always_update          = false
+[rtabmap-10] [INFO] [1765005194.271712737] [rtabmap]: rtabmap(maps): map_empty_ray_tracing      = true
+[rtabmap-10] [INFO] [1765005194.271716467] [rtabmap]: rtabmap(maps): cloud_output_voxelized     = true
+[rtabmap-10] [INFO] [1765005194.271720292] [rtabmap]: rtabmap(maps): cloud_subtract_filtering   = false
+[rtabmap-10] [INFO] [1765005194.271724295] [rtabmap]: rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2
+[rtabmap-10] [INFO] [1765005194.271764406] [rtabmap]: rtabmap(maps): octomap_tree_depth         = 16
+[parameter_bridge-4] [INFO] [1765005194.279841555] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (gz.msgs.LaserScan) -> /world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[rgbd_sync-9] [INFO] [1765005194.290529801] [rgbd_sync]: 
+[rgbd_sync-9] rgbd_sync subscribed to (approx sync, max interval=0.020000s):
+[rgbd_sync-9]    /camera/image,
+[rgbd_sync-9]    /camera/depth_image,
+[rgbd_sync-9]    /camera/image/camera_info
+[controller_server-13] [INFO] [1765005194.300466625] [controller_server]: Configuring controller interface
+[controller_server-13] [INFO] [1765005194.300866651] [controller_server]: getting goal checker plugins..
+[controller_server-13] [INFO] [1765005194.301156554] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-13] [INFO] [1765005194.301195571] [local_costmap.local_costmap]: Configuring
+[parameter_bridge-4] [INFO] [1765005194.303606263] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (sensor_msgs/msg/LaserScan) -> /world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (gz.msgs.LaserScan)] (Lazy 0)
+[controller_server-13] [INFO] [1765005194.313707684] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-13] [INFO] [1765005194.316799239] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[joint_state_publisher-2] [INFO] [1765005194.326004211] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[rtabmap_viz-11] [INFO] [1765005194.327715348] [rtabmap_viz]: rtabmap_viz: Using configuration from "/home/ubuntu/.ros/rtabmapGUI.ini"
+[controller_server-13] [INFO] [1765005194.330473161] [voxel_grid]: Error, this implementation can only support up to 16 z values (32)
+[controller_server-13] [INFO] [1765005194.330511588] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-13] [INFO] [1765005194.330528772] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-13] [INFO] [1765005194.331245156] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[rtabmap-10] [INFO] [1765005194.336314711] [rtabmap]: rtabmap: frame_id      = x500_rtab_0/base_footprint
+[rtabmap-10] [INFO] [1765005194.336340916] [rtabmap]: rtabmap: odom_frame_id = x500_rtab_0/odom
+[rtabmap-10] [INFO] [1765005194.336344302] [rtabmap]: rtabmap: map_frame_id  = map
+[rtabmap-10] [INFO] [1765005194.336352052] [rtabmap]: rtabmap: log_to_rosout_level  = 4
+[rtabmap-10] [INFO] [1765005194.336355286] [rtabmap]: rtabmap: initial_pose  = 
+[rtabmap-10] [INFO] [1765005194.336358902] [rtabmap]: rtabmap: use_action_for_goal  = false
+[rtabmap-10] [INFO] [1765005194.336361825] [rtabmap]: rtabmap: tf_delay      = 0.050000
+[rtabmap-10] [INFO] [1765005194.336368183] [rtabmap]: rtabmap: tf_tolerance  = 0.100000
+[rtabmap-10] [INFO] [1765005194.336371101] [rtabmap]: rtabmap: odom_sensor_sync   = false
+[rtabmap-10] [INFO] [1765005194.336373773] [rtabmap]: rtabmap: pub_loc_pose_only_when_localizing = false
+[rtabmap-10] [INFO] [1765005194.336376473] [rtabmap]: rtabmap: wait_for_transform = 0.200000
+[rtabmap-10] [INFO] [1765005194.336379313] [rtabmap]: rtabmap: gen_scan  = false
+[rtabmap-10] [INFO] [1765005194.336381833] [rtabmap]: rtabmap: gen_depth  = false
+[controller_server-13] [INFO] [1765005194.339108888] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-13] [INFO] [1765005194.339595621] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-13] [INFO] [1765005194.339761792] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-13] [INFO] [1765005194.341110285] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-13] [INFO] [1765005194.341463695] [controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-13] [INFO] [1765005194.347718304] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-13] [INFO] [1765005194.348104360] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.348527261] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-13] [INFO] [1765005194.348843887] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.348919084] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-13] [INFO] [1765005194.349035243] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.349097911] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-13] [INFO] [1765005194.349609426] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.349696215] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-13] [INFO] [1765005194.349867165] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.349929264] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-13] [INFO] [1765005194.350020272] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.350066405] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-13] [INFO] [1765005194.350141852] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1765005194.350152502] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-19] [INFO] [1765005194.356121451] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-14] [INFO] [1765005194.357112812] [smoother_server]: Configuring smoother server
+[rtabmap-10] [INFO] [1765005194.358127541] [rtabmap]: Setting RTAB-Map parameter "Icp/CorrespondenceRatio"="0.2" (rosparam)
+[rtabmap-10] [INFO] [1765005194.358307656] [rtabmap]: Setting RTAB-Map parameter "Icp/MaxCorrespondenceDistance"="0.15" (rosparam)
+[rtabmap-10] [INFO] [1765005194.358490666] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlane"="false" (rosparam)
+[rtabmap-10] [INFO] [1765005194.358729906] [rtabmap]: Setting RTAB-Map parameter "Icp/VoxelSize"="0.05" (rosparam)
+[rtabmap-10] [INFO] [1765005194.360444368] [rtabmap]: Setting RTAB-Map parameter "Mem/IncrementalMemory"="False" (rosparam)
+[rtabmap-10] [INFO] [1765005194.360578006] [rtabmap]: Setting RTAB-Map parameter "Mem/InitWMWithAllNodes"="True" (rosparam)
+[rtabmap-10] [INFO] [1765005194.361725057] [rtabmap]: Setting RTAB-Map parameter "Mem/STMSize"="30" (rosparam)
+[rtabmap-10] [INFO] [1765005194.364397642] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalRadius"="5" (rosparam)
+[rtabmap-10] [INFO] [1765005194.364946687] [rtabmap]: Setting RTAB-Map parameter "RGBD/NeighborLinkRefining"="true" (rosparam)
+[rtabmap-10] [INFO] [1765005194.365066831] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeFromGraphEnd"="false" (rosparam)
+[rtabmap-10] [INFO] [1765005194.365144718] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeMaxError"="4" (rosparam)
+[rtabmap-10] [INFO] [1765005194.365511159] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityBySpace"="true" (rosparam)
+[rtabmap-10] [INFO] [1765005194.365649924] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityByTime"="false" (rosparam)
+[smoother_server-14] [INFO] [1765005194.366172919] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[rtabmap-10] [INFO] [1765005194.366298646] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityPathMaxNeighbors"="10" (rosparam)
+[smoother_server-14] [INFO] [1765005194.366367202] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[rtabmap-10] [INFO] [1765005194.366642081] [rtabmap]: Setting RTAB-Map parameter "Reg/Force3DoF"="false" (rosparam)
+[rtabmap-10] [INFO] [1765005194.366861994] [rtabmap]: Setting RTAB-Map parameter "Reg/Strategy"="1" (rosparam)
+[lifecycle_manager-19] [INFO] [1765005194.371254236] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-15] [INFO] [1765005194.371439668] [planner_server]: Configuring
+[planner_server-15] [INFO] [1765005194.371465282] [global_costmap.global_costmap]: Configuring
+[rtabmap-10] [INFO] [1765005194.372046256] [rtabmap]: Setting RTAB-Map parameter "Vis/MinInliers"="12" (rosparam)
+[rtabmap-10] [WARN] [1765005194.373199338] [rtabmap]: Setting "Grid/Sensor" parameter to 0 (default 1) as "subscribe_scan" or "subscribe_scan_cloud" or "gen_scan" is true. The occupancy grid map will be constructed from laser scans. To get occupancy grid map from cloud projection, set "Grid/Sensor" to true. To suppress this warning, add <param name="Grid/Sensor" type="string" value="0"/>
+[rtabmap-10] [INFO] [1765005194.373278635] [rtabmap]: Setting "Grid/RangeMax" parameter to 0 (default 5.000000) as "subscribe_scan" or "subscribe_scan_cloud" or "gen_scan" is true and Grid/Sensor is 0.
+[rtabmap-10] [INFO] [1765005194.374378818] [rtabmap]: Update RTAB-Map parameter "Db/TargetVersion"="0.21.10" from database
+[rtabmap-10] [INFO] [1765005194.374519950] [rtabmap]: Update RTAB-Map parameter "Rtabmap/PublishRAMUsage"="true" from database
+[rtabmap-10] [INFO] [1765005194.374687861] [rtabmap]: RTAB-Map detection rate = 1.000000 Hz
+[rtabmap-10] [INFO] [1765005194.374751896] [rtabmap]: rtabmap: Using database from "/home/ubuntu/.ros/rtabmap.db" (836 MB).
+[planner_server-15] [INFO] [1765005194.382817712] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-15] [INFO] [1765005194.384794488] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-15] [INFO] [1765005194.385571944] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-15] [INFO] [1765005194.385584898] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-15] [INFO] [1765005194.385725914] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-15] [INFO] [1765005194.395819918] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-15] [INFO] [1765005194.395856544] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-15] [INFO] [1765005194.396881526] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-15] [INFO] [1765005194.406005803] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[planner_server-15] [INFO] [1765005194.406049116] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-15] [INFO] [1765005194.406967691] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-19] [INFO] [1765005194.414468516] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-16] [INFO] [1765005194.414631190] [behavior_server]: Configuring
+[behavior_server-16] [INFO] [1765005194.421317246] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[behavior_server-16] [INFO] [1765005194.421844443] [behavior_server]: Configuring spin
+[behavior_server-16] [INFO] [1765005194.426333523] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[behavior_server-16] [INFO] [1765005194.426878986] [behavior_server]: Configuring backup
+[behavior_server-16] [INFO] [1765005194.429954955] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[behavior_server-16] [INFO] [1765005194.430500604] [behavior_server]: Configuring drive_on_heading
+[behavior_server-16] [INFO] [1765005194.434946275] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[behavior_server-16] [INFO] [1765005194.435504311] [behavior_server]: Configuring wait
+[lifecycle_manager-19] [INFO] [1765005194.439267438] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-17] [INFO] [1765005194.439417092] [bt_navigator]: Configuring
+[lifecycle_manager-19] [INFO] [1765005194.479463504] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-18] [INFO] [1765005194.479621032] [waypoint_follower]: Configuring
+[waypoint_follower-18] [INFO] [1765005194.487989238] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[lifecycle_manager-19] [INFO] [1765005194.488484535] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-13] [INFO] [1765005194.488634719] [controller_server]: Activating
+[controller_server-13] [INFO] [1765005194.488675564] [local_costmap.local_costmap]: Activating
+[controller_server-13] [INFO] [1765005194.488692036] [local_costmap.local_costmap]: Checking transform
+[controller_server-13] [INFO] [1765005194.488718004] [local_costmap.local_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to x500_rtab_0/odom to become available, tf error: Invalid frame ID "x500_rtab_0/odom" passed to canTransform argument target_frame - frame does not exist
+[rviz2-12] [INFO] [1765005194.791634138] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-12] [INFO] [1765005194.791790292] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-12] [INFO] [1765005194.858000190] [rviz2]: Stereo is NOT SUPPORTED
+[controller_server-13] [INFO] [1765005194.988762517] [local_costmap.local_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to x500_rtab_0/odom to become available, tf error: Invalid frame ID "x500_rtab_0/odom" passed to canTransform argument target_frame - frame does not exist
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] [INFO] [1765005195.233774718] [rtabmap_viz]: Reading parameters from the ROS server...
+[controller_server-13] [INFO] [1765005195.488840926] [local_costmap.local_costmap]: start
+[controller_server-13] [INFO] [1765005195.589787170] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005195.695823879] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-19] [INFO] [1765005195.695878904] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-14] [INFO] [1765005195.696193038] [smoother_server]: Activating
+[smoother_server-14] [INFO] [1765005195.696230446] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005195.800467804] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-19] [INFO] [1765005195.800516438] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-15] [INFO] [1765005195.800790383] [planner_server]: Activating
+[planner_server-15] [INFO] [1765005195.800826477] [global_costmap.global_costmap]: Activating
+[planner_server-15] [INFO] [1765005195.800837118] [global_costmap.global_costmap]: Checking transform
+[planner_server-15] [INFO] [1765005195.800857037] [global_costmap.global_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rtabmap-10] [INFO] [1765005195.923067850] [rtabmap]: rtabmap: 2D occupancy grid map loaded (494x436).
+[planner_server-15] [INFO] [1765005196.301016965] [global_costmap.global_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-15] [INFO] [1765005196.800907146] [global_costmap.global_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-15] [INFO] [1765005197.300903187] [global_costmap.global_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-15] [INFO] [1765005197.800904474] [global_costmap.global_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-15] [INFO] [1765005198.300906610] [global_costmap.global_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rtabmap-10] [INFO] [1765005198.515201500] [rtabmap]: rtabmap: Working Memory = 764, Local map = 762.
+[rtabmap-10] [INFO] [1765005198.515306600] [rtabmap]: rtabmap: Database version = "0.21.10".
+[rtabmap-10] [INFO] [1765005198.515314049] [rtabmap]: rtabmap: Localization mode (Mem/IncrementalMemory=false)
+[rtabmap-10] [INFO] [1765005198.564851986] [rtabmap]: Setup callbacks
+[rtabmap-10] [WARN] [1765005198.564914629] [rtabmap]: rtabmap: Parameters subscribe_depth and subscribe_rgbd cannot be true at the same time. Parameter subscribe_depth is set to false.
+[rtabmap-10] [INFO] [1765005198.565039384] [rtabmap]: rtabmap: subscribe_depth = false
+[rtabmap-10] [INFO] [1765005198.565053181] [rtabmap]: rtabmap: subscribe_rgb = false
+[rtabmap-10] [INFO] [1765005198.565059386] [rtabmap]: rtabmap: subscribe_stereo = false
+[rtabmap-10] [INFO] [1765005198.565065488] [rtabmap]: rtabmap: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap-10] [INFO] [1765005198.565073733] [rtabmap]: rtabmap: subscribe_sensor_data = false
+[rtabmap-10] [INFO] [1765005198.565079404] [rtabmap]: rtabmap: subscribe_odom_info = true
+[rtabmap-10] [INFO] [1765005198.565085630] [rtabmap]: rtabmap: subscribe_user_data = false
+[rtabmap-10] [INFO] [1765005198.565090906] [rtabmap]: rtabmap: subscribe_scan = true
+[rtabmap-10] [INFO] [1765005198.565096595] [rtabmap]: rtabmap: subscribe_scan_cloud = false
+[rtabmap-10] [INFO] [1765005198.565102530] [rtabmap]: rtabmap: subscribe_scan_descriptor = false
+[rtabmap-10] [INFO] [1765005198.565108231] [rtabmap]: rtabmap: topic_queue_size = 10
+[rtabmap-10] [INFO] [1765005198.565114996] [rtabmap]: rtabmap: sync_queue_size  = 10
+[rtabmap-10] [INFO] [1765005198.565121312] [rtabmap]: rtabmap: qos_image       = 0
+[rtabmap-10] [INFO] [1765005198.565127961] [rtabmap]: rtabmap: qos_camera_info = 0
+[rtabmap-10] [INFO] [1765005198.565134382] [rtabmap]: rtabmap: qos_scan        = 0
+[rtabmap-10] [INFO] [1765005198.565140316] [rtabmap]: rtabmap: qos_odom        = 0
+[rtabmap-10] [INFO] [1765005198.565144960] [rtabmap]: rtabmap: qos_user_data   = 0
+[rtabmap-10] [INFO] [1765005198.565150693] [rtabmap]: rtabmap: approx_sync     = true
+[rtabmap-10] [INFO] [1765005198.565166992] [rtabmap]: Setup rgbd callback
+[rtabmap-10] [WARN] [1765005198.567004411] [rtabmap]: subscribe_odom_info ignored...
+[rtabmap-10] [INFO] [1765005198.567133770] [rtabmap]: 
+[rtabmap-10] rtabmap subscribed to (approx sync):
+[rtabmap-10]    /rgbd_image \
+[rtabmap-10]    /scan
+[rtabmap_viz-11] [INFO] [1765005198.644231832] [rtabmap_viz]: Parameters read = 387
+[rtabmap_viz-11] [INFO] [1765005198.644287974] [rtabmap_viz]: Parameters successfully read.
+[planner_server-15] [INFO] [1765005198.780118228] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 494 X 436 at 0.050000 m/pix
+[rtabmap-10] [INFO] [1765005198.781398750] [rtabmap]: rtabmap (1086): Rate=1.00s, Limit=0.000s, Conversion=0.0041s, RTAB-Map=0.0630s, Maps update=0.0015s pub=0.0027s delay=0.0680s (local map=762, WM=764)
+[rviz2-12] [INFO] [1765005198.783372982] [rviz2]: Trying to create a map of size 494 x 436 using 1 swatches
+[planner_server-15] [INFO] [1765005198.800984433] [global_costmap.global_costmap]: start
+[rtabmap_viz-11] [INFO] [1765005199.231112609] [rtabmap_viz]: rtabmap_viz: subscribe_depth = false
+[rtabmap_viz-11] [INFO] [1765005199.231156596] [rtabmap_viz]: rtabmap_viz: subscribe_rgb = false
+[rtabmap_viz-11] [INFO] [1765005199.231161860] [rtabmap_viz]: rtabmap_viz: subscribe_stereo = false
+[rtabmap_viz-11] [INFO] [1765005199.231166486] [rtabmap_viz]: rtabmap_viz: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap_viz-11] [INFO] [1765005199.231171609] [rtabmap_viz]: rtabmap_viz: subscribe_sensor_data = false
+[rtabmap_viz-11] [INFO] [1765005199.231175722] [rtabmap_viz]: rtabmap_viz: subscribe_odom_info = true
+[rtabmap_viz-11] [INFO] [1765005199.231179708] [rtabmap_viz]: rtabmap_viz: subscribe_user_data = false
+[rtabmap_viz-11] [INFO] [1765005199.231183338] [rtabmap_viz]: rtabmap_viz: subscribe_scan = true
+[rtabmap_viz-11] [INFO] [1765005199.231188799] [rtabmap_viz]: rtabmap_viz: subscribe_scan_cloud = false
+[rtabmap_viz-11] [INFO] [1765005199.231192572] [rtabmap_viz]: rtabmap_viz: subscribe_scan_descriptor = false
+[rtabmap_viz-11] [INFO] [1765005199.231197062] [rtabmap_viz]: rtabmap_viz: topic_queue_size = 10
+[rtabmap_viz-11] [INFO] [1765005199.231201346] [rtabmap_viz]: rtabmap_viz: sync_queue_size  = 10
+[rtabmap_viz-11] [INFO] [1765005199.231205286] [rtabmap_viz]: rtabmap_viz: qos_image       = 0
+[rtabmap_viz-11] [INFO] [1765005199.231209425] [rtabmap_viz]: rtabmap_viz: qos_camera_info = 0
+[rtabmap_viz-11] [INFO] [1765005199.231214994] [rtabmap_viz]: rtabmap_viz: qos_scan        = 0
+[rtabmap_viz-11] [INFO] [1765005199.231220048] [rtabmap_viz]: rtabmap_viz: qos_odom        = 0
+[rtabmap_viz-11] [INFO] [1765005199.231225042] [rtabmap_viz]: rtabmap_viz: qos_user_data   = 0
+[rtabmap_viz-11] [INFO] [1765005199.231230467] [rtabmap_viz]: rtabmap_viz: approx_sync     = true
+[rtabmap_viz-11] [INFO] [1765005199.231241713] [rtabmap_viz]: Setup rgbd callback
+[rtabmap_viz-11] [WARN] [1765005199.233014571] [rtabmap_viz]: subscribe_odom_info ignored...
+[rtabmap_viz-11] [INFO] [1765005199.233104033] [rtabmap_viz]: 
+[rtabmap_viz-11] rtabmap_viz subscribed to (approx sync):
+[rtabmap_viz-11]    /rgbd_image \
+[rtabmap_viz-11]    /scan
+[rtabmap_viz-11] [INFO] [1765005199.234997152] [rtabmap_viz]: rtabmap_viz started.
+[rviz2-12] [INFO] [1765005199.817989842] [rviz2]: Trying to create a map of size 494 x 436 using 1 swatches
+[planner_server-15] [INFO] [1765005199.851842990] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-15] [INFO] [1765005199.854037476] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005199.962821644] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-19] [INFO] [1765005199.962961661] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-16] [INFO] [1765005199.963798750] [behavior_server]: Activating
+[behavior_server-16] [INFO] [1765005199.963887997] [behavior_server]: Activating spin
+[behavior_server-16] [INFO] [1765005199.963917478] [behavior_server]: Activating backup
+[behavior_server-16] [INFO] [1765005199.963938337] [behavior_server]: Activating drive_on_heading
+[behavior_server-16] [INFO] [1765005199.963956869] [behavior_server]: Activating wait
+[behavior_server-16] [INFO] [1765005199.963984359] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005200.074284150] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-19] [INFO] [1765005200.074359045] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-17] [INFO] [1765005200.074735813] [bt_navigator]: Activating
+[bt_navigator-17] [INFO] [1765005200.137913605] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005200.242243607] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-19] [INFO] [1765005200.242302969] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-18] [INFO] [1765005200.242776990] [waypoint_follower]: Activating
+[waypoint_follower-18] [INFO] [1765005200.242843191] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005200.353491696] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-19] [INFO] [1765005200.353557322] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-19] [INFO] [1765005200.353570571] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[rtabmap-10] [INFO] [1765005200.421482492] [rtabmap]: rtabmap (1087): Rate=1.00s, Limit=0.000s, Conversion=0.0017s, RTAB-Map=0.0839s, Maps update=0.0020s pub=0.0079s delay=0.1080s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005201.668319150] [rtabmap]: rtabmap (1088): Rate=1.00s, Limit=0.000s, Conversion=0.0034s, RTAB-Map=0.0694s, Maps update=0.0011s pub=0.0028s delay=0.0920s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005203.016581829] [rtabmap]: rtabmap (1089): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0679s, Maps update=0.0024s pub=0.0029s delay=0.0880s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005204.314979115] [rtabmap]: rtabmap (1090): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0900s, Maps update=0.0013s pub=0.0037s delay=0.1120s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005205.553705033] [rtabmap]: rtabmap (1091): Rate=1.00s, Limit=0.000s, Conversion=0.0018s, RTAB-Map=0.0791s, Maps update=0.0012s pub=0.0030s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005206.883001663] [rtabmap]: rtabmap (1092): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0690s, Maps update=0.0016s pub=0.0019s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005208.212289477] [rtabmap]: rtabmap (1093): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0633s, Maps update=0.0010s pub=0.0025s delay=0.0800s (local map=762, WM=764)
+[rviz2-12] [INFO] [1765005208.215079485] [rviz2]: Message Filter dropping message: frame 'x500_rtab_0/odom' at time 4659.076 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rtabmap-10] [INFO] [1765005209.620892066] [rtabmap]: rtabmap (1094): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0622s, Maps update=0.0010s pub=0.0023s delay=0.0440s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005211.664328503] [rtabmap]: rtabmap (1095): Rate=1.00s, Limit=0.000s, Conversion=0.0017s, RTAB-Map=0.0740s, Maps update=0.0010s pub=0.0024s delay=0.0880s (local map=762, WM=764)
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:14.983) DBDriverSqlite3.cpp:3858::loadWordsQuery() Query (37539) doesn't match loaded words (37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36986 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36987 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36988 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36989 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36990 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36991 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36992 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36993 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36994 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36995 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36996 (dict size=37527)[0m
+[rtabmap-10] [31m[ERROR] (2025-12-06 07:13:15.894) VWDictionary.cpp:741::addWordRef() Not found word 36997 (dict size=37527)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:18.714) Rtabmap.cpp:1368::process() Update map correction based on last localization saved in database! correction = xyz=0.388574,-4.210902,-2.345164 rpy=0.000000,-0.000000,1.014008, nearest id = 550 of last pose = xyz=-3.930150,1.001561,0.190478 rpy=-0.001543,0.000228,3.085695, odom = xyz=2.142874,6.420999,2.535643 rpy=-0.000099,0.000131,2.071687[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:18.720) Memory.cpp:5917::createSignature() Mem/SaveDepth16Format is set to false to use 32bits format but this is not compatible with the compressed depth format chosen (Mem/DepthCompressionFormat=".rvl"), depth images will be compressed in ".png" format instead. Explicitly set Mem/SaveDepth16Format to true to keep using ".rvl" format and images will be converted to 16bits for convenience (warning: that would remove all depth values over 65 meters). Explicitly set Mem/DepthCompressionFormat=".png" to suppress this warning. This warning is only printed once.[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:20.410) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 550 513 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:21.663) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 549 551 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:23.010) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 390 512 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:24.305) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.111382,-0.175181,0.000000 rpy=0.000000,-0.000000,0.007041) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:24.309) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 514 545 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:25.548) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 548 552 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:26.878) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 568 569 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:28.208) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 26 126 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:29.616) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 332 389 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:31.660) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 391 511 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [INFO] [1765005213.002843393] [rtabmap]: rtabmap (1096): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0725s, Maps update=0.0014s pub=0.0030s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005214.331977034] [rtabmap]: rtabmap (1097): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0614s, Maps update=0.0009s pub=0.0021s delay=0.0560s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005216.376768631] [rtabmap]: rtabmap (1098): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0724s, Maps update=0.0009s pub=0.0017s delay=0.0720s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005218.009804460] [rtabmap]: rtabmap (1099): Rate=1.00s, Limit=0.000s, Conversion=0.0015s, RTAB-Map=0.0897s, Maps update=0.0013s pub=0.0028s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005219.477005655] [rtabmap]: rtabmap (1100): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0689s, Maps update=0.0010s pub=0.0023s delay=0.0560s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005221.028804028] [rtabmap]: rtabmap (1101): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0793s, Maps update=0.0012s pub=0.0031s delay=0.0800s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005222.337652371] [rtabmap]: rtabmap (1102): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.0745s, Maps update=0.0013s pub=0.0019s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005223.730669486] [rtabmap]: rtabmap (1103): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0828s, Maps update=0.0009s pub=0.0019s delay=0.1000s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005225.104746670] [rtabmap]: rtabmap (1104): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0729s, Maps update=0.0017s pub=0.0023s delay=0.0840s (local map=762, WM=764)
+[rviz2-12] [INFO] [1765005226.215048082] [rviz2]: Trying to create a map of size 60 x 60 using 1 swatches
+[rtabmap-10] [INFO] [1765005226.406949228] [rtabmap]: rtabmap (1105): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0656s, Maps update=0.0012s pub=0.0018s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005227.842143606] [rtabmap]: rtabmap (1106): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0697s, Maps update=0.0014s pub=0.0034s delay=0.0760s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005229.166457360] [rtabmap]: rtabmap (1107): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0754s, Maps update=0.0021s pub=0.0039s delay=0.0800s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005230.582069845] [rtabmap]: rtabmap (1108): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.0863s, Maps update=0.0012s pub=0.0027s delay=0.0960s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005232.091259978] [rtabmap]: rtabmap (1109): Rate=1.00s, Limit=0.000s, Conversion=0.0014s, RTAB-Map=0.0687s, Maps update=0.0011s pub=0.0017s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005233.550864995] [rtabmap]: rtabmap (1110): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0601s, Maps update=0.0012s pub=0.0023s delay=0.0720s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005235.070354766] [rtabmap]: rtabmap (1111): Rate=1.00s, Limit=0.000s, Conversion=0.0018s, RTAB-Map=0.0656s, Maps update=0.0011s pub=0.0027s delay=0.0680s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005236.371915843] [rtabmap]: rtabmap (1112): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0661s, Maps update=0.0015s pub=0.0033s delay=0.0760s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005237.658207454] [rtabmap]: rtabmap (1113): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0574s, Maps update=0.0014s pub=0.0021s delay=0.0680s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005239.029916649] [rtabmap]: rtabmap (1114): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0754s, Maps update=0.0014s pub=0.0024s delay=0.0880s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005240.439589196] [rtabmap]: rtabmap (1115): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0715s, Maps update=0.0015s pub=0.0028s delay=0.0760s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005241.672026629] [rtabmap]: rtabmap (1116): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0830s, Maps update=0.0017s pub=0.0045s delay=0.0880s (local map=762, WM=764)
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:32.993) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.231330,0.017522,0.000000 rpy=0.000000,-0.000000,0.012742) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:32.997) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 515 519 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:34.328) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 520 521 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:36.370) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.227265,0.038614,0.000000 rpy=0.000000,-0.000000,0.014463) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:36.373) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 522 523 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:38.004) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 524 525 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:39.472) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 526 527 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:41.023) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 528 529 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:42.333) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 530 531 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:43.727) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 532 533 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:45.099) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 534 544 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:46.403) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 546 547 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:47.836) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 553 554 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:49.159) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 556 557 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:50.577) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 558 559 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:52.087) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 567 570 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:53.546) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 25 27 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:55.065) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 31 125 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:56.366) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 127 208 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:57.653) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 209 311 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:13:59.024) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 312 313 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:00.431) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.036461,-0.215669,0.000000 rpy=0.000000,-0.000000,0.017380) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:00.434) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 314 315 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:01.660) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.046262,-0.200421,0.000000 rpy=0.000000,-0.000000,0.016759) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:01.664) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 316 317 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [INFO] [1765005242.771797385] [rtabmap]: rtabmap (1117): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.0533s, Maps update=0.0014s pub=0.0025s delay=0.0680s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005244.258927678] [rtabmap]: rtabmap (1118): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0521s, Maps update=0.0012s pub=0.0023s delay=0.0720s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005245.570835093] [rtabmap]: rtabmap (1119): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0687s, Maps update=0.0014s pub=0.0027s delay=0.0760s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005246.907685434] [rtabmap]: rtabmap (1120): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0751s, Maps update=0.0012s pub=0.0024s delay=0.0920s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005248.185564798] [rtabmap]: rtabmap (1121): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0717s, Maps update=0.0016s pub=0.0021s delay=0.0800s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005249.576471359] [rtabmap]: rtabmap (1122): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0685s, Maps update=0.0020s pub=0.0032s delay=0.0880s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005251.124360477] [rtabmap]: rtabmap (1123): Rate=1.00s, Limit=0.000s, Conversion=0.0014s, RTAB-Map=0.0800s, Maps update=0.0015s pub=0.0021s delay=0.0920s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005252.445833979] [rtabmap]: rtabmap (1124): Rate=1.00s, Limit=0.000s, Conversion=0.0010s, RTAB-Map=0.0552s, Maps update=0.0011s pub=0.0019s delay=0.0680s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005253.825975745] [rtabmap]: rtabmap (1125): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0908s, Maps update=0.0013s pub=0.0025s delay=0.1040s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005255.131773534] [rtabmap]: rtabmap (1126): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.0719s, Maps update=0.0016s pub=0.0026s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005256.451978595] [rtabmap]: rtabmap (1127): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0662s, Maps update=0.0018s pub=0.0024s delay=0.0840s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005260.074640707] [rtabmap]: rtabmap (1128): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0715s, Maps update=0.0013s pub=0.0033s delay=0.0720s (local map=762, WM=764)
+[rviz2-12] Start navigation
+[rviz2-12] [INFO] [1765005260.236039791] [rviz_navigation_dialog_action_client]: NavigateToPose will be called using the BT Navigator's default behavior tree.
+[bt_navigator-17] [INFO] [1765005260.236788396] [bt_navigator]: Begin navigating from current location (-4.02, 0.95) to (-2.36, 0.98)
+[controller_server-13] [INFO] [1765005260.257915667] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-13] [WARN] [1765005260.257968559] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-13] [INFO] [1765005261.308196009] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005262.041337902] [rtabmap]: rtabmap (1129): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.1126s, Maps update=0.0016s pub=0.0020s delay=0.0960s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005262.358199388] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005263.358194913] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005263.711287679] [rtabmap]: rtabmap (1130): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.1549s, Maps update=0.0013s pub=0.0078s delay=0.1200s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005264.409021308] [controller_server]: Passing new path to controller.
+[rviz2-12] Start navigation
+[rviz2-12] [INFO] [1765005264.973253017] [rviz_navigation_dialog_action_client]: NavigateToPose will be called using the BT Navigator's default behavior tree.
+[bt_navigator-17] [INFO] [1765005264.976933788] [bt_navigator]: Received goal preemption request
+[bt_navigator-17] [INFO] [1765005264.977099132] [bt_navigator]: Begin navigating from current location (-2.71, 0.95) to (-1.56, 1.32)
+[rtabmap-10] [INFO] [1765005265.179229171] [rtabmap]: rtabmap (1131): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0790s, Maps update=0.0014s pub=0.0037s delay=0.0760s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005265.408193497] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005266.458193048] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005267.183821911] [rtabmap]: rtabmap (1132): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.1501s, Maps update=0.0015s pub=0.0076s delay=0.1440s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005267.459758164] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005268.508208909] [controller_server]: Passing new path to controller.
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:02.766) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 318 319 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:04.254) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 320 321 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:05.565) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 322 323 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:06.903) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 331 333 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:08.181) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 341 342 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:09.570) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 343 344 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:11.117) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.054722,-0.196725,0.000000 rpy=0.000000,-0.000000,0.014247) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:11.120) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 345 346 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:12.442) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 347 348 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:13.821) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 349 350 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:15.126) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 351 356 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:16.446) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 388 392 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:20.069) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 413 414 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:22.030) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.055235,-0.113942,0.000000 rpy=0.000000,-0.000000,0.004378) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:22.036) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 415 416 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:23.672) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.120958,-0.185049,0.000000 rpy=0.000000,-0.000000,0.018404) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:23.694) Rtabmap.cpp:3069::process() Rejected loop closure 270 -> 1130: Not enough inliers 0/12 (matches=4) between 270 and 1130[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:23.698) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 270 419 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:25.166) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.037741,0.087095,0.000000 rpy=0.000000,-0.000000,-0.015953) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:25.173) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 510 516 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:27.131) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.130667,0.157459,0.000000 rpy=0.000000,-0.000000,-0.012959) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:27.166) Rtabmap.cpp:3069::process() Rejected loop closure 224 -> 1132: Not enough inliers 0/12 (matches=2) between 224 and 1132[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:27.171) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 224 518 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:29.110) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.061446,-0.097268,0.000000 rpy=0.000000,-0.000000,-0.001013) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [INFO] [1765005269.178735750] [rtabmap]: rtabmap (1133): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.1955s, Maps update=0.0012s pub=0.0058s delay=0.1440s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005269.508229558] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005270.558205548] [controller_server]: Passing new path to controller.
+[rviz2-12] Start navigation
+[rviz2-12] [INFO] [1765005270.620614392] [rviz_navigation_dialog_action_client]: NavigateToPose will be called using the BT Navigator's default behavior tree.
+[bt_navigator-17] [INFO] [1765005270.626954204] [bt_navigator]: Received goal preemption request
+[bt_navigator-17] [INFO] [1765005270.627130889] [bt_navigator]: Begin navigating from current location (-2.00, 2.17) to (-0.85, 1.67)
+[controller_server-13] [INFO] [1765005271.608205489] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005272.398039373] [rtabmap]: rtabmap (1134): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.1700s, Maps update=0.0018s pub=0.0050s delay=0.1480s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005272.608199908] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005273.658204606] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005274.613838722] [rtabmap]: rtabmap (1135): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.1318s, Maps update=0.0012s pub=0.0021s delay=0.0880s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005274.658198141] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005275.708527497] [controller_server]: Passing new path to controller.
+[rviz2-12] Start navigation
+[rviz2-12] [INFO] [1765005276.381343688] [rviz_navigation_dialog_action_client]: NavigateToPose will be called using the BT Navigator's default behavior tree.
+[bt_navigator-17] [INFO] [1765005276.386973842] [bt_navigator]: Received goal preemption request
+[bt_navigator-17] [INFO] [1765005276.387307119] [bt_navigator]: Begin navigating from current location (-0.94, 1.32) to (-0.18, 1.64)
+[rtabmap-10] [INFO] [1765005276.428358267] [rtabmap]: rtabmap (1136): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.1396s, Maps update=0.0030s pub=0.0026s delay=0.1200s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005276.708201938] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005277.758197097] [controller_server]: Passing new path to controller.
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:29.127) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.055907,-0.032576,0.000000 rpy=0.000000,-0.000000,-0.003390) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:29.154) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.027735,0.125885,0.000000 rpy=0.000000,-0.000000,0.000449) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:29.163) Rtabmap.cpp:3069::process() Rejected loop closure 582 -> 1133: Not enough inliers 0/12 (matches=10) between 582 and 1133[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:29.170) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 582 411 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:32.317) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.050281,-0.033990,0.000000 rpy=0.000000,-0.000000,-0.001172) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:32.352) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.026291,0.039926,0.000000 rpy=0.000000,-0.000000,-0.001772) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:32.367) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.066296,0.058614,0.000000 rpy=0.000000,-0.000000,0.007780) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:32.381) Rtabmap.cpp:3069::process() Rejected loop closure 484 -> 1134: Not enough inliers 0/12 (matches=1) between 484 and 1134[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:32.389) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 484 410 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:34.579) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.042656,0.098731,0.000000 rpy=0.000000,-0.000000,0.002689) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:34.601) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.122340,0.026149,0.000000 rpy=0.000000,-0.000000,0.009673) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:34.606) Rtabmap.cpp:3069::process() Rejected loop closure 484 -> 1135: Not enough inliers 0/12 (matches=0) between 484 and 1135[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:34.609) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 17 1 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:36.361) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.041108,0.090033,0.000000 rpy=0.000000,-0.000000,-0.003697) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:36.387) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.021181,-0.103368,0.000000 rpy=0.000000,-0.000000,0.006427) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:36.408) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.055650,0.038462,0.000000 rpy=0.000000,-0.000000,0.010348) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:36.413) Rtabmap.cpp:3069::process() Rejected loop closure 484 -> 1136: Not enough inliers 0/12 (matches=1) between 484 and 1136[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:36.421) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 21 22 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:38.025) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.033633,-0.101874,0.000000 rpy=0.000000,-0.000000,0.006669) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [INFO] [1765005278.073225011] [rtabmap]: rtabmap (1137): Rate=1.00s, Limit=0.000s, Conversion=0.0046s, RTAB-Map=0.1226s, Maps update=0.0012s pub=0.0022s delay=0.1120s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005278.758651679] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005279.808202772] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005280.680947773] [rtabmap]: rtabmap (1138): Rate=1.00s, Limit=0.000s, Conversion=0.0014s, RTAB-Map=0.1438s, Maps update=0.0016s pub=0.0024s delay=0.1200s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005280.858231811] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005281.858191986] [controller_server]: Passing new path to controller.
+[rtabmap-10] [INFO] [1765005282.130724352] [rtabmap]: rtabmap (1139): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0872s, Maps update=0.0010s pub=0.0025s delay=0.1000s (local map=762, WM=764)
+[controller_server-13] [INFO] [1765005282.858194851] [controller_server]: Passing new path to controller.
+[controller_server-13] [INFO] [1765005283.017695053] [controller_server]: Reached the goal!
+[bt_navigator-17] [INFO] [1765005283.057209349] [bt_navigator]: Goal succeeded
+[rtabmap-10] [INFO] [1765005283.435823162] [rtabmap]: rtabmap (1140): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.1186s, Maps update=0.0012s pub=0.0020s delay=0.1160s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005284.704292392] [rtabmap]: rtabmap (1141): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.1039s, Maps update=0.0016s pub=0.0034s delay=0.1320s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005285.961385839] [rtabmap]: rtabmap (1142): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0800s, Maps update=0.0011s pub=0.0018s delay=0.0920s (local map=762, WM=764)
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:38.055) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.008457,-0.112847,0.000000 rpy=0.000000,-0.000000,0.006859) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:38.064) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1137: Not enough inliers 0/12 (matches=1) between 272 and 1137[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:38.068) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 272 23 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:40.645) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.075047,-0.034444,0.000000 rpy=0.000000,-0.000000,-0.004622) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:40.665) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.020363,0.037867,0.000000 rpy=0.000000,-0.000000,-0.000839) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:40.669) Rtabmap.cpp:3069::process() Rejected loop closure 274 -> 1138: Not enough inliers 0/12 (matches=0) between 274 and 1138[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:40.672) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 274 412 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:42.111) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.084135,0.035132,0.000000 rpy=0.000000,-0.000000,-0.017528) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:42.123) Rtabmap.cpp:3069::process() Rejected loop closure 259 -> 1139: Not enough inliers 0/12 (matches=1) between 259 and 1139[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:42.126) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 259 353 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:43.416) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.032033,-0.031306,0.000000 rpy=0.000000,-0.000000,-0.005685) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:43.426) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.202909,0.041471,0.000000 rpy=0.000000,-0.000000,0.012672) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:43.429) Rtabmap.cpp:3069::process() Rejected loop closure 257 -> 1140: Not enough inliers 0/12 (matches=5) between 257 and 1140[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:43.431) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 257 409 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:44.682) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.106437,0.067976,0.000000 rpy=0.000000,-0.000000,-0.012711) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:44.692) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.058853,-0.096335,0.000000 rpy=0.000000,-0.000000,0.007079) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:44.695) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1141: Not enough inliers 0/12 (matches=1) between 272 and 1141[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:44.698) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 440 441 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:45.945) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.049011,-0.018266,0.000000 rpy=0.000000,-0.000000,-0.006340) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:45.952) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.041960,0.076578,0.000000 rpy=0.000000,-0.000000,0.006670) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:45.955) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1142: Not enough inliers 0/12 (matches=1) between 272 and 1142[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:45.957) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 124 354 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [INFO] [1765005287.339737457] [rtabmap]: rtabmap (1143): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.1130s, Maps update=0.0013s pub=0.0027s delay=0.0880s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005288.697272739] [rtabmap]: rtabmap (1144): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0943s, Maps update=0.0012s pub=0.0024s delay=0.1040s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005290.116854851] [rtabmap]: rtabmap (1145): Rate=1.00s, Limit=0.000s, Conversion=0.0028s, RTAB-Map=0.1054s, Maps update=0.0010s pub=0.0026s delay=0.1040s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005291.439775115] [rtabmap]: rtabmap (1146): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0812s, Maps update=0.0011s pub=0.0033s delay=0.1040s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005292.774595667] [rtabmap]: rtabmap (1147): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0824s, Maps update=0.0010s pub=0.0022s delay=0.0960s (local map=762, WM=764)
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:47.305) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.132546,0.061860,0.000000 rpy=0.000000,-0.000000,-0.012949) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:47.327) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.049148,-0.076949,0.000000 rpy=0.000000,-0.000000,0.000985) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:47.329) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1143: Not enough inliers 0/12 (matches=3) between 272 and 1143[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:47.334) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 358 408 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:48.681) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.094149,-0.033716,0.000000 rpy=0.000000,-0.000000,0.006306) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:48.687) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.076129,-0.069319,0.000000 rpy=0.000000,-0.000000,0.005064) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:48.689) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1144: Not enough inliers 0/12 (matches=2) between 272 and 1144[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:48.692) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 418 439 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:50.097) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.117877,0.080302,0.000000 rpy=0.000000,-0.000000,-0.013202) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:50.106) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.125790,0.057967,0.000000 rpy=0.000000,-0.000000,0.009712) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:50.109) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1145: Not enough inliers 0/12 (matches=4) between 272 and 1145[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:50.112) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 442 30 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:51.421) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.104676,0.060503,0.000000 rpy=0.000000,-0.000000,-0.012817) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:51.429) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.154447,0.045275,0.000000 rpy=0.000000,-0.000000,0.010356) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:51.431) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1146: Not enough inliers 0/12 (matches=3) between 272 and 1146[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:51.434) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 32 61 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:52.758) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.060400,-0.012482,0.000000 rpy=0.000000,-0.000000,-0.005447) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:52.765) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.021161,0.014588,0.000000 rpy=0.000000,-0.000000,-0.000751) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:52.767) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1147: Not enough inliers 0/12 (matches=3) between 272 and 1147[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:52.770) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 123 128 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [INFO] [1765005294.609519052] [rtabmap]: rtabmap (1148): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0856s, Maps update=0.0010s pub=0.0030s delay=0.0760s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005296.641092606] [rtabmap]: rtabmap (1149): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0775s, Maps update=0.0010s pub=0.0019s delay=0.0520s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005299.550791448] [rtabmap]: rtabmap (1150): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0765s, Maps update=0.0014s pub=0.0032s delay=0.0360s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005302.641061005] [rtabmap]: rtabmap (1151): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.0726s, Maps update=0.0012s pub=0.0020s delay=0.0400s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005305.680964022] [rtabmap]: rtabmap (1152): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0807s, Maps update=0.0010s pub=0.0020s delay=0.0360s (local map=762, WM=764)
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:54.593) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.048054,0.001041,0.000000 rpy=0.000000,-0.000000,-0.005296) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:54.600) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.026221,0.076179,0.000000 rpy=0.000000,-0.000000,0.007284) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:54.602) Rtabmap.cpp:3069::process() Rejected loop closure 272 -> 1148: Not enough inliers 0/12 (matches=2) between 272 and 1148[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:54.604) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 129 130 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:56.624) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.052676,-0.028605,0.000000 rpy=0.000000,-0.000000,-0.002667) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:56.632) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.145167,0.047377,0.000000 rpy=0.000000,-0.000000,0.010649) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:56.634) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1149: Not enough inliers 0/12 (matches=2) between 688 and 1149[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:56.637) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 688 131 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:59.531) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.054315,0.017950,0.000000 rpy=0.000000,-0.000000,-0.010996) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:59.539) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.153881,0.044119,0.000000 rpy=0.000000,-0.000000,0.010298) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:59.541) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1150: Not enough inliers 0/12 (matches=1) between 688 and 1150[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:14:59.545) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 132 133 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:02.623) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.036016,0.015283,0.000000 rpy=0.000000,-0.000000,-0.005675) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:02.632) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.165284,0.031411,0.000000 rpy=0.000000,-0.000000,0.010777) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:02.634) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1151: Not enough inliers 0/12 (matches=1) between 688 and 1151[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:02.637) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 134 135 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:05.664) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.052006,0.020674,0.000000 rpy=0.000000,-0.000000,-0.006534) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:05.673) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.153440,0.047203,0.000000 rpy=0.000000,-0.000000,0.008224) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:05.674) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1152: Not enough inliers 0/12 (matches=2) between 688 and 1152[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:05.677) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 136 137 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:07.818) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.053270,0.016345,0.000000 rpy=0.000000,-0.000000,-0.006677) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [INFO] [1765005307.836213681] [rtabmap]: rtabmap (1153): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0875s, Maps update=0.0014s pub=0.0023s delay=0.1000s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005309.186078137] [rtabmap]: rtabmap (1154): Rate=1.00s, Limit=0.000s, Conversion=0.0013s, RTAB-Map=0.1007s, Maps update=0.0021s pub=0.0029s delay=0.1120s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005310.494084200] [rtabmap]: rtabmap (1155): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0950s, Maps update=0.0011s pub=0.0022s delay=0.1000s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005311.772253751] [rtabmap]: rtabmap (1156): Rate=1.00s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.0957s, Maps update=0.0014s pub=0.0027s delay=0.1080s (local map=762, WM=764)
+[rtabmap-10] [INFO] [1765005313.077163494] [rtabmap]: rtabmap (1157): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0863s, Maps update=0.0011s pub=0.0021s delay=0.0960s (local map=762, WM=764)
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[behavior_server-16] [INFO] [1765005313.265300871] [rclcpp]: signal_handler(signum=2)
+[behavior_server-16] [INFO] [1765005313.265390849] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-16] [INFO] [1765005313.265445337] [behavior_server]: Deactivating
+[smoother_server-14] [INFO] [1765005313.265302983] [rclcpp]: signal_handler(signum=2)
+[smoother_server-14] [INFO] [1765005313.265390772] [smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+[smoother_server-14] [INFO] [1765005313.265445527] [smoother_server]: Deactivating
+[smoother_server-14] [INFO] [1765005313.265458855] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005313.265301994] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-17] [INFO] [1765005313.265300899] [rclcpp]: signal_handler(signum=2)
+[planner_server-15] [INFO] [1765005313.265301013] [rclcpp]: signal_handler(signum=2)
+[planner_server-15] [INFO] [1765005313.265390581] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-15] [INFO] [1765005313.265474054] [planner_server]: Deactivating
+[controller_server-13] [INFO] [1765005313.265309680] [rclcpp]: signal_handler(signum=2)
+[controller_server-13] [INFO] [1765005313.265465716] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[rtabmap-10] [INFO] [1765005313.265359732] [rclcpp]: signal_handler(signum=2)
+[relay-5] [INFO] [1765005313.265348551] [rclcpp]: signal_handler(signum=2)
+[velocity_transform.py-7] Traceback (most recent call last):
+[velocity_transform.py-7]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py", line 158, in <module>
+[velocity_transform.py-7]     main()
+[velocity_transform.py-7]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py", line 152, in main
+[velocity_transform.py-7]     rclpy.spin(node)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[velocity_transform.py-7]     executor.spin_once()
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[velocity_transform.py-7]     self._spin_once_impl(timeout_sec)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 746, in _spin_once_impl
+[velocity_transform.py-7]     handler()
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 254, in __call__
+[velocity_transform.py-7]     self._handler.send(None)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 447, in handler
+[velocity_transform.py-7]     await call_coroutine(entity, arg)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 372, in _execute_subscription
+[velocity_transform.py-7]     await await_or_execute(sub.callback, msg)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 102, in await_or_execute
+[velocity_transform.py-7]     if inspect.iscoroutinefunction(callback):
+[velocity_transform.py-7]   File "/usr/lib/python3.10/inspect.py", line 313, in iscoroutinefunction
+[behavior_server-16] [INFO] [1765005313.265465475] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-19] [INFO] [1765005313.265968721] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-19] [INFO] [1765005313.266002429] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[bt_navigator-17] [INFO] [1765005313.265592460] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-17] [INFO] [1765005313.265641972] [bt_navigator]: Deactivating
+[bt_navigator-17] [INFO] [1765005313.265658033] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[planner_server-15] [INFO] [1765005313.265496125] [global_costmap.global_costmap]: Deactivating
+[controller_server-13] [INFO] [1765005313.265512805] [controller_server]: Deactivating
+[controller_server-13] [INFO] [1765005313.265541355] [local_costmap.local_costmap]: Deactivating
+[waypoint_follower-18] [INFO] [1765005313.265434563] [rclcpp]: signal_handler(signum=2)
+[waypoint_follower-18] [INFO] [1765005313.265588077] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[waypoint_follower-18] [INFO] [1765005313.265646414] [waypoint_follower]: Deactivating
+[waypoint_follower-18] [INFO] [1765005313.265669917] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[rviz2-12] [INFO] [1765005313.265407210] [rclcpp]: signal_handler(signum=2)
+[image_transform.py-6] Traceback (most recent call last):
+[image_transform.py-6]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py", line 54, in <module>
+[image_transform.py-6]     main()
+[image_transform.py-6]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py", line 49, in main
+[image_transform.py-6]     rclpy.spin(node)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[image_transform.py-6]     executor.spin_once()
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[image_transform.py-6]     self._spin_once_impl(timeout_sec)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 748, in _spin_once_impl
+[image_transform.py-6]     raise handler.exception()
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 254, in __call__
+[image_transform.py-6]     self._handler.send(None)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 440, in handler
+[image_transform.py-6]     arg = take_from_wait_list(entity)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 365, in _take_subscription
+[image_transform.py-6]     msg_info = sub.handle.take_message(sub.msg_type, sub.raw)
+[image_transform.py-6] RuntimeError: Unable to convert call argument to Python object (compile in debug mode for details)
+[parameter_bridge-4] [INFO] [1765005313.265829598] [rclcpp]: signal_handler(signum=2)
+[rgbd_sync-9] [INFO] [1765005313.266157071] [rclcpp]: signal_handler(signum=2)
+[robot_state_publisher-1] [INFO] [1765005313.266194025] [rclcpp]: signal_handler(signum=2)
+[velocity_transform.py-7]     return _has_code_flag(obj, CO_COROUTINE)
+[velocity_transform.py-7]   File "/usr/lib/python3.10/inspect.py", line 294, in _has_code_flag
+[velocity_transform.py-7]     while ismethod(f):
+[velocity_transform.py-7]   File "/usr/lib/python3.10/inspect.py", line 207, in ismethod
+[velocity_transform.py-7]     return isinstance(object, types.MethodType)
+[velocity_transform.py-7] KeyboardInterrupt
+[rtabmap_viz-11] [INFO] [1765005313.270704474] [rtabmap_viz]: rtabmap_viz stopping spinner...
+[rtabmap_viz-11] [INFO] [1765005313.274038795] [rtabmap_viz]: rtabmap_viz: All done! Closing...
+[behavior_server-16] [INFO] [1765005313.275628612] [behavior_server]: Cleaning up
+[smoother_server-14] [INFO] [1765005313.275663838] [smoother_server]: Cleaning up
+[bt_navigator-17] [INFO] [1765005313.275803963] [bt_navigator]: Cleaning up
+[waypoint_follower-18] [INFO] [1765005313.275882900] [waypoint_follower]: Cleaning up
+[controller_server-13] [INFO] [1765005313.291301783] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[waypoint_follower-18] [INFO] [1765005313.294121262] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[odom_baselink_publisher.py-3] Traceback (most recent call last):
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 102, in main
+[odom_baselink_publisher.py-3]     rclpy.spin(node)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[odom_baselink_publisher.py-3]     executor.spin_once()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[odom_baselink_publisher.py-3]     self._spin_once_impl(timeout_sec)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 748, in _spin_once_impl
+[odom_baselink_publisher.py-3]     raise handler.exception()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 254, in __call__
+[odom_baselink_publisher.py-3]     self._handler.send(None)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 440, in handler
+[odom_baselink_publisher.py-3]     arg = take_from_wait_list(entity)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 365, in _take_subscription
+[odom_baselink_publisher.py-3]     msg_info = sub.handle.take_message(sub.msg_type, sub.raw)
+[odom_baselink_publisher.py-3] RuntimeError: Unable to convert call argument to Python object (compile in debug mode for details)
+[odom_baselink_publisher.py-3] 
+[odom_baselink_publisher.py-3] During handling of the above exception, another exception occurred:
+[odom_baselink_publisher.py-3] 
+[odom_baselink_publisher.py-3] Traceback (most recent call last):
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 110, in <module>
+[odom_baselink_publisher.py-3]     main()
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 107, in main
+[odom_baselink_publisher.py-3]     rclpy.shutdown()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[odom_baselink_publisher.py-3]     _shutdown(context=context)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[odom_baselink_publisher.py-3]     return context.shutdown()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[odom_baselink_publisher.py-3]     self.__context.shutdown()
+[odom_baselink_publisher.py-3] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[controller_server-13] [INFO] [1765005313.302181664] [controller_server]: Cleaning up
+[controller_server-13] [INFO] [1765005313.302367560] [local_costmap.local_costmap]: Cleaning up
+[waypoint_follower-18] [INFO] [1765005313.305477428] [waypoint_follower]: Destroying
+[behavior_server-16] [INFO] [1765005313.308479607] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[smoother_server-14] [INFO] [1765005313.310272364] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[smoother_server-14] [INFO] [1765005313.315186588] [smoother_server]: Destroying
+[rtabmap-10] [INFO] [1765005313.317874949] [rtabmap]: Parameters are not saved (No configuration file provided...)
+[behavior_server-16] [INFO] [1765005313.332232476] [behavior_server]: Destroying
+[controller_server-13] [INFO] [1765005313.346286460] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-13] [INFO] [1765005313.349462200] [local_costmap.local_costmap]: Destroying
+[controller_server-13] [INFO] [1765005313.358641550] [controller_server]: Destroying
+[ERROR] [velocity_transform.py-7]: process has died [pid 62504, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py --ros-args -r __node:=velocity_transform --params-file /tmp/launch_params_adu4t2le'].
+[bt_navigator-17] [INFO] [1765005313.374130410] [bt_navigator]: Completed Cleaning up
+[bt_navigator-17] [INFO] [1765005313.374190363] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-17] [INFO] [1765005313.379992873] [bt_navigator]: Destroying
+[lifecycle_manager-19] [INFO] [1765005313.384330867] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[INFO] [parameter_bridge-4]: process has finished cleanly [pid 62498]
+[INFO] [relay-5]: process has finished cleanly [pid 62500]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 62492]
+[INFO] [waypoint_follower-18]: process has finished cleanly [pid 62526]
+[INFO] [rgbd_sync-9]: process has finished cleanly [pid 62507]
+[ERROR] [image_transform.py-6]: process has died [pid 62502, exit code 1, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py --ros-args -r __node:=image_transform --params-file /tmp/launch_params_yhq7ozgd'].
+[INFO] [smoother_server-14]: process has finished cleanly [pid 62517]
+[INFO] [behavior_server-16]: process has finished cleanly [pid 62521]
+[INFO] [controller_server-13]: process has finished cleanly [pid 62515]
+[INFO] [joint_state_publisher-2]: process has finished cleanly [pid 62494]
+[INFO] [bt_navigator-17]: process has finished cleanly [pid 62523]
+[INFO] [lifecycle_manager-19]: process has finished cleanly [pid 62532]
+[ERROR] [odom_baselink_publisher.py-3]: process has died [pid 62496, exit code 1, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py --ros-args -r __node:=map_baselink_publisher --params-file /tmp/launch_params_25b29ejt'].
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:07.825) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.006082,-0.000842,0.000000 rpy=0.000000,-0.000000,0.000346) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:07.828) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1153: Not enough inliers 0/12 (matches=2) between 688 and 1153[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:07.831) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 138 139 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:09.160) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.055693,0.016966,0.000000 rpy=0.000000,-0.000000,-0.006307) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:09.174) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.040228,-0.040792,0.000000 rpy=0.000000,-0.000000,0.000788) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:09.176) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1154: Not enough inliers 0/12 (matches=0) between 688 and 1154[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:09.179) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 140 141 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:10.476) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.055155,0.024228,0.000000 rpy=0.000000,-0.000000,-0.006676) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:10.484) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.044202,-0.049195,0.000000 rpy=0.000000,-0.000000,-0.000273) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:10.486) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1155: Not enough inliers 0/12 (matches=1) between 688 and 1155[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:10.489) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 142 143 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:11.754) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.044815,0.006167,0.000000 rpy=0.000000,-0.000000,-0.005041) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:11.763) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1156: Not enough inliers 0/12 (matches=1) between 688 and 1156[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:11.767) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 144 145 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:13.059) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.045467,0.005865,0.000000 rpy=0.000000,-0.000000,-0.006492) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:13.069) Rtabmap.cpp:3069::process() Rejected loop closure 688 -> 1157: Not enough inliers 0/12 (matches=1) between 688 and 1157[0m
+[rtabmap-10] [33m[ WARN] (2025-12-06 07:15:13.072) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 146 147 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] rtabmap: Saving database/long-term memory... (located at /home/ubuntu/.ros/rtabmap.db)
+[rtabmap-10] rtabmap: 2D occupancy grid map saved.
+[rtabmap-10] rtabmap: Saving database/long-term memory...done! (located at /home/ubuntu/.ros/rtabmap.db, 836 MB)
+[ERROR] [rtabmap_viz-11]: process has died [pid 62511, exit code 255, cmd '/opt/ros/humble/lib/rtabmap_viz/rtabmap_viz --ros-args -p use_sim_time:=True --params-file /tmp/launch_params_3br8t9zy -r rgb/image:=/camera/image -r depth/image:=/camera/depth_image -r rgb/camera_info:=/camera/image/camera_info -r scan:=/scan -r odom:=/odom -r imu:=/imu'].
+[INFO] [rtabmap-10]: process has finished cleanly [pid 62509]
+[planner_server-15] [INFO] [1765005313.801141525] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[planner_server-15] [INFO] [1765005313.801181704] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-15] [INFO] [1765005313.811336724] [planner_server]: Cleaning up
+[planner_server-15] [INFO] [1765005313.815407976] [global_costmap.global_costmap]: Cleaning up
+[planner_server-15] [INFO] [1765005313.818770102] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[planner_server-15] [INFO] [1765005313.819025557] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[planner_server-15] [INFO] [1765005313.823558667] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-15] [INFO] [1765005313.825699049] [global_costmap.global_costmap]: Destroying
+[planner_server-15] [INFO] [1765005313.833080967] [planner_server]: Destroying
+[ERROR] [rviz2-12]: process has died [pid 62513, exit code -11, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/share/rtabmap_nav2_px4/rviz/nav2.rviz --ros-args -r __node:=rviz2 -p use_sim_time:=True'].
+[INFO] [planner_server-15]: process has finished cleanly [pid 62519]

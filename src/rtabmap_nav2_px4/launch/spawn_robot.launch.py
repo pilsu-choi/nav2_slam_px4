@@ -25,6 +25,12 @@ def generate_launch_description():
         description='Flag to enable use_sim_time'
     )
 
+    start_offboard_arg = DeclareLaunchArgument(
+        'start_offboard',
+        default_value='True',
+        description='Send Offboard heartbeats/mode from velocity_transform',
+    )
+
     # Define the path to your URDF or Xacro file
     urdf_file_path = PathJoinSubstitution([
         pkg_rtabmap_nav2_px4,  # Replace with your package name
@@ -122,7 +128,8 @@ def generate_launch_description():
         name='velocity_transform',
         output='screen',
         parameters=[
-            {'use_sim_time': LaunchConfiguration('use_sim_time')},
+            {'use_sim_time': LaunchConfiguration('use_sim_time'),
+             'enable_offboard': LaunchConfiguration('start_offboard')},
         ],
     )
 
@@ -141,6 +148,7 @@ def generate_launch_description():
 
     launchDescriptionObject.add_action(model_arg)
     launchDescriptionObject.add_action(sim_time_arg)
+    launchDescriptionObject.add_action(start_offboard_arg)
     launchDescriptionObject.add_action(robot_state_publisher_node)
     launchDescriptionObject.add_action(joint_state_publisher)
     launchDescriptionObject.add_action(tf_broadcaster_node)

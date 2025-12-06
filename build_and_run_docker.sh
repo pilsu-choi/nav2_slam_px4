@@ -3,7 +3,7 @@
 echo "=== Docker 이미지 빌드 및 실행 ==="
 
 # 이미지 이름과 태그 설정
-IMAGE_NAME="nav2_slam_px4"
+IMAGE_NAME="nav2_slam_px4_20251206"
 IMAGE_TAG="dev"
 
 # Docker 데몬 설정 확인 및 설정
@@ -124,8 +124,11 @@ if [ "$GPU_AVAILABLE" = true ]; then
         --name ${IMAGE_NAME}_container \
         --privileged \
         --network host \
+        --shm-size=2gb \
         --gpus all \
         -e DISPLAY=$DISPLAY \
+        -e XAUTHORITY=/home/ubuntu/.Xauthority \
+        -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics \
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -v $HOME/.Xauthority:/home/ubuntu/.Xauthority \
         -v $(pwd):/home/ubuntu/workspace \
@@ -136,7 +139,9 @@ else
         --name ${IMAGE_NAME}_container \
         --privileged \
         --network host \
+        --shm-size=2gb \
         -e DISPLAY=$DISPLAY \
+        -e XAUTHORITY=/home/ubuntu/.Xauthority \
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -v $HOME/.Xauthority:/home/ubuntu/.Xauthority \
         -v $(pwd):/home/ubuntu/workspace \

@@ -27,7 +27,15 @@ from rclpy.qos import (
 )
 
 from geometry_msgs.msg import Twist
-from px4_msgs.msg import TrajectorySetpoint, VehicleAttitude, VehicleLocalPosition
+from px4_msgs.msg import (
+    TrajectorySetpoint,
+    VehicleAttitude,
+    VehicleLocalPosition,
+    OffboardControlMode,
+    VehicleCommand,
+    VehicleCommandAck,
+    VehicleStatus,
+)
 
 # -----------------------------------------------------------------------------
 # Helper – quaternion → yaw (NED convention, yaw about Down ‑Z)
@@ -51,11 +59,27 @@ class TwistToTrajectoryNode(Node):
             history=QoSHistoryPolicy.KEEP_LAST,
             depth=1,
         )
+        qos_ack = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            durability=QoSDurabilityPolicy.VOLATILE,  # ack publisher is volatile
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=5,
+        )
+
+        # allow disabling offboard enforcement so QGC commands (RTL/Land) work
+        self._enable_offboard_param = (
+            self.declare_parameter("enable_offboard", True)
+            .get_parameter_value()
+            .bool_value
+        )
+        # live gate: opened only when PX4 is in Offboard and no RTL/Land requested
+        self._offboard_status_ok = True
 
         # internal state -----------------------------------------------------------------
         self._body_yaw_ned = 0.0  # current yaw angle of vehicle in NED (rad)
         self._cmd_lin_flu = np.zeros(3)  # latest linear velocity in FLU/ENU (m/s)
         self._cmd_yaw_flu = 0.0  # latest angular z in FLU/ENU (rad/s)
+        self._last_mode_cmd_ns = 0  # throttle Offboard mode commands
 
         # subscribers --------------------------------------------------------------------
         self.create_subscription(Twist, "/cmd_vel", self._twist_cb, 10)
@@ -71,10 +95,28 @@ class TwistToTrajectoryNode(Node):
             self._local_cb,
             qos,
         )
+        self.create_subscription(
+            VehicleStatus,
+            "/fmu/out/vehicle_status",
+            self._status_cb,
+            qos,
+        )
+        self.create_subscription(
+            VehicleCommandAck,
+            "/fmu/out/vehicle_command_ack",
+            self._cmd_ack_cb,
+            qos_ack,
+        )
 
         # publisher ----------------------------------------------------------------------
         self._pub = self.create_publisher(
             TrajectorySetpoint, "/fmu/in/trajectory_setpoint", qos
+        )
+        self._pub_offboard = self.create_publisher(
+            OffboardControlMode, "/fmu/in/offboard_control_mode", qos
+        )
+        self._pub_mode_cmd = self.create_publisher(
+            VehicleCommand, "/fmu/in/vehicle_command", qos
         )
 
         # timer --------------------------------------------------------------------------
@@ -95,6 +137,20 @@ class TwistToTrajectoryNode(Node):
 
     def _local_cb(self, msg: VehicleLocalPosition):
         self.vehicle_local_position = msg
+
+    def _status_cb(self, msg: VehicleStatus):
+        # allow Offboard publish only while PX4 reports Offboard nav_state
+        self._offboard_status_ok = (
+            msg.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD
+        )
+
+    def _cmd_ack_cb(self, msg: VehicleCommandAck):
+        # if QGC/FCU acknowledged RTL or Land, stop Offboard enforcement
+        if msg.command in (
+            VehicleCommand.VEHICLE_CMD_NAV_RETURN_TO_LAUNCH,
+            VehicleCommand.VEHICLE_CMD_NAV_LAND,
+        ):
+            self._offboard_status_ok = False
 
     # ---------------------------------------------------------------------
     # Conversion helpers
@@ -124,6 +180,40 @@ class TwistToTrajectoryNode(Node):
     # Main loop – build & publish TrajectorySetpoint
     # ---------------------------------------------------------------------
     def _publish_setpoint(self):
+        if not (self._enable_offboard_param and self._offboard_status_ok):
+            # Offboard is disabled: don't send heartbeat, mode commands, or setpoints
+            return
+
+        now_ns = self.get_clock().now().nanoseconds
+        now_us = int(now_ns / 1000)
+
+        # Offboard heartbeat (velocity mode)
+        hb = OffboardControlMode()
+        hb.timestamp = now_us
+        hb.position = False
+        hb.velocity = True
+        hb.acceleration = False
+        hb.attitude = False
+        hb.body_rate = False
+        hb.thrust_and_torque = False
+        hb.direct_actuator = False
+        self._pub_offboard.publish(hb)
+
+        # Periodic Offboard mode command (2 Hz) to keep PX4 in Offboard
+        if now_ns - self._last_mode_cmd_ns > 500_000_000:
+            cmd = VehicleCommand()
+            cmd.timestamp = now_us
+            cmd.param1 = 1.0  # custom main mode
+            cmd.param2 = 6.0  # main mode = PX4_CUSTOM_MAIN_MODE_OFFBOARD
+            cmd.command = VehicleCommand.VEHICLE_CMD_DO_SET_MODE
+            cmd.target_system = 1
+            cmd.target_component = 1
+            cmd.source_system = 1
+            cmd.source_component = 1
+            cmd.from_external = True
+            self._pub_mode_cmd.publish(cmd)
+            self._last_mode_cmd_ns = now_ns
+
         # 1) Body‑frame conversion --------------------------------------------------------
         v_frd = self._ros_to_frd(self._cmd_lin_flu)
 
@@ -132,7 +222,7 @@ class TwistToTrajectoryNode(Node):
 
         # 3) Pack PX4 TrajectorySetpoint --------------------------------------------------
         msg = TrajectorySetpoint()
-        msg.timestamp = int(Clock().now().nanoseconds / 1000)
+        msg.timestamp = now_us
         msg.position[:] = [float('nan'), float('nan'), float('nan')]
         msg.acceleration[:] = [float("nan")] * 3
         msg.velocity[:] = v_ned.astype(float)

@@ -104,6 +104,10 @@ def generate_launch_description():
         'use_respawn', default_value='False',
         description='Whether to respawn if a node crashes. Applied when composition is disabled.')
 
+    declare_start_offboard_cmd = DeclareLaunchArgument(
+        'start_offboard', default_value='False',
+        description='Start px4_offboard/offboard_control to publish OffboardControlMode heartbeats.')
+
     load_nodes = GroupAction(
         condition=IfCondition(PythonExpression(['not ', use_composition])),
         actions=[
@@ -235,6 +239,7 @@ def generate_launch_description():
     ld.add_action(declare_use_composition_cmd)
     ld.add_action(declare_container_name_cmd)
     ld.add_action(declare_use_respawn_cmd)
+    ld.add_action(declare_start_offboard_cmd)
 
     # Add the actions to launch all of the navigation nodes
     ld.add_action(load_nodes)

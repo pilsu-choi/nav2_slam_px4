@@ -3,6 +3,7 @@
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, GroupAction
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
@@ -15,7 +16,21 @@ def generate_launch_description():
         description='Use /clock if running in Gazebo/IGN'
     )
 
+    run_offboard_arg = DeclareLaunchArgument(
+        'run_offboard',
+        default_value='false',
+        description='Launch px4_offboard/offboard_control (Offboard heartbeat)',
+    )
+
+    start_offboard_arg = DeclareLaunchArgument(
+        'start_offboard',
+        default_value='false',
+        description='Send Offboard heartbeats/mode from velocity_transform',
+    )
+
     use_sim_time = LaunchConfiguration('use_sim_time')
+    run_offboard = LaunchConfiguration('run_offboard')
+    start_offboard = LaunchConfiguration('start_offboard')
 
     rtabmap_pkg_share = FindPackageShare('rtabmap_nav2_px4')
     px4_off_pkg_share = FindPackageShare('px4_offboard')
@@ -26,6 +41,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             'use_sim_time': use_sim_time,
+            'start_offboard': start_offboard,
         }.items()
     )
 
@@ -54,7 +70,8 @@ def generate_launch_description():
         ),
         launch_arguments={
             'use_sim_time': use_sim_time,
-        }.items()
+        }.items(),
+        condition=IfCondition(run_offboard),
     )
 
 
@@ -63,6 +80,8 @@ def generate_launch_description():
     # ─────────────────────────────────────────────
     return LaunchDescription([
         use_sim_time_arg,
+        run_offboard_arg,
+        start_offboard_arg,
         spawn_robot,
         rtabmap,
         navigation,
