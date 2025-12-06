@@ -1,0 +1,1240 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2025-11-23-00-22-59-031779-pilsu-H610M-K-V2-4467
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [gnome-terminal-8]: exception occurred while executing process:
+Traceback (most recent call last):
+  File "/opt/ros/humble/lib/python3.10/site-packages/launch/actions/execute_local.py", line 551, in __execute_process
+    transport, self._subprocess_protocol = await async_execute_process(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 139, in async_execute_process
+    transport, protocol = await _async_execute_process_nopty(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 45, in _async_execute_process_nopty
+    transport, protocol = await loop.subprocess_exec(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1681, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 207, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+  File "/usr/lib/python3.10/asyncio/base_subprocess.py", line 36, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 799, in _start
+    self._proc = subprocess.Popen(
+  File "/usr/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'gnome-terminal'
+
+[INFO] [robot_state_publisher-1]: process started with pid [4469]
+[INFO] [joint_state_publisher-2]: process started with pid [4471]
+[INFO] [odom_baselink_publisher.py-3]: process started with pid [4473]
+[INFO] [parameter_bridge-4]: process started with pid [4475]
+[INFO] [relay-5]: process started with pid [4477]
+[INFO] [image_transform.py-6]: process started with pid [4479]
+[INFO] [velocity_transform.py-7]: process started with pid [4481]
+[INFO] [rgbd_sync-9]: process started with pid [4484]
+[INFO] [rtabmap-10]: process started with pid [4486]
+[INFO] [rtabmap_viz-11]: process started with pid [4488]
+[INFO] [rviz2-12]: process started with pid [4490]
+[INFO] [controller_server-13]: process started with pid [4492]
+[INFO] [smoother_server-14]: process started with pid [4494]
+[INFO] [planner_server-15]: process started with pid [4496]
+[INFO] [behavior_server-16]: process started with pid [4499]
+[INFO] [bt_navigator-17]: process started with pid [4513]
+[INFO] [waypoint_follower-18]: process started with pid [4530]
+[INFO] [lifecycle_manager-19]: process started with pid [4535]
+[INFO] [visualizer-20]: process started with pid [4543]
+[INFO] [offboard_control-21]: process started with pid [4556]
+[INFO] [rviz2-22]: process started with pid [4558]
+[rviz2-12] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[controller_server-13] [INFO] [1763857379.404025248] [controller_server]: 
+[controller_server-13] 	controller_server lifecycle node launched. 
+[controller_server-13] 	Waiting on external lifecycle transitions to activate
+[controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-14] [INFO] [1763857379.411041809] [smoother_server]: 
+[smoother_server-14] 	smoother_server lifecycle node launched. 
+[smoother_server-14] 	Waiting on external lifecycle transitions to activate
+[smoother_server-14] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-13] [INFO] [1763857379.421864718] [controller_server]: Creating controller server
+[smoother_server-14] [INFO] [1763857379.424025406] [smoother_server]: Creating smoother server
+[rviz2-22] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[robot_state_publisher-1] [INFO] [1763857379.434519210] [robot_state_publisher]: got segment body
+[robot_state_publisher-1] [INFO] [1763857379.434615033] [robot_state_publisher]: got segment camera_link_optical
+[robot_state_publisher-1] [INFO] [1763857379.434623147] [robot_state_publisher]: got segment depth_camera_link_optical
+[robot_state_publisher-1] [INFO] [1763857379.434627382] [robot_state_publisher]: got segment rotor_0
+[robot_state_publisher-1] [INFO] [1763857379.434631109] [robot_state_publisher]: got segment rotor_1
+[robot_state_publisher-1] [INFO] [1763857379.434634877] [robot_state_publisher]: got segment rotor_2
+[robot_state_publisher-1] [INFO] [1763857379.434638300] [robot_state_publisher]: got segment rotor_3
+[robot_state_publisher-1] [INFO] [1763857379.434642119] [robot_state_publisher]: got segment x500_rtab_0/OakD-Lite/base_link/IMX214
+[robot_state_publisher-1] [INFO] [1763857379.434646664] [robot_state_publisher]: got segment x500_rtab_0/OakD-Lite/base_link/StereoOV7251
+[robot_state_publisher-1] [INFO] [1763857379.434649937] [robot_state_publisher]: got segment x500_rtab_0/base_footprint
+[robot_state_publisher-1] [INFO] [1763857379.434653220] [robot_state_publisher]: got segment x500_rtab_0/base_link/imu_sensor
+[robot_state_publisher-1] [INFO] [1763857379.434656579] [robot_state_publisher]: got segment x500_rtab_0/base_link/navsat_sensor
+[robot_state_publisher-1] [INFO] [1763857379.434660076] [robot_state_publisher]: got segment x500_rtab_0/link/lidar_2d_v2
+[lifecycle_manager-19] [INFO] [1763857379.436930899] [lifecycle_manager_navigation]: Creating
+[behavior_server-16] [INFO] [1763857379.438912883] [behavior_server]: 
+[behavior_server-16] 	behavior_server lifecycle node launched. 
+[behavior_server-16] 	Waiting on external lifecycle transitions to activate
+[behavior_server-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-15] [INFO] [1763857379.439171699] [planner_server]: 
+[planner_server-15] 	planner_server lifecycle node launched. 
+[planner_server-15] 	Waiting on external lifecycle transitions to activate
+[planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-15] [INFO] [1763857379.441278343] [planner_server]: Creating
+[lifecycle_manager-19] [INFO] [1763857379.444103512] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[bt_navigator-17] [INFO] [1763857379.451583938] [bt_navigator]: 
+[bt_navigator-17] 	bt_navigator lifecycle node launched. 
+[bt_navigator-17] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-17] [INFO] [1763857379.451694774] [bt_navigator]: Creating
+[planner_server-15] [INFO] [1763857379.457785396] [global_costmap.global_costmap]: 
+[planner_server-15] 	global_costmap lifecycle node launched. 
+[planner_server-15] 	Waiting on external lifecycle transitions to activate
+[planner_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-15] [INFO] [1763857379.460835585] [global_costmap.global_costmap]: Creating Costmap
+[parameter_bridge-4] [INFO] [1763857379.469168881] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[controller_server-13] [INFO] [1763857379.472078486] [local_costmap.local_costmap]: 
+[controller_server-13] 	local_costmap lifecycle node launched. 
+[controller_server-13] 	Waiting on external lifecycle transitions to activate
+[controller_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-13] [INFO] [1763857379.472861712] [local_costmap.local_costmap]: Creating Costmap
+[parameter_bridge-4] [INFO] [1763857379.479533816] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/clock (rosgraph_msgs/msg/Clock) -> /clock (gz.msgs.Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.482426375] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/x500_rtab_0/odometry (gz.msgs.Odometry) -> /model/x500_rtab_0/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.486969422] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/x500_rtab_0/odometry (nav_msgs/msg/Odometry) -> /model/x500_rtab_0/odometry (gz.msgs.Odometry)] (Lazy 0)
+[lifecycle_manager-19] [INFO] [1763857379.487692515] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-19] [INFO] [1763857379.487735530] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[parameter_bridge-4] [INFO] [1763857379.488921909] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera (gz.msgs.Image) -> /camera (sensor_msgs/msg/Image)] (Lazy 0)
+[waypoint_follower-18] [INFO] [1763857379.493067095] [waypoint_follower]: 
+[waypoint_follower-18] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-18] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-18] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-13] [INFO] [1763857379.495184287] [controller_server]: Configuring controller interface
+[controller_server-13] [INFO] [1763857379.495308272] [controller_server]: getting goal checker plugins..
+[controller_server-13] [INFO] [1763857379.495341751] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-13] [INFO] [1763857379.495361422] [local_costmap.local_costmap]: Configuring
+[waypoint_follower-18] [INFO] [1763857379.497048844] [waypoint_follower]: Creating
+[parameter_bridge-4] [INFO] [1763857379.497199407] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/camera (sensor_msgs/msg/Image) -> /camera (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.500426925] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/depth_camera (gz.msgs.Image) -> /depth_camera (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.506319769] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/depth_camera (sensor_msgs/msg/Image) -> /depth_camera (gz.msgs.Image)] (Lazy 0)
+[controller_server-13] [INFO] [1763857379.507282789] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[parameter_bridge-4] [INFO] [1763857379.509829601] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera_info (gz.msgs.CameraInfo) -> /camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[controller_server-13] [INFO] [1763857379.511521598] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[parameter_bridge-4] [INFO] [1763857379.513490567] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/camera_info (sensor_msgs/msg/CameraInfo) -> /camera_info (gz.msgs.CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.516606671] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/depth_camera/points (gz.msgs.PointCloudPacked) -> /depth_camera/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.518267765] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/depth_camera/points (sensor_msgs/msg/PointCloud2) -> /depth_camera/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[controller_server-13] [INFO] [1763857379.519661508] [voxel_grid]: Error, this implementation can only support up to 16 z values (32)
+[controller_server-13] [INFO] [1763857379.519697560] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-13] [INFO] [1763857379.519714542] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[parameter_bridge-4] [INFO] [1763857379.520108158] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (gz.msgs.NavSat) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (sensor_msgs/msg/NavSatFix)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.522718837] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (sensor_msgs/msg/NavSatFix) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (gz.msgs.NavSat)] (Lazy 0)
+[controller_server-13] [INFO] [1763857379.523377254] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[parameter_bridge-4] [INFO] [1763857379.524893730] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (gz.msgs.IMU) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.526677768] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (sensor_msgs/msg/Imu) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (gz.msgs.IMU)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.529400009] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (gz.msgs.LaserScan) -> /world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763857379.535603661] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (sensor_msgs/msg/LaserScan) -> /world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (gz.msgs.LaserScan)] (Lazy 0)
+[controller_server-13] [INFO] [1763857379.545308655] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-13] [INFO] [1763857379.547723870] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-13] [INFO] [1763857379.547888863] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-13] [INFO] [1763857379.550892627] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-13] [INFO] [1763857379.555090254] [controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-13] [INFO] [1763857379.574874874] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-13] [INFO] [1763857379.575629697] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.575940632] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-13] [INFO] [1763857379.576109860] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.576566932] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-13] [INFO] [1763857379.576677675] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.576728171] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-13] [INFO] [1763857379.576866140] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.576905475] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-13] [INFO] [1763857379.576986676] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.577018448] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-13] [INFO] [1763857379.577087512] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.577120234] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-13] [INFO] [1763857379.577194011] [controller_server]: Critic plugin initialized
+[controller_server-13] [INFO] [1763857379.577205604] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-19] [INFO] [1763857379.586349329] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-14] [INFO] [1763857379.588897613] [smoother_server]: Configuring smoother server
+[smoother_server-14] [INFO] [1763857379.624372325] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-14] [INFO] [1763857379.624526776] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-19] [INFO] [1763857379.628649435] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-15] [INFO] [1763857379.628932003] [planner_server]: Configuring
+[planner_server-15] [INFO] [1763857379.628960383] [global_costmap.global_costmap]: Configuring
+[planner_server-15] [INFO] [1763857379.645801525] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-15] [INFO] [1763857379.653282971] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-15] [INFO] [1763857379.656179958] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-15] [INFO] [1763857379.656283601] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-15] [INFO] [1763857379.656938561] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-15] [INFO] [1763857379.658657268] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-15] [INFO] [1763857379.658692389] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-15] [INFO] [1763857379.658971692] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[rgbd_sync-9] [INFO] [1763857379.668507521] [rgbd_sync]: rgbd_sync: approx_sync = true
+[rgbd_sync-9] [INFO] [1763857379.668650583] [rgbd_sync]: rgbd_sync: approx_sync_max_interval = 0.020000
+[rgbd_sync-9] [INFO] [1763857379.668672767] [rgbd_sync]: rgbd_sync: topic_queue_size  = 10
+[rgbd_sync-9] [INFO] [1763857379.668677970] [rgbd_sync]: rgbd_sync: sync_queue_size  = 10
+[rgbd_sync-9] [INFO] [1763857379.668682903] [rgbd_sync]: rgbd_sync: qos             = 0
+[rgbd_sync-9] [INFO] [1763857379.668687885] [rgbd_sync]: rgbd_sync: qos_camera_info = 0
+[rgbd_sync-9] [INFO] [1763857379.668692165] [rgbd_sync]: rgbd_sync: depth_scale = 1.000000
+[rgbd_sync-9] [INFO] [1763857379.668697181] [rgbd_sync]: rgbd_sync: decimation = 1
+[rgbd_sync-9] [INFO] [1763857379.668701616] [rgbd_sync]: rgbd_sync: compressed_rate = 0.000000
+[planner_server-15] [WARN] [1763857379.673672173] [pluginlib.ClassLoader]: given plugin name 'libnav2_dstar_planner' should be 'nav2_dstar_planner' for better portability
+[planner_server-15] [INFO] [1763857379.674228944] [planner_server]: Created global planner plugin GridBased of type nav2_dstar_planner/DStarPlanner
+[planner_server-15] [INFO] [1763857379.674682476] [planner_server]: Configuring DStarPlanner
+[planner_server-15] [INFO] [1763857379.674708249] [planner_server]: Planner Server has GridBased  planners available.
+[rgbd_sync-9] [INFO] [1763857379.692991269] [rgbd_sync]: 
+[rgbd_sync-9] rgbd_sync subscribed to (approx sync, max interval=0.020000s):
+[rgbd_sync-9]    /camera/image,
+[rgbd_sync-9]    /camera/depth_image,
+[rgbd_sync-9]    /camera/image/camera_info
+[lifecycle_manager-19] [INFO] [1763857379.699742657] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-16] [INFO] [1763857379.700029565] [behavior_server]: Configuring
+[behavior_server-16] [INFO] [1763857379.718781953] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[behavior_server-16] [INFO] [1763857379.719481324] [behavior_server]: Configuring spin
+[behavior_server-16] [INFO] [1763857379.749961543] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[behavior_server-16] [INFO] [1763857379.750945831] [behavior_server]: Configuring backup
+[joint_state_publisher-2] [INFO] [1763857379.759043442] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[behavior_server-16] [INFO] [1763857379.769076084] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[behavior_server-16] [INFO] [1763857379.771419210] [behavior_server]: Configuring drive_on_heading
+[behavior_server-16] [INFO] [1763857379.801119952] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[behavior_server-16] [INFO] [1763857379.803592553] [behavior_server]: Configuring wait
+[lifecycle_manager-19] [INFO] [1763857379.832120485] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-17] [INFO] [1763857379.833227079] [bt_navigator]: Configuring
+[rtabmap-10] [INFO] [1763857379.862365521] [rtabmap]: rtabmap(maps): latch                      = true
+[rtabmap-10] [INFO] [1763857379.862553269] [rtabmap]: rtabmap(maps): map_filter_radius          = 0.000000
+[rtabmap-10] [INFO] [1763857379.862569631] [rtabmap]: rtabmap(maps): map_filter_angle           = 30.000000
+[rtabmap-10] [INFO] [1763857379.862575258] [rtabmap]: rtabmap(maps): map_cleanup                = true
+[rtabmap-10] [INFO] [1763857379.862579217] [rtabmap]: rtabmap(maps): map_always_update          = false
+[rtabmap-10] [INFO] [1763857379.862583013] [rtabmap]: rtabmap(maps): map_empty_ray_tracing      = true
+[rtabmap-10] [INFO] [1763857379.862586790] [rtabmap]: rtabmap(maps): cloud_output_voxelized     = true
+[rtabmap-10] [INFO] [1763857379.862590278] [rtabmap]: rtabmap(maps): cloud_subtract_filtering   = false
+[rtabmap-10] [INFO] [1763857379.862593885] [rtabmap]: rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2
+[rtabmap-10] [INFO] [1763857379.864124455] [rtabmap]: rtabmap(maps): octomap_tree_depth         = 16
+[rtabmap_viz-11] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[rtabmap-10] [INFO] [1763857379.932689646] [rtabmap]: rtabmap: frame_id      = x500_rtab_0/base_footprint
+[rtabmap-10] [INFO] [1763857379.932731744] [rtabmap]: rtabmap: odom_frame_id = x500_rtab_0/odom
+[rtabmap-10] [INFO] [1763857379.932737518] [rtabmap]: rtabmap: map_frame_id  = map
+[rtabmap-10] [INFO] [1763857379.932742633] [rtabmap]: rtabmap: log_to_rosout_level  = 4
+[rtabmap-10] [INFO] [1763857379.932747897] [rtabmap]: rtabmap: initial_pose  = 
+[rtabmap-10] [INFO] [1763857379.932752672] [rtabmap]: rtabmap: use_action_for_goal  = false
+[rtabmap-10] [INFO] [1763857379.932757648] [rtabmap]: rtabmap: tf_delay      = 0.050000
+[rtabmap-10] [INFO] [1763857379.932767840] [rtabmap]: rtabmap: tf_tolerance  = 0.100000
+[rtabmap-10] [INFO] [1763857379.932773399] [rtabmap]: rtabmap: odom_sensor_sync   = false
+[rtabmap-10] [INFO] [1763857379.932778070] [rtabmap]: rtabmap: pub_loc_pose_only_when_localizing = false
+[rtabmap-10] [INFO] [1763857379.932782702] [rtabmap]: rtabmap: wait_for_transform = 0.200000
+[rtabmap-10] [INFO] [1763857379.932787784] [rtabmap]: rtabmap: gen_scan  = false
+[rtabmap-10] [INFO] [1763857379.932792530] [rtabmap]: rtabmap: gen_depth  = false
+[lifecycle_manager-19] [INFO] [1763857379.951946005] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-18] [INFO] [1763857379.952190888] [waypoint_follower]: Configuring
+[rtabmap_viz-11] [INFO] [1763857379.952651053] [rtabmap_viz]: rtabmap_viz: Using configuration from "/home/ubuntu/.ros/rtabmapGUI.ini"
+[waypoint_follower-18] [INFO] [1763857379.968989875] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[lifecycle_manager-19] [INFO] [1763857379.970518635] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-13] [INFO] [1763857379.970905906] [controller_server]: Activating
+[controller_server-13] [INFO] [1763857379.970936041] [local_costmap.local_costmap]: Activating
+[controller_server-13] [INFO] [1763857379.970945997] [local_costmap.local_costmap]: Checking transform
+[controller_server-13] [INFO] [1763857379.970964854] [local_costmap.local_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to x500_rtab_0/odom to become available, tf error: Invalid frame ID "x500_rtab_0/odom" passed to canTransform argument target_frame - frame does not exist
+[rtabmap-10] [INFO] [1763857379.979366370] [rtabmap]: Setting RTAB-Map parameter "Icp/CorrespondenceRatio"="0.2" (rosparam)
+[rtabmap-10] [INFO] [1763857379.979512458] [rtabmap]: Setting RTAB-Map parameter "Icp/MaxCorrespondenceDistance"="0.15" (rosparam)
+[rtabmap-10] [INFO] [1763857379.980918762] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlane"="false" (rosparam)
+[rtabmap-10] [INFO] [1763857379.981239363] [rtabmap]: Setting RTAB-Map parameter "Icp/VoxelSize"="0.05" (rosparam)
+[rtabmap-10] [INFO] [1763857379.988670026] [rtabmap]: Setting RTAB-Map parameter "Mem/STMSize"="30" (rosparam)
+[rtabmap-10] [INFO] [1763857380.001751521] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalRadius"="5" (rosparam)
+[rtabmap-10] [INFO] [1763857380.003005673] [rtabmap]: Setting RTAB-Map parameter "RGBD/NeighborLinkRefining"="true" (rosparam)
+[rtabmap-10] [INFO] [1763857380.003137444] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeFromGraphEnd"="false" (rosparam)
+[rtabmap-10] [INFO] [1763857380.003204815] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeMaxError"="4" (rosparam)
+[rtabmap-10] [INFO] [1763857380.003395390] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityBySpace"="true" (rosparam)
+[rtabmap-10] [INFO] [1763857380.003442551] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityByTime"="false" (rosparam)
+[rtabmap-10] [INFO] [1763857380.004974169] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityPathMaxNeighbors"="10" (rosparam)
+[rtabmap-10] [INFO] [1763857380.006977183] [rtabmap]: Setting RTAB-Map parameter "Reg/Force3DoF"="false" (rosparam)
+[rtabmap-10] [INFO] [1763857380.007232623] [rtabmap]: Setting RTAB-Map parameter "Reg/Strategy"="1" (rosparam)
+[rtabmap-10] [INFO] [1763857380.020720295] [rtabmap]: Setting RTAB-Map parameter "Vis/MinInliers"="12" (rosparam)
+[rtabmap-10] [WARN] [1763857380.024832376] [rtabmap]: Setting "Grid/Sensor" parameter to 0 (default 1) as "subscribe_scan" or "subscribe_scan_cloud" or "gen_scan" is true. The occupancy grid map will be constructed from laser scans. To get occupancy grid map from cloud projection, set "Grid/Sensor" to true. To suppress this warning, add <param name="Grid/Sensor" type="string" value="0"/>
+[rtabmap-10] [INFO] [1763857380.024885618] [rtabmap]: Setting "Grid/RangeMax" parameter to 0 (default 5.000000) as "subscribe_scan" or "subscribe_scan_cloud" or "gen_scan" is true and Grid/Sensor is 0.
+[rtabmap-10] [INFO] [1763857380.025093870] [rtabmap]: RTAB-Map detection rate = 1.000000 Hz
+[rtabmap-10] [INFO] [1763857380.025851858] [rtabmap]: rtabmap: Deleted database "/home/ubuntu/.ros/rtabmap.db" (--delete_db_on_start or -d are set).
+[rtabmap-10] [INFO] [1763857380.025907782] [rtabmap]: rtabmap: Using database from "/home/ubuntu/.ros/rtabmap.db" (0 MB).
+[rtabmap-10] [INFO] [1763857380.082961517] [rtabmap]: rtabmap: Database version = "0.22.1".
+[rtabmap-10] [INFO] [1763857380.083022030] [rtabmap]: rtabmap: SLAM mode (Mem/IncrementalMemory=true)
+[rtabmap-10] [INFO] [1763857380.110318419] [rtabmap]: Setup callbacks
+[rtabmap-10] [WARN] [1763857380.110381948] [rtabmap]: rtabmap: Parameters subscribe_depth and subscribe_rgbd cannot be true at the same time. Parameter subscribe_depth is set to false.
+[rtabmap-10] [INFO] [1763857380.110545642] [rtabmap]: rtabmap: subscribe_depth = false
+[rtabmap-10] [INFO] [1763857380.110559570] [rtabmap]: rtabmap: subscribe_rgb = false
+[rtabmap-10] [INFO] [1763857380.110564592] [rtabmap]: rtabmap: subscribe_stereo = false
+[rtabmap-10] [INFO] [1763857380.110569078] [rtabmap]: rtabmap: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap-10] [INFO] [1763857380.110574075] [rtabmap]: rtabmap: subscribe_sensor_data = false
+[rtabmap-10] [INFO] [1763857380.110578852] [rtabmap]: rtabmap: subscribe_odom_info = true
+[rtabmap-10] [INFO] [1763857380.110583806] [rtabmap]: rtabmap: subscribe_user_data = false
+[rtabmap-10] [INFO] [1763857380.110588938] [rtabmap]: rtabmap: subscribe_scan = true
+[rtabmap-10] [INFO] [1763857380.110593239] [rtabmap]: rtabmap: subscribe_scan_cloud = false
+[rtabmap-10] [INFO] [1763857380.110597357] [rtabmap]: rtabmap: subscribe_scan_descriptor = false
+[rtabmap-10] [INFO] [1763857380.110601825] [rtabmap]: rtabmap: topic_queue_size = 10
+[rtabmap-10] [INFO] [1763857380.110606657] [rtabmap]: rtabmap: sync_queue_size  = 10
+[rtabmap-10] [INFO] [1763857380.110611331] [rtabmap]: rtabmap: qos_image       = 0
+[rtabmap-10] [INFO] [1763857380.110616045] [rtabmap]: rtabmap: qos_camera_info = 0
+[rtabmap-10] [INFO] [1763857380.110621012] [rtabmap]: rtabmap: qos_scan        = 0
+[rtabmap-10] [INFO] [1763857380.110625620] [rtabmap]: rtabmap: qos_odom        = 0
+[rtabmap-10] [INFO] [1763857380.110630280] [rtabmap]: rtabmap: qos_user_data   = 0
+[rtabmap-10] [INFO] [1763857380.110634721] [rtabmap]: rtabmap: approx_sync     = true
+[rtabmap-10] [INFO] [1763857380.110646811] [rtabmap]: Setup rgbd callback
+[rtabmap-10] [WARN] [1763857380.112459800] [rtabmap]: subscribe_odom_info ignored...
+[rtabmap-10] [INFO] [1763857380.112597368] [rtabmap]: 
+[rtabmap-10] rtabmap subscribed to (approx sync):
+[rtabmap-10]    /rgbd_image \
+[rtabmap-10]    /scan
+[rviz2-12] [INFO] [1763857380.129653949] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-12] [INFO] [1763857380.129828862] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-22] [INFO] [1763857380.136363179] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-22] [INFO] [1763857380.136533180] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-12] [INFO] [1763857380.173369160] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-22] [INFO] [1763857380.173727263] [rviz2]: Stereo is NOT SUPPORTED
+[rtabmap-10] [INFO] [1763857380.375935620] [rtabmap]: rtabmap (1): Rate=1.00s, Limit=0.000s, Conversion=0.0028s, RTAB-Map=0.0524s, Maps update=0.0034s pub=0.0006s delay=0.1080s (local map=1, WM=1)
+[planner_server-15] [INFO] [1763857380.376194660] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 415 X 448 at 0.050000 m/pix
+[controller_server-13] [INFO] [1763857380.472082582] [local_costmap.local_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to x500_rtab_0/odom to become available, tf error: Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees.
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] [INFO] [1763857380.800975012] [rtabmap_viz]: Reading parameters from the ROS server...
+[rviz2-22] [INFO] [1763857380.874823092] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857380.938347805] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857380.970751313] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.152 for reason 'discarding message because the queue is full'
+[controller_server-13] [INFO] [1763857380.971018069] [local_costmap.local_costmap]: Timed out waiting for transform from x500_rtab_0/base_footprint to x500_rtab_0/odom to become available, tf error: Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees.
+[rtabmap_viz-11] [INFO] [1763857381.001868353] [rtabmap_viz]: Parameters read = 387
+[rtabmap_viz-11] [INFO] [1763857381.001931854] [rtabmap_viz]: Parameters successfully read.
+[rviz2-22] [INFO] [1763857381.034591083] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.098530326] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.163000110] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.194819944] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.355040224] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.400 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [INFO] [1763857381.444504238] [rtabmap_viz]: rtabmap_viz: subscribe_depth = false
+[rtabmap_viz-11] [INFO] [1763857381.444549168] [rtabmap_viz]: rtabmap_viz: subscribe_rgb = false
+[rtabmap_viz-11] [INFO] [1763857381.444555929] [rtabmap_viz]: rtabmap_viz: subscribe_stereo = false
+[rtabmap_viz-11] [INFO] [1763857381.444560847] [rtabmap_viz]: rtabmap_viz: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap_viz-11] [INFO] [1763857381.444565930] [rtabmap_viz]: rtabmap_viz: subscribe_sensor_data = false
+[rtabmap_viz-11] [INFO] [1763857381.444571786] [rtabmap_viz]: rtabmap_viz: subscribe_odom_info = true
+[rtabmap_viz-11] [INFO] [1763857381.444576792] [rtabmap_viz]: rtabmap_viz: subscribe_user_data = false
+[rtabmap_viz-11] [INFO] [1763857381.444584308] [rtabmap_viz]: rtabmap_viz: subscribe_scan = true
+[rtabmap_viz-11] [INFO] [1763857381.444589193] [rtabmap_viz]: rtabmap_viz: subscribe_scan_cloud = false
+[rtabmap_viz-11] [INFO] [1763857381.444593764] [rtabmap_viz]: rtabmap_viz: subscribe_scan_descriptor = false
+[rtabmap_viz-11] [INFO] [1763857381.444596874] [rtabmap_viz]: rtabmap_viz: topic_queue_size = 10
+[rtabmap_viz-11] [INFO] [1763857381.444600217] [rtabmap_viz]: rtabmap_viz: sync_queue_size  = 10
+[rtabmap_viz-11] [INFO] [1763857381.444603010] [rtabmap_viz]: rtabmap_viz: qos_image       = 0
+[rtabmap_viz-11] [INFO] [1763857381.444605802] [rtabmap_viz]: rtabmap_viz: qos_camera_info = 0
+[rtabmap_viz-11] [INFO] [1763857381.444608508] [rtabmap_viz]: rtabmap_viz: qos_scan        = 0
+[rtabmap_viz-11] [INFO] [1763857381.444612304] [rtabmap_viz]: rtabmap_viz: qos_odom        = 0
+[rtabmap_viz-11] [INFO] [1763857381.444616596] [rtabmap_viz]: rtabmap_viz: qos_user_data   = 0
+[rtabmap_viz-11] [INFO] [1763857381.444620393] [rtabmap_viz]: rtabmap_viz: approx_sync     = true
+[rtabmap_viz-11] [INFO] [1763857381.444631224] [rtabmap_viz]: Setup rgbd callback
+[rtabmap_viz-11] [WARN] [1763857381.446745011] [rtabmap_viz]: subscribe_odom_info ignored...
+[rtabmap_viz-11] [INFO] [1763857381.446863180] [rtabmap_viz]: 
+[rtabmap_viz-11] rtabmap_viz subscribed to (approx sync):
+[rtabmap_viz-11]    /rgbd_image \
+[rtabmap_viz-11]    /scan
+[rtabmap_viz-11] [INFO] [1763857381.449965374] [rtabmap_viz]: rtabmap_viz started.
+[controller_server-13] [INFO] [1763857381.471155272] [local_costmap.local_costmap]: start
+[rviz2-22] [INFO] [1763857381.482520929] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.514511642] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.500 for reason 'discarding message because the queue is full'
+[controller_server-13] [INFO] [1763857381.572014439] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[rviz2-12] [INFO] [1763857381.585656431] [rviz2]: Trying to create a map of size 60 x 60 using 1 swatches
+[rviz2-22] [INFO] [1763857381.642561036] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.674715249] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.600 for reason 'discarding message because the queue is full'
+[lifecycle_manager-19] [INFO] [1763857381.677010305] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-19] [INFO] [1763857381.677086891] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-14] [INFO] [1763857381.677399394] [smoother_server]: Activating
+[smoother_server-14] [INFO] [1763857381.677430394] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[rviz2-22] [INFO] [1763857381.738427392] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.771251709] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.700 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857381.777682515] [rtabmap]: rtabmap (2): Rate=1.00s, Limit=0.000s, Conversion=0.0018s, RTAB-Map=0.0584s, Maps update=0.0018s pub=0.0010s delay=0.0720s (local map=1, WM=1)
+[lifecycle_manager-19] [INFO] [1763857381.780896682] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-19] [INFO] [1763857381.780937312] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-15] [INFO] [1763857381.781206942] [planner_server]: Activating
+[planner_server-15] [INFO] [1763857381.781239069] [global_costmap.global_costmap]: Activating
+[planner_server-15] [INFO] [1763857381.781246950] [global_costmap.global_costmap]: Checking transform
+[planner_server-15] [INFO] [1763857381.781322527] [global_costmap.global_costmap]: start
+[rviz2-22] [INFO] [1763857381.834659568] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.898448350] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.962545969] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857381.994620479] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.058416214] [rviz2]: Message Filter dropping message: frame 'odom' at time 167.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.090651169] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.154357311] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.218893741] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.283240643] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.315087973] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.379008598] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.442980034] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.475087471] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.538507378] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.603066254] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.634849556] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.698711573] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.762905915] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857382.794785284] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.652 for reason 'discarding message because the queue is full'
+[rviz2-12] [INFO] [1763857382.804454820] [rviz2]: Trying to create a map of size 415 x 448 using 1 swatches
+[planner_server-15] [INFO] [1763857382.832105916] [planner_server]: Activating DStarPlanner
+[planner_server-15] [INFO] [1763857382.833320633] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[rviz2-22] [INFO] [1763857382.858367214] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.700 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857382.879972734] [rtabmap]: rtabmap (3): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0564s, Maps update=0.0014s pub=0.0008s delay=0.0800s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857382.923159158] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.752 for reason 'discarding message because the queue is full'
+[lifecycle_manager-19] [INFO] [1763857382.937951521] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-19] [INFO] [1763857382.937997672] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-16] [INFO] [1763857382.938304139] [behavior_server]: Activating
+[behavior_server-16] [INFO] [1763857382.938337460] [behavior_server]: Activating spin
+[behavior_server-16] [INFO] [1763857382.938353390] [behavior_server]: Activating backup
+[behavior_server-16] [INFO] [1763857382.938365986] [behavior_server]: Activating drive_on_heading
+[behavior_server-16] [INFO] [1763857382.938377569] [behavior_server]: Activating wait
+[behavior_server-16] [INFO] [1763857382.938392323] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[rviz2-22] [INFO] [1763857382.955203705] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.018563771] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.852 for reason 'discarding message because the queue is full'
+[lifecycle_manager-19] [INFO] [1763857383.044315733] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-19] [INFO] [1763857383.044350272] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-17] [INFO] [1763857383.044620754] [bt_navigator]: Activating
+[rviz2-22] [INFO] [1763857383.082553901] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.900 for reason 'discarding message because the queue is full'
+[bt_navigator-17] [INFO] [1763857383.095843059] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[rviz2-22] [INFO] [1763857383.114689475] [rviz2]: Message Filter dropping message: frame 'odom' at time 168.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.178383467] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.000 for reason 'discarding message because the queue is full'
+[lifecycle_manager-19] [INFO] [1763857383.200821504] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-19] [INFO] [1763857383.200884923] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-18] [INFO] [1763857383.201292713] [waypoint_follower]: Activating
+[waypoint_follower-18] [INFO] [1763857383.201343204] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[rviz2-22] [INFO] [1763857383.243373174] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.274689287] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.100 for reason 'discarding message because the queue is full'
+[lifecycle_manager-19] [INFO] [1763857383.306157229] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-19] [INFO] [1763857383.306224754] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-19] [INFO] [1763857383.306236717] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[rviz2-22] [INFO] [1763857383.338633334] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.402464473] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.435226757] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.498946497] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.562827183] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.594563198] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.659259932] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.723080341] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.755210748] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.818365586] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.882957971] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857383.915005980] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.700 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857383.969829256] [rtabmap]: rtabmap (4): Rate=1.00s, Limit=0.000s, Conversion=0.0014s, RTAB-Map=0.0514s, Maps update=0.0014s pub=0.0005s delay=0.0680s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857383.978956942] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.042614522] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.106497246] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.138584965] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.202328371] [rviz2]: Message Filter dropping message: frame 'odom' at time 169.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.267287687] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.299228961] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.362808694] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.394877049] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.458871146] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.522581406] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.586443652] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.619228634] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.682971622] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.746573439] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.778667224] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.842559530] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.906382731] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857384.939056439] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.002580573] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.066680044] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.752 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857385.069607143] [rtabmap]: rtabmap (5): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0565s, Maps update=0.0009s pub=0.0008s delay=0.0840s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857385.098998472] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.195253077] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.227300883] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.291120435] [rviz2]: Message Filter dropping message: frame 'odom' at time 170.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.354523247] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.419378992] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.450869862] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.515192379] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.547078863] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.611073647] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.674975084] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.707008849] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.770614701] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.835239028] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.867136750] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.930835231] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857385.994903238] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.026995742] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.090788897] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.154585316] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.186932233] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.800 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857386.215827037] [rtabmap]: rtabmap (6): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0543s, Maps update=0.0013s pub=0.0005s delay=0.0640s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857386.250912535] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.314559864] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.378767108] [rviz2]: Message Filter dropping message: frame 'odom' at time 171.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.410820383] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.474648773] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.507221168] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.602543373] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.634778807] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.699348087] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.763132289] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.794905267] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.858378037] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.923318984] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857386.987407871] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.018762835] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.083039792] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.146631838] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.178845916] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.242813697] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.307319708] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.339331871] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.402416055] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.466487284] [rviz2]: Message Filter dropping message: frame 'odom' at time 172.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.498436708] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.000 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857387.515358730] [rtabmap]: rtabmap (7): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0534s, Maps update=0.0019s pub=0.0005s delay=0.0720s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857387.563329573] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.627353426] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.691545333] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.755477875] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.786798221] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.850952196] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.914945926] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857387.946995121] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.011091220] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.075038857] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.139473135] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.171076600] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.235050683] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.299270218] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.330369925] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.395426888] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.458608791] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.491088636] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.554379842] [rviz2]: Message Filter dropping message: frame 'odom' at time 173.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.619074319] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.650447739] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.714446779] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.100 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857388.768908425] [rtabmap]: rtabmap (8): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0495s, Maps update=0.0012s pub=0.0005s delay=0.0640s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857388.778854960] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.843178082] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.907236261] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857388.939261237] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.002481357] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.066772925] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.099137319] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.162950090] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.227182899] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.259190506] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.323258988] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.387297401] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.451055099] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.483320357] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.547315940] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.610446949] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.675294720] [rviz2]: Message Filter dropping message: frame 'odom' at time 174.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.707445512] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.770688713] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.834408706] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.898821841] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857389.962897732] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.200 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857389.973071374] [rtabmap]: rtabmap (9): Rate=1.00s, Limit=0.000s, Conversion=0.0015s, RTAB-Map=0.0520s, Maps update=0.0018s pub=0.0004s delay=0.0680s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857390.026787007] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.059350672] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.122702393] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.187372670] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.218617395] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.283247135] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.346414686] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.411290713] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.443285606] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.507313555] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.571039704] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.760 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.602596686] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.666840232] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.730499921] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.794580463] [rviz2]: Message Filter dropping message: frame 'odom' at time 175.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.827242790] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.891191925] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.954678919] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857390.987138039] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.050581770] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.200 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857391.091850588] [rtabmap]: rtabmap (10): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0507s, Maps update=0.0010s pub=0.0004s delay=0.0600s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857391.116382731] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.178867663] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.243005899] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.275153360] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.339372276] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.402913228] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.467285255] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.499310255] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.563276902] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.594733027] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.658774264] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.723629502] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.787068749] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.851239315] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.882821079] [rviz2]: Message Filter dropping message: frame 'odom' at time 176.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857391.947020403] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.010667791] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.074538586] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.106462886] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.171223793] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.235235672] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.252 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857392.240437751] [rtabmap]: rtabmap (11): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0503s, Maps update=0.0019s pub=0.0005s delay=0.0720s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857392.299296826] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.330551185] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.395043133] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.459532034] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.522949031] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.587149254] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.619054299] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.683113947] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.746607559] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.810846498] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.843234493] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.906771394] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857392.971105202] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.002561583] [rviz2]: Message Filter dropping message: frame 'odom' at time 177.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.066661850] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.131273710] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.162768207] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.227064697] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.291054057] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.355340810] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.252 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857393.376759446] [rtabmap]: rtabmap (12): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0520s, Maps update=0.0012s pub=0.0005s delay=0.0680s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857393.386848378] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.451133969] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.514619288] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.578815507] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.611168944] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.674476746] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.738929186] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.770846551] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.835422710] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.898983203] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.931171050] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857393.994452629] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.058499212] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.123266422] [rviz2]: Message Filter dropping message: frame 'odom' at time 178.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.186664275] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.218862734] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.283570022] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.347208407] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.411167569] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.442578354] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.507291676] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.300 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857394.519433852] [rtabmap]: rtabmap (13): Rate=1.00s, Limit=0.000s, Conversion=0.0030s, RTAB-Map=0.0600s, Maps update=0.0019s pub=0.0005s delay=0.0760s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857394.571067921] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.634520694] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.699195521] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.762358442] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.794851863] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.859226367] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.923313110] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857394.986686222] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.018853373] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.083260071] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.147375422] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.178721009] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.242864420] [rviz2]: Message Filter dropping message: frame 'odom' at time 179.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.306998023] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.004 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.370910802] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.403213396] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.467005013] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.531426004] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.594834332] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.659291262] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.300 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857395.677372382] [rtabmap]: rtabmap (14): Rate=1.00s, Limit=0.000s, Conversion=0.0016s, RTAB-Map=0.0551s, Maps update=0.0013s pub=0.0004s delay=0.0640s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857395.722805818] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.786893205] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.818813588] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.883414122] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.947173970] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857395.979426149] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.042919171] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.107131308] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.171463670] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.202941650] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.266946361] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.331506483] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.395125150] [rviz2]: Message Filter dropping message: frame 'odom' at time 180.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.459343022] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.523437996] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.555019007] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.619343393] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.683064833] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.747489924] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.778443187] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.842902361] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857396.906522978] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.400 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857396.907554382] [rtabmap]: rtabmap (15): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0519s, Maps update=0.0016s pub=0.0004s delay=0.0600s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857396.971288805] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.034827409] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.098882159] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.131001907] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.195185834] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.259331885] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.290397816] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.354953524] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.419136538] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.450678462] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.515574000] [rviz2]: Message Filter dropping message: frame 'odom' at time 181.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.579383249] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.643739225] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.739336212] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.802993249] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.867336555] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.930683156] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857397.994695681] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.059181255] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.123309053] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.187149231] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.252410446] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.314935595] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.552 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857398.350454054] [rtabmap]: rtabmap (16): Rate=1.00s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.0586s, Maps update=0.0016s pub=0.0007s delay=0.0760s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857398.379452053] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.443011497] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.507258879] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.571497152] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.634617886] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.699689925] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.762989192] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.826787426] [rviz2]: Message Filter dropping message: frame 'odom' at time 182.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.891019123] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857398.987629813] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.051411018] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.115353587] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.179265505] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.242587973] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.307157854] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.339440574] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.403204064] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.499282812] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.531318504] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.595087921] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.659127176] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.600 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857399.663954890] [rtabmap]: rtabmap (17): Rate=1.00s, Limit=0.000s, Conversion=0.0016s, RTAB-Map=0.0610s, Maps update=0.0024s pub=0.0012s delay=0.0720s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857399.722466617] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.787165000] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.851458839] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.915725793] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857399.979667401] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.042978302] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.108051241] [rviz2]: Message Filter dropping message: frame 'odom' at time 183.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.171155223] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.236439425] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.299651009] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.363505006] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.426726362] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.491181800] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.556153316] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.618621685] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.683840489] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.746882517] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.811785342] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.875187910] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857400.939836486] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.600 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857400.978724001] [rtabmap]: rtabmap (18): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0682s, Maps update=0.0018s pub=0.0006s delay=0.0840s (local map=1, WM=1)
+[rviz2-22] [INFO] [1763857401.002863291] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.067445142] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.130973554] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.195082421] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.259442083] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.322828122] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.421170040] [rviz2]: Message Filter dropping message: frame 'odom' at time 184.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.451438327] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.515177243] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.579586091] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.643719132] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.707139918] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.772054782] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.835467763] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.899388942] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857401.963596282] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.026717216] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.091010854] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.154752634] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.218941024] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.283814391] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.315182879] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.411209549] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.474977071] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.800 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857402.484693460] [rtabmap]: rtabmap (19): Rate=1.00s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.0744s, Maps update=0.0031s pub=0.0009s delay=0.0880s (local map=2, WM=2)
+[rviz2-22] [INFO] [1763857402.510377326] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.852 for reason 'discarding message because the queue is full'
+[rviz2-12] [INFO] [1763857402.517766215] [rviz2]: Trying to create a map of size 416 x 448 using 1 swatches
+[rviz2-22] [INFO] [1763857402.570760021] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.634840352] [rviz2]: Message Filter dropping message: frame 'odom' at time 185.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.698999328] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.763126386] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.052 for reason 'discarding message because the queue is full'
+[planner_server-15] [INFO] [1763857402.781492739] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 416 X 448 at 0.050000 m/pix
+[rviz2-12] [INFO] [1763857402.805840136] [rviz2]: Trying to create a map of size 416 x 448 using 1 swatches
+[rviz2-22] [INFO] [1763857402.826648545] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.891313849] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857402.956315279] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.050906685] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.082823399] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.179806536] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.242868969] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.307081826] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.371438248] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.435818155] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.499018210] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.563331374] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.595482502] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.691853772] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.755512627] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.800 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857403.796974801] [rtabmap]: rtabmap (20): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0729s, Maps update=0.0061s pub=0.0009s delay=0.0880s (local map=3, WM=3)
+[rviz2-22] [INFO] [1763857403.825421534] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.852 for reason 'discarding message because the queue is full'
+[rviz2-12] [INFO] [1763857403.833358591] [rviz2]: Trying to create a map of size 417 x 448 using 1 swatches
+[rviz2-22] [INFO] [1763857403.850748700] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.915112005] [rviz2]: Message Filter dropping message: frame 'odom' at time 186.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857403.979721677] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.044153504] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.108176879] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.171116460] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.234619542] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.299232271] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.364082663] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.426856532] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.492300104] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.554871578] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.618648599] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.683402398] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.748203115] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.600 for reason 'discarding message because the queue is full'
+[planner_server-15] [INFO] [1763857404.781494709] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 417 X 448 at 0.050000 m/pix
+[rviz2-12] [INFO] [1763857404.820817362] [rviz2]: Trying to create a map of size 417 x 448 using 1 swatches
+[rviz2-22] [INFO] [1763857404.843496332] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.875561071] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857404.939010118] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.004846333] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.067631021] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.852 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857405.109374656] [rtabmap]: rtabmap (21): Rate=1.00s, Limit=0.000s, Conversion=0.0033s, RTAB-Map=0.0785s, Maps update=0.0043s pub=0.0010s delay=0.0960s (local map=4, WM=4)
+[rviz2-22] [INFO] [1763857405.132421440] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.900 for reason 'discarding message because the queue is full'
+[rviz2-12] [INFO] [1763857405.144834306] [rviz2]: Trying to create a map of size 419 x 450 using 1 swatches
+[rviz2-22] [INFO] [1763857405.194853775] [rviz2]: Message Filter dropping message: frame 'odom' at time 187.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.259021279] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.322860058] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.387655988] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.452182800] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.515425423] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.579331422] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.643223882] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.707426929] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.771404425] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.400 for reason 'discarding message because the queue is full'
+[planner_server-15] [INFO] [1763857405.781513846] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 419 X 450 at 0.050000 m/pix
+[rviz2-22] [INFO] [1763857405.835357450] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.867289019] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.930749997] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857405.994827960] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.059418844] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.122926689] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.187526405] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.251735720] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.314692717] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.380373740] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.443507625] [rviz2]: Message Filter dropping message: frame 'odom' at time 188.952 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857406.467134590] [rtabmap]: rtabmap (22): Rate=1.00s, Limit=0.000s, Conversion=0.0017s, RTAB-Map=0.0797s, Maps update=0.0048s pub=0.0016s delay=0.1000s (local map=5, WM=5)
+[rviz2-12] [INFO] [1763857406.484928427] [rviz2]: Trying to create a map of size 419 x 451 using 1 swatches
+[rviz2-22] [INFO] [1763857406.507463400] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.570773945] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.636313700] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.698633429] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.764491570] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.200 for reason 'discarding message because the queue is full'
+[planner_server-15] [INFO] [1763857406.781514643] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 419 X 451 at 0.050000 m/pix
+[rviz2-12] [INFO] [1763857406.807114044] [rviz2]: Trying to create a map of size 419 x 451 using 1 swatches
+[rviz2-22] [INFO] [1763857406.827260436] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.891861574] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857406.956447279] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.019348017] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.115283360] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.178635002] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.243170095] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.307413950] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.371732868] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.403132677] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.498841736] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.530638772] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.595247935] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.659429414] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.722600946] [rviz2]: Message Filter dropping message: frame 'odom' at time 189.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.788336521] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857407.883806995] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.052 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857407.938082423] [rtabmap]: rtabmap (23): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0709s, Maps update=0.0018s pub=0.0003s delay=0.0720s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857407.947233700] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.011133774] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.075505762] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.139651352] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.203438860] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.267392248] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.331233609] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.395588083] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.427376830] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.491298980] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.555301658] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.620431740] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.683095787] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.747782437] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.811042211] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.875789875] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857408.940232824] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.004580172] [rviz2]: Message Filter dropping message: frame 'odom' at time 190.960 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.067438201] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.130937722] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.194993664] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.100 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857409.223990173] [rtabmap]: rtabmap (24): Rate=1.00s, Limit=0.000s, Conversion=0.0010s, RTAB-Map=0.0702s, Maps update=0.0015s pub=0.0005s delay=0.0840s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857409.227219984] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.291597457] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.354938498] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.418779019] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.483917477] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.546616043] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.612762684] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.674840982] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.740462335] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.803151470] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.868759567] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.931388564] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857409.996302130] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.059653028] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.122857685] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.155485456] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.219469485] [rviz2]: Message Filter dropping message: frame 'odom' at time 191.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.283371599] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.346873237] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.410835658] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.475301026] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.152 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857410.510414702] [rtabmap]: rtabmap (25): Rate=1.00s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.0613s, Maps update=0.0022s pub=0.0007s delay=0.0760s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857410.539955318] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.603503586] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.667748156] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.731164671] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.795675353] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.859617258] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.452 for reason 'discarding message because the queue is full'
+[rviz2-12] Start navigation
+[rviz2-12] [INFO] [1763857410.866634993] [rviz_navigation_dialog_action_client]: NavigateToPose will be called using the BT Navigator's default behavior tree.
+[bt_navigator-17] [INFO] [1763857410.867255073] [bt_navigator]: Begin navigating from current location (-0.04, -0.00) to (0.10, -0.12)
+[rviz2-22] [INFO] [1763857410.923591612] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857410.955213768] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.019100551] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.083212809] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.147725152] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.211205358] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.242881367] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.307431809] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.371108254] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.403679063] [rviz2]: Message Filter dropping message: frame 'odom' at time 192.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.467578544] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.530582394] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.562888187] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.627236657] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.690880613] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.723365512] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.252 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857411.746655183] [rtabmap]: rtabmap (26): Rate=1.00s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.0602s, Maps update=0.0015s pub=0.0007s delay=0.0680s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857411.786780290] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.851029673] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.915436146] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857411.946805172] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.011585248] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.074960765] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.107329447] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.600 for reason 'discarding message because the queue is full'
+[planner_server-15] [INFO] [1763857412.120532195] [planner_server]: Found path with 4 points
+[planner_server-15] [WARN] [1763857412.120706892] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 0.8711 Hz
+[controller_server-13] [INFO] [1763857412.138010406] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-13] [WARN] [1763857412.138132924] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-13] [INFO] [1763857412.150801851] [controller_server]: Reached the goal!
+[rviz2-22] [INFO] [1763857412.170931418] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.652 for reason 'discarding message because the queue is full'
+[bt_navigator-17] [INFO] [1763857412.187581737] [bt_navigator]: Goal succeeded
+[rviz2-22] [INFO] [1763857412.235762494] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.299615291] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.363212372] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.426968547] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.460827618] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.522885056] [rviz2]: Message Filter dropping message: frame 'odom' at time 193.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.588181433] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.683377761] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.747637367] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.812516626] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.875672063] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.939202893] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857412.970994482] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.300 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857412.974066593] [rtabmap]: rtabmap (27): Rate=1.00s, Limit=0.000s, Conversion=0.0015s, RTAB-Map=0.0676s, Maps update=0.0021s pub=0.0006s delay=0.0720s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857413.035380043] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.099387144] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.164168370] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.227011700] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.258685013] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.323270230] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.418990179] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.451065501] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.515496221] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.579377908] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.643547949] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.706944621] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.771388175] [rviz2]: Message Filter dropping message: frame 'odom' at time 194.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.803521506] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.866759228] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.931411679] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857413.994712808] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.058981439] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.123311190] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.187953602] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.300 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857414.249854663] [rtabmap]: rtabmap (28): Rate=1.00s, Limit=0.000s, Conversion=0.0024s, RTAB-Map=0.0726s, Maps update=0.0016s pub=0.0005s delay=0.0800s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857414.251273490] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.315249898] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.347085603] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.411924449] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.475569267] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.538831622] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.603080525] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.667173053] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.731233920] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.795454054] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.827029470] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.891468177] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857414.955925586] [rviz2]: Message Filter dropping message: frame 'odom' at time 195.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.018756844] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.114799814] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.179137389] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.242909537] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.306860984] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.370865694] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.435768354] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.499011666] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.352 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857415.512557877] [rtabmap]: rtabmap (29): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0580s, Maps update=0.0028s pub=0.0005s delay=0.0720s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857415.562804143] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.626774007] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.659552075] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.755417138] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.819287054] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.884396496] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857415.947006446] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.011547528] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.074676928] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.107800712] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.172588624] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.235326188] [rviz2]: Message Filter dropping message: frame 'odom' at time 196.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.299044889] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.363348147] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.427190550] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.460339856] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.156 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.523536799] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.587685454] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.652689857] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.747593098] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.811520342] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.400 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857416.836784555] [rtabmap]: rtabmap (30): Rate=1.00s, Limit=0.000s, Conversion=0.0017s, RTAB-Map=0.0686s, Maps update=0.0021s pub=0.0007s delay=0.0760s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857416.875699749] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857416.938998591] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.035924721] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.067215464] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.131544853] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.195921736] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.260756883] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.323500571] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.386899246] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.418746019] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.515664417] [rviz2]: Message Filter dropping message: frame 'odom' at time 197.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.548076456] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.643887716] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.675668320] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.771169324] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.802827871] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.867391574] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.931787313] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857417.995627873] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.058882303] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.123984884] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.452 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857418.148199221] [rtabmap]: rtabmap (31): Rate=1.00s, Limit=0.000s, Conversion=0.0016s, RTAB-Map=0.0757s, Maps update=0.0026s pub=0.0003s delay=0.1000s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857418.187311540] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.500 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.250895433] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.315199918] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.378908009] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.444307539] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.507452458] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.571287980] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.666993363] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.852 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.731740677] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.900 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.762972115] [rviz2]: Message Filter dropping message: frame 'odom' at time 198.952 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.827350073] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.000 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.891729615] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.052 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.923225603] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.100 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857418.986862154] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.152 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.051643621] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.200 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.115435644] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.252 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.180335423] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.300 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.275788199] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.352 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.308449412] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.400 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.403364188] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.452 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.466673757] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.500 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763857419.510375033] [rtabmap]: rtabmap (32): Rate=1.00s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.0595s, Maps update=0.0026s pub=0.0006s delay=0.0760s (local map=5, WM=5)
+[rviz2-22] [INFO] [1763857419.532987927] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.552 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.563267971] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.600 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.660772963] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.652 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.691007127] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.700 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.787078531] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.752 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.820456563] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.800 for reason 'discarding message because the queue is full'
+[rviz2-22] [INFO] [1763857419.915357870] [rviz2]: Message Filter dropping message: frame 'odom' at time 199.852 for reason 'discarding message because the queue is full'
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[bt_navigator-17] [INFO] [1763857419.971039380] [rclcpp]: signal_handler(signum=2)
+[controller_server-13] [INFO] [1763857419.971044292] [rclcpp]: signal_handler(signum=2)
+[controller_server-13] [INFO] [1763857419.971294310] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-13] [INFO] [1763857419.971386261] [controller_server]: Deactivating
+[planner_server-15] [INFO] [1763857419.971044415] [rclcpp]: signal_handler(signum=2)
+[planner_server-15] [INFO] [1763857419.971237529] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-15] [INFO] [1763857419.971346138] [planner_server]: Deactivating
+[planner_server-15] [INFO] [1763857419.971400604] [global_costmap.global_costmap]: Deactivating
+[behavior_server-16] [INFO] [1763857419.971043713] [rclcpp]: signal_handler(signum=2)
+[behavior_server-16] [INFO] [1763857419.971228928] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-16] [INFO] [1763857419.971394797] [behavior_server]: Deactivating
+[waypoint_follower-18] [INFO] [1763857419.971083966] [rclcpp]: signal_handler(signum=2)
+[rtabmap-10] [INFO] [1763857419.971082300] [rclcpp]: signal_handler(signum=2)
+[rviz2-12] [INFO] [1763857419.971087521] [rclcpp]: signal_handler(signum=2)
+[rviz2-22] [INFO] [1763857419.971132577] [rclcpp]: signal_handler(signum=2)
+[robot_state_publisher-1] [INFO] [1763857419.971138894] [rclcpp]: signal_handler(signum=2)
+[rtabmap_viz-11] [INFO] [1763857419.971142086] [rtabmap_viz]: rtabmap_viz stopping spinner...
+[relay-5] [INFO] [1763857419.971116290] [rclcpp]: signal_handler(signum=2)
+[rgbd_sync-9] [INFO] [1763857419.971143596] [rclcpp]: signal_handler(signum=2)
+[parameter_bridge-4] [INFO] [1763857419.971158548] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-19] [INFO] [1763857419.971176784] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-19] [INFO] [1763857419.971335325] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-19] [INFO] [1763857419.971408806] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[smoother_server-14] [INFO] [1763857419.971226453] [rclcpp]: signal_handler(signum=2)
+[smoother_server-14] [INFO] [1763857419.971502892] [smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+[smoother_server-14] [INFO] [1763857419.971594866] [smoother_server]: Deactivating
+[smoother_server-14] [INFO] [1763857419.971619537] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[offboard_control-21] Traceback (most recent call last):
+[offboard_control-21]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/offboard_control", line 33, in <module>
+[offboard_control-21]     sys.exit(load_entry_point('px4-offboard==0.0.0', 'console_scripts', 'offboard_control')())
+[offboard_control-21]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/offboard_control.py", line 121, in main
+[controller_server-13] [INFO] [1763857419.971445795] [local_costmap.local_costmap]: Deactivating
+[controller_server-13] [INFO] [1763857419.973217576] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-13] [INFO] [1763857419.987166366] [controller_server]: Cleaning up
+[controller_server-13] [INFO] [1763857419.987419652] [local_costmap.local_costmap]: Cleaning up
+[behavior_server-16] [INFO] [1763857419.971435404] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[waypoint_follower-18] [INFO] [1763857419.971621210] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[waypoint_follower-18] [INFO] [1763857419.971726267] [waypoint_follower]: Deactivating
+[waypoint_follower-18] [INFO] [1763857419.971766226] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[waypoint_follower-18] [INFO] [1763857419.985219090] [waypoint_follower]: Cleaning up
+[visualizer-20] Traceback (most recent call last):
+[visualizer-20]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/visualizer", line 33, in <module>
+[visualizer-20]     sys.exit(load_entry_point('px4-offboard==0.0.0', 'console_scripts', 'visualizer')())
+[visualizer-20]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/visualizer.py", line 232, in main
+[visualizer-20]     rclpy.spin(px4_visualizer)
+[visualizer-20]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[visualizer-20]     executor.spin_once()
+[visualizer-20]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[visualizer-20]     self._spin_once_impl(timeout_sec)
+[visualizer-20]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[visualizer-20]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[visualizer-20]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[visualizer-20]     return next(self._cb_iter)
+[visualizer-20]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[visualizer-20]     wait_set.wait(timeout_nsec)
+[visualizer-20] KeyboardInterrupt
+[velocity_transform.py-7] Traceback (most recent call last):
+[velocity_transform.py-7]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py", line 158, in <module>
+[velocity_transform.py-7]     main()
+[velocity_transform.py-7]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py", line 152, in main
+[velocity_transform.py-7]     rclpy.spin(node)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[velocity_transform.py-7]     executor.spin_once()
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[velocity_transform.py-7]     self._spin_once_impl(timeout_sec)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[velocity_transform.py-7]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[velocity_transform.py-7]     return next(self._cb_iter)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[velocity_transform.py-7]     wait_set.wait(timeout_nsec)
+[velocity_transform.py-7] KeyboardInterrupt
+[image_transform.py-6] Traceback (most recent call last):
+[image_transform.py-6]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py", line 54, in <module>
+[image_transform.py-6]     main()
+[image_transform.py-6]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py", line 49, in main
+[image_transform.py-6]     rclpy.spin(node)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[image_transform.py-6]     executor.spin_once()
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[image_transform.py-6]     self._spin_once_impl(timeout_sec)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[image_transform.py-6]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[image_transform.py-6]     return next(self._cb_iter)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[image_transform.py-6]     wait_set.wait(timeout_nsec)
+[image_transform.py-6] KeyboardInterrupt
+[offboard_control-21]     rclpy.spin(offboard_control)
+[offboard_control-21]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[offboard_control-21]     executor.spin_once()
+[offboard_control-21]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[offboard_control-21]     self._spin_once_impl(timeout_sec)
+[offboard_control-21]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[offboard_control-21]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[offboard_control-21]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[offboard_control-21]     return next(self._cb_iter)
+[offboard_control-21]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[offboard_control-21]     wait_set.wait(timeout_nsec)
+[offboard_control-21] KeyboardInterrupt
+[relay-5] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[relay-5]   what():  Failed to get information by topic for publishers:rcl node's context is invalid, at ./src/rcl/node.c:428: error not set
+[bt_navigator-17] [INFO] [1763857419.971190401] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-17] [INFO] [1763857419.975375508] [bt_navigator]: Deactivating
+[bt_navigator-17] [INFO] [1763857419.975412153] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[rtabmap_viz-11] [INFO] [1763857419.981798909] [rtabmap_viz]: rtabmap_viz: All done! Closing...
+[smoother_server-14] [INFO] [1763857419.984541147] [smoother_server]: Cleaning up
+[bt_navigator-17] [INFO] [1763857419.997150853] [bt_navigator]: Cleaning up
+[behavior_server-16] [INFO] [1763857420.001792101] [behavior_server]: Cleaning up
+[waypoint_follower-18] [INFO] [1763857420.010145229] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[odom_baselink_publisher.py-3] Traceback (most recent call last):
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 110, in <module>
+[odom_baselink_publisher.py-3]     main()
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 107, in main
+[odom_baselink_publisher.py-3]     rclpy.shutdown()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[odom_baselink_publisher.py-3]     _shutdown(context=context)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[odom_baselink_publisher.py-3]     return context.shutdown()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[odom_baselink_publisher.py-3]     self.__context.shutdown()
+[odom_baselink_publisher.py-3] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[behavior_server-16] [INFO] [1763857420.013411393] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[waypoint_follower-18] [INFO] [1763857420.019110426] [waypoint_follower]: Destroying
+[smoother_server-14] [INFO] [1763857420.021048123] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[rtabmap-10] [INFO] [1763857420.022730147] [rtabmap]: Parameters are not saved (No configuration file provided...)
+[smoother_server-14] [INFO] [1763857420.029550960] [smoother_server]: Destroying
+[behavior_server-16] [INFO] [1763857420.042646820] [behavior_server]: Destroying
+[controller_server-13] [INFO] [1763857420.048069561] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-13] [INFO] [1763857420.052520114] [local_costmap.local_costmap]: Destroying
+[controller_server-13] [INFO] [1763857420.064777746] [controller_server]: Destroying
+[ERROR] [image_transform.py-6]: process has died [pid 4479, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py --ros-args -r __node:=image_transform --params-file /tmp/launch_params_vwmg5a19'].
+[lifecycle_manager-19] [INFO] [1763857420.074551272] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[ERROR] [offboard_control-21]: process has died [pid 4556, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/offboard_control --ros-args -r __node:=control -r __ns:=/ -p use_sim_time:=True --params-file /tmp/launch_params_xkc3juv9 --params-file /tmp/launch_params_jpvw_47h --params-file /tmp/launch_params_sm8a4r70 --params-file /tmp/launch_params_lngyjxhd'].
+[ERROR] [velocity_transform.py-7]: process has died [pid 4481, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py --ros-args -r __node:=velocity_transform --params-file /tmp/launch_params_5a8h0tge'].
+[bt_navigator-17] [INFO] [1763857420.094526561] [bt_navigator]: Completed Cleaning up
+[bt_navigator-17] [INFO] [1763857420.094565802] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[ERROR] [visualizer-20]: process has died [pid 4543, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/visualizer --ros-args -r __node:=visualizer -r __ns:=/ -p use_sim_time:=True --params-file /tmp/launch_params_wn3kunlb'].
+[bt_navigator-17] [INFO] [1763857420.097623682] [bt_navigator]: Destroying
+[INFO] [parameter_bridge-4]: process has finished cleanly [pid 4475]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 4469]
+[INFO] [waypoint_follower-18]: process has finished cleanly [pid 4530]
+[INFO] [rgbd_sync-9]: process has finished cleanly [pid 4484]
+[INFO] [smoother_server-14]: process has finished cleanly [pid 4494]
+[INFO] [behavior_server-16]: process has finished cleanly [pid 4499]
+[INFO] [controller_server-13]: process has finished cleanly [pid 4492]
+[INFO] [lifecycle_manager-19]: process has finished cleanly [pid 4535]
+[INFO] [joint_state_publisher-2]: process has finished cleanly [pid 4471]
+[ERROR] [odom_baselink_publisher.py-3]: process has died [pid 4473, exit code 1, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py --ros-args -r __node:=map_baselink_publisher --params-file /tmp/launch_params_q2_w5dnc'].
+[INFO] [bt_navigator-17]: process has finished cleanly [pid 4513]
+[INFO] [rviz2-22]: process has finished cleanly [pid 4558]
+[ERROR] [rtabmap_viz-11]: process has died [pid 4488, exit code 255, cmd '/opt/ros/humble/lib/rtabmap_viz/rtabmap_viz --ros-args -p use_sim_time:=True --params-file /tmp/launch_params_ai5eim1t -r rgb/image:=/camera/image -r depth/image:=/camera/depth_image -r rgb/camera_info:=/camera/image/camera_info -r scan:=/scan -r odom:=/odom -r imu:=/imu'].
+[planner_server-15] [INFO] [1763857420.781485056] [planner_server]: Deactivating DStarPlanner
+[planner_server-15] [INFO] [1763857420.781532316] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-15] [INFO] [1763857420.791688893] [planner_server]: Cleaning up
+[planner_server-15] [INFO] [1763857420.799781587] [global_costmap.global_costmap]: Cleaning up
+[planner_server-15] [INFO] [1763857420.804563289] [planner_server]: Cleaning up DStarPlanner
+[planner_server-15] [INFO] [1763857420.825762409] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-15] [INFO] [1763857420.827151538] [global_costmap.global_costmap]: Destroying
+[planner_server-15] [INFO] [1763857420.830427538] [planner_server]: Destroying
+[INFO] [planner_server-15]: process has finished cleanly [pid 4496]
+[ERROR] [relay-5]: process has died [pid 4477, exit code -6, cmd '/opt/ros/humble/lib/topic_tools/relay /camera/camera_info camera/image/camera_info --ros-args -r __node:=relay_camera_info --params-file /tmp/launch_params_78l205__'].
+[rtabmap-10] [33m[ WARN] (2025-11-23 00:23:00.326) Memory.cpp:5917::createSignature() Mem/SaveDepth16Format is set to false to use 32bits format but this is not compatible with the compressed depth format chosen (Mem/DepthCompressionFormat=".rvl"), depth images will be compressed in ".png" format instead. Explicitly set Mem/SaveDepth16Format to true to keep using ".rvl" format and images will be converted to 16bits for convenience (warning: that would remove all depth values over 65 meters). Explicitly set Mem/DepthCompressionFormat=".png" to suppress this warning. This warning is only printed once.[0m
+[rtabmap-10] [33m[ WARN] (2025-11-23 00:23:02.877) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 1 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-23 00:23:05.066) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 1 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-23 00:23:23.788) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.017884,0.026470,0.000000 rpy=0.000000,-0.000000,-0.000756) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-11-23 00:23:25.103) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=-0.008317,-0.025568,0.000000 rpy=0.000000,-0.000000,-0.019001) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] [33m[ WARN] (2025-11-23 00:23:26.459) RegistrationIcp.cpp:911::computeTransformationImpl() Transform is found (xyz=0.007888,-0.018746,0.000000 rpy=0.000000,-0.000000,0.000804) but no correspondences has been found!? Variance is unknown![0m
+[rtabmap-10] rtabmap: Saving database/long-term memory... (located at /home/ubuntu/.ros/rtabmap.db)
+[rtabmap-10] rtabmap: 2D occupancy grid map saved.
+[rtabmap-10] rtabmap: Saving database/long-term memory...done! (located at /home/ubuntu/.ros/rtabmap.db, 22 MB)
+[INFO] [rtabmap-10]: process has finished cleanly [pid 4486]
+[ERROR] [rviz2-12]: process[rviz2-12] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [rviz2-12]: sending signal 'SIGTERM' to process[rviz2-12]
+[ERROR] [rviz2-12]: process[rviz2-12] failed to terminate '10.0' seconds after receiving 'SIGTERM', escalating to 'SIGKILL'
+[INFO] [rviz2-12]: sending signal 'SIGKILL' to process[rviz2-12]
+[ERROR] [rviz2-12]: process has died [pid 4490, exit code -9, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/share/rtabmap_nav2_px4/rviz/nav2.rviz --ros-args -r __node:=rviz2 -p use_sim_time:=True'].

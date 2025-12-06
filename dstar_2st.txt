@@ -1,0 +1,500 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2025-11-16-08-00-57-731599-pilsu-H610M-K-V2-43464
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [gnome-terminal-8]: exception occurred while executing process:
+Traceback (most recent call last):
+  File "/opt/ros/humble/lib/python3.10/site-packages/launch/actions/execute_local.py", line 551, in __execute_process
+    transport, self._subprocess_protocol = await async_execute_process(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 139, in async_execute_process
+    transport, protocol = await _async_execute_process_nopty(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 45, in _async_execute_process_nopty
+    transport, protocol = await loop.subprocess_exec(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1681, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 207, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+  File "/usr/lib/python3.10/asyncio/base_subprocess.py", line 36, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 799, in _start
+    self._proc = subprocess.Popen(
+  File "/usr/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'gnome-terminal'
+
+[INFO] [robot_state_publisher-1]: process started with pid [43466]
+[INFO] [joint_state_publisher-2]: process started with pid [43468]
+[INFO] [odom_baselink_publisher.py-3]: process started with pid [43470]
+[INFO] [parameter_bridge-4]: process started with pid [43472]
+[INFO] [relay-5]: process started with pid [43474]
+[INFO] [image_transform.py-6]: process started with pid [43476]
+[INFO] [velocity_transform.py-7]: process started with pid [43478]
+[INFO] [rgbd_sync-9]: process started with pid [43481]
+[INFO] [rtabmap-10]: process started with pid [43483]
+[INFO] [rtabmap_viz-11]: process started with pid [43485]
+[INFO] [rviz2-12]: process started with pid [43487]
+[INFO] [visualizer-13]: process started with pid [43489]
+[INFO] [offboard_control-14]: process started with pid [43491]
+[INFO] [rviz2-15]: process started with pid [43494]
+[robot_state_publisher-1] [INFO] [1763280057.950460481] [robot_state_publisher]: got segment body
+[robot_state_publisher-1] [INFO] [1763280057.950556047] [robot_state_publisher]: got segment camera_link_optical
+[robot_state_publisher-1] [INFO] [1763280057.950564057] [robot_state_publisher]: got segment depth_camera_link_optical
+[robot_state_publisher-1] [INFO] [1763280057.950568065] [robot_state_publisher]: got segment rotor_0
+[robot_state_publisher-1] [INFO] [1763280057.950571919] [robot_state_publisher]: got segment rotor_1
+[robot_state_publisher-1] [INFO] [1763280057.950575705] [robot_state_publisher]: got segment rotor_2
+[robot_state_publisher-1] [INFO] [1763280057.950579087] [robot_state_publisher]: got segment rotor_3
+[robot_state_publisher-1] [INFO] [1763280057.950582676] [robot_state_publisher]: got segment x500_rtab_0/OakD-Lite/base_link/IMX214
+[robot_state_publisher-1] [INFO] [1763280057.950586669] [robot_state_publisher]: got segment x500_rtab_0/OakD-Lite/base_link/StereoOV7251
+[robot_state_publisher-1] [INFO] [1763280057.950589979] [robot_state_publisher]: got segment x500_rtab_0/base_footprint
+[robot_state_publisher-1] [INFO] [1763280057.950593558] [robot_state_publisher]: got segment x500_rtab_0/base_link/imu_sensor
+[robot_state_publisher-1] [INFO] [1763280057.950597238] [robot_state_publisher]: got segment x500_rtab_0/base_link/navsat_sensor
+[robot_state_publisher-1] [INFO] [1763280057.950601174] [robot_state_publisher]: got segment x500_rtab_0/link/lidar_2d_v2
+[rviz2-15] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[rviz2-12] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[parameter_bridge-4] [INFO] [1763280057.963551018] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.969890176] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/clock (rosgraph_msgs/msg/Clock) -> /clock (gz.msgs.Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.974205399] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/x500_rtab_0/odometry (gz.msgs.Odometry) -> /model/x500_rtab_0/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.978182508] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/x500_rtab_0/odometry (nav_msgs/msg/Odometry) -> /model/x500_rtab_0/odometry (gz.msgs.Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.982065524] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera (gz.msgs.Image) -> /camera (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.985697679] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/camera (sensor_msgs/msg/Image) -> /camera (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.988572039] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/depth_camera (gz.msgs.Image) -> /depth_camera (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.990354215] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/depth_camera (sensor_msgs/msg/Image) -> /depth_camera (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.992537196] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/camera_info (gz.msgs.CameraInfo) -> /camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.995387802] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/camera_info (sensor_msgs/msg/CameraInfo) -> /camera_info (gz.msgs.CameraInfo)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.997775566] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/depth_camera/points (gz.msgs.PointCloudPacked) -> /depth_camera/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280057.999830825] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/depth_camera/points (sensor_msgs/msg/PointCloud2) -> /depth_camera/points (gz.msgs.PointCloudPacked)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280058.002402438] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (gz.msgs.NavSat) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (sensor_msgs/msg/NavSatFix)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280058.005698446] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (sensor_msgs/msg/NavSatFix) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/navsat_sensor/navsat (gz.msgs.NavSat)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280058.012908134] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (gz.msgs.IMU) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280058.019111023] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (sensor_msgs/msg/Imu) -> /world/turtlebot3_world/model/x500_rtab_0/link/base_link/sensor/imu_sensor/imu (gz.msgs.IMU)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280058.023937378] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (gz.msgs.LaserScan) -> /world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1763280058.027629555] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (sensor_msgs/msg/LaserScan) -> /world/turtlebot3_world/model/x500_rtab_0/link/link/sensor/lidar_2d_v2/scan (gz.msgs.LaserScan)] (Lazy 0)
+[rtabmap-10] [INFO] [1763280058.242921357] [rtabmap]: rtabmap(maps): latch                      = true
+[rtabmap-10] [INFO] [1763280058.243084281] [rtabmap]: rtabmap(maps): map_filter_radius          = 0.000000
+[rtabmap-10] [INFO] [1763280058.243101113] [rtabmap]: rtabmap(maps): map_filter_angle           = 30.000000
+[rtabmap-10] [INFO] [1763280058.243107963] [rtabmap]: rtabmap(maps): map_cleanup                = true
+[rtabmap-10] [INFO] [1763280058.243112700] [rtabmap]: rtabmap(maps): map_always_update          = false
+[rtabmap-10] [INFO] [1763280058.243118973] [rtabmap]: rtabmap(maps): map_empty_ray_tracing      = true
+[rtabmap-10] [INFO] [1763280058.243123691] [rtabmap]: rtabmap(maps): cloud_output_voxelized     = true
+[rtabmap-10] [INFO] [1763280058.243128447] [rtabmap]: rtabmap(maps): cloud_subtract_filtering   = false
+[rtabmap-10] [INFO] [1763280058.243133150] [rtabmap]: rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2
+[rtabmap-10] [INFO] [1763280058.243157726] [rtabmap]: rtabmap(maps): octomap_tree_depth         = 16
+[rtabmap-10] [INFO] [1763280058.285340777] [rtabmap]: rtabmap: frame_id      = x500_rtab_0/base_footprint
+[rtabmap-10] [INFO] [1763280058.285590282] [rtabmap]: rtabmap: odom_frame_id = x500_rtab_0/odom
+[rtabmap-10] [INFO] [1763280058.285598864] [rtabmap]: rtabmap: map_frame_id  = map
+[rtabmap-10] [INFO] [1763280058.285602113] [rtabmap]: rtabmap: log_to_rosout_level  = 4
+[rtabmap-10] [INFO] [1763280058.285605367] [rtabmap]: rtabmap: initial_pose  = 
+[rtabmap-10] [INFO] [1763280058.285608012] [rtabmap]: rtabmap: use_action_for_goal  = false
+[rtabmap-10] [INFO] [1763280058.285610916] [rtabmap]: rtabmap: tf_delay      = 0.050000
+[rtabmap-10] [INFO] [1763280058.285620292] [rtabmap]: rtabmap: tf_tolerance  = 0.100000
+[rtabmap-10] [INFO] [1763280058.285625156] [rtabmap]: rtabmap: odom_sensor_sync   = false
+[rtabmap-10] [INFO] [1763280058.285629201] [rtabmap]: rtabmap: pub_loc_pose_only_when_localizing = false
+[rtabmap-10] [INFO] [1763280058.285632877] [rtabmap]: rtabmap: wait_for_transform = 0.200000
+[rtabmap-10] [INFO] [1763280058.285637078] [rtabmap]: rtabmap: gen_scan  = false
+[rtabmap-10] [INFO] [1763280058.285641006] [rtabmap]: rtabmap: gen_depth  = false
+[rgbd_sync-9] [INFO] [1763280058.300521090] [rgbd_sync]: rgbd_sync: approx_sync = true
+[rgbd_sync-9] [INFO] [1763280058.300744071] [rgbd_sync]: rgbd_sync: approx_sync_max_interval = 0.020000
+[rgbd_sync-9] [INFO] [1763280058.300769869] [rgbd_sync]: rgbd_sync: topic_queue_size  = 10
+[rgbd_sync-9] [INFO] [1763280058.300779340] [rgbd_sync]: rgbd_sync: sync_queue_size  = 10
+[rgbd_sync-9] [INFO] [1763280058.300787186] [rgbd_sync]: rgbd_sync: qos             = 0
+[rgbd_sync-9] [INFO] [1763280058.300794850] [rgbd_sync]: rgbd_sync: qos_camera_info = 0
+[rgbd_sync-9] [INFO] [1763280058.300803112] [rgbd_sync]: rgbd_sync: depth_scale = 1.000000
+[rgbd_sync-9] [INFO] [1763280058.300819957] [rgbd_sync]: rgbd_sync: decimation = 1
+[rgbd_sync-9] [INFO] [1763280058.300828208] [rgbd_sync]: rgbd_sync: compressed_rate = 0.000000
+[joint_state_publisher-2] [INFO] [1763280058.302312467] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[rtabmap_viz-11] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-ubuntu'
+[rgbd_sync-9] [INFO] [1763280058.319295060] [rgbd_sync]: 
+[rgbd_sync-9] rgbd_sync subscribed to (approx sync, max interval=0.020000s):
+[rgbd_sync-9]    /camera/image,
+[rgbd_sync-9]    /camera/depth_image,
+[rgbd_sync-9]    /camera/image/camera_info
+[rtabmap-10] [INFO] [1763280058.325691608] [rtabmap]: Setting RTAB-Map parameter "Icp/CorrespondenceRatio"="0.2" (rosparam)
+[rtabmap-10] [INFO] [1763280058.325891739] [rtabmap]: Setting RTAB-Map parameter "Icp/MaxCorrespondenceDistance"="0.15" (rosparam)
+[rtabmap-10] [INFO] [1763280058.327334038] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlane"="false" (rosparam)
+[rtabmap-10] [INFO] [1763280058.327617223] [rtabmap]: Setting RTAB-Map parameter "Icp/VoxelSize"="0.05" (rosparam)
+[rtabmap-10] [INFO] [1763280058.332422583] [rtabmap]: Setting RTAB-Map parameter "Mem/STMSize"="30" (rosparam)
+[rtabmap-10] [INFO] [1763280058.334761234] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalRadius"="5" (rosparam)
+[rtabmap-10] [INFO] [1763280058.335952219] [rtabmap]: Setting RTAB-Map parameter "RGBD/NeighborLinkRefining"="true" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336048506] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeFromGraphEnd"="false" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336089581] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeMaxError"="4" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336277780] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityBySpace"="true" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336319303] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityByTime"="false" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336641514] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityPathMaxNeighbors"="10" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336748127] [rtabmap]: Setting RTAB-Map parameter "Reg/Force3DoF"="false" (rosparam)
+[rtabmap-10] [INFO] [1763280058.336803823] [rtabmap]: Setting RTAB-Map parameter "Reg/Strategy"="1" (rosparam)
+[rtabmap-10] [INFO] [1763280058.343183417] [rtabmap]: Setting RTAB-Map parameter "Vis/MinInliers"="12" (rosparam)
+[rtabmap-10] [WARN] [1763280058.344737081] [rtabmap]: Setting "Grid/Sensor" parameter to 0 (default 1) as "subscribe_scan" or "subscribe_scan_cloud" or "gen_scan" is true. The occupancy grid map will be constructed from laser scans. To get occupancy grid map from cloud projection, set "Grid/Sensor" to true. To suppress this warning, add <param name="Grid/Sensor" type="string" value="0"/>
+[rtabmap-10] [INFO] [1763280058.344784876] [rtabmap]: Setting "Grid/RangeMax" parameter to 0 (default 5.000000) as "subscribe_scan" or "subscribe_scan_cloud" or "gen_scan" is true and Grid/Sensor is 0.
+[rtabmap-10] [INFO] [1763280058.345003719] [rtabmap]: RTAB-Map detection rate = 1.000000 Hz
+[rtabmap-10] [INFO] [1763280058.346913459] [rtabmap]: rtabmap: Deleted database "/home/ubuntu/.ros/rtabmap.db" (--delete_db_on_start or -d are set).
+[rtabmap-10] [INFO] [1763280058.346987377] [rtabmap]: rtabmap: Using database from "/home/ubuntu/.ros/rtabmap.db" (0 MB).
+[rtabmap_viz-11] [INFO] [1763280058.361319967] [rtabmap_viz]: rtabmap_viz: Using configuration from "/home/ubuntu/.ros/rtabmapGUI.ini"
+[rtabmap-10] [INFO] [1763280058.407963370] [rtabmap]: rtabmap: Database version = "0.22.1".
+[rtabmap-10] [INFO] [1763280058.408010462] [rtabmap]: rtabmap: SLAM mode (Mem/IncrementalMemory=true)
+[rtabmap-10] [INFO] [1763280058.424090503] [rtabmap]: Setup callbacks
+[rtabmap-10] [WARN] [1763280058.424142621] [rtabmap]: rtabmap: Parameters subscribe_depth and subscribe_rgbd cannot be true at the same time. Parameter subscribe_depth is set to false.
+[rtabmap-10] [INFO] [1763280058.424267585] [rtabmap]: rtabmap: subscribe_depth = false
+[rtabmap-10] [INFO] [1763280058.424298363] [rtabmap]: rtabmap: subscribe_rgb = false
+[rtabmap-10] [INFO] [1763280058.424308730] [rtabmap]: rtabmap: subscribe_stereo = false
+[rtabmap-10] [INFO] [1763280058.424316984] [rtabmap]: rtabmap: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap-10] [INFO] [1763280058.424326217] [rtabmap]: rtabmap: subscribe_sensor_data = false
+[rtabmap-10] [INFO] [1763280058.424333775] [rtabmap]: rtabmap: subscribe_odom_info = true
+[rtabmap-10] [INFO] [1763280058.424341353] [rtabmap]: rtabmap: subscribe_user_data = false
+[rtabmap-10] [INFO] [1763280058.424348731] [rtabmap]: rtabmap: subscribe_scan = true
+[rtabmap-10] [INFO] [1763280058.424356177] [rtabmap]: rtabmap: subscribe_scan_cloud = false
+[rtabmap-10] [INFO] [1763280058.424364030] [rtabmap]: rtabmap: subscribe_scan_descriptor = false
+[rtabmap-10] [INFO] [1763280058.424387939] [rtabmap]: rtabmap: topic_queue_size = 10
+[rtabmap-10] [INFO] [1763280058.424400473] [rtabmap]: rtabmap: sync_queue_size  = 10
+[rtabmap-10] [INFO] [1763280058.424403624] [rtabmap]: rtabmap: qos_image       = 0
+[rtabmap-10] [INFO] [1763280058.424408320] [rtabmap]: rtabmap: qos_camera_info = 0
+[rtabmap-10] [INFO] [1763280058.424412024] [rtabmap]: rtabmap: qos_scan        = 0
+[rtabmap-10] [INFO] [1763280058.424416377] [rtabmap]: rtabmap: qos_odom        = 0
+[rtabmap-10] [INFO] [1763280058.424420364] [rtabmap]: rtabmap: qos_user_data   = 0
+[rtabmap-10] [INFO] [1763280058.424424427] [rtabmap]: rtabmap: approx_sync     = true
+[rtabmap-10] [INFO] [1763280058.424437346] [rtabmap]: Setup rgbd callback
+[rtabmap-10] [WARN] [1763280058.425725500] [rtabmap]: subscribe_odom_info ignored...
+[rtabmap-10] [INFO] [1763280058.425830432] [rtabmap]: 
+[rtabmap-10] rtabmap subscribed to (approx sync):
+[rtabmap-10]    /rgbd_image \
+[rtabmap-10]    /scan
+[rviz2-12] [INFO] [1763280058.644416010] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-12] [INFO] [1763280058.644622150] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-15] [INFO] [1763280058.648618275] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-15] [INFO] [1763280058.648751280] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-12] [INFO] [1763280058.698880003] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-15] [INFO] [1763280058.819882075] [rviz2]: Stereo is NOT SUPPORTED
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] libpng warning: iCCP: known incorrect sRGB profile
+[rtabmap_viz-11] [INFO] [1763280059.202454617] [rtabmap_viz]: Reading parameters from the ROS server...
+[rtabmap_viz-11] [INFO] [1763280059.242706070] [rtabmap_viz]: Parameters read = 387
+[rtabmap_viz-11] [INFO] [1763280059.242743081] [rtabmap_viz]: Parameters successfully read.
+[rtabmap_viz-11] [INFO] [1763280059.637726875] [rtabmap_viz]: rtabmap_viz: subscribe_depth = false
+[rtabmap_viz-11] [INFO] [1763280059.637767346] [rtabmap_viz]: rtabmap_viz: subscribe_rgb = false
+[rtabmap_viz-11] [INFO] [1763280059.637771143] [rtabmap_viz]: rtabmap_viz: subscribe_stereo = false
+[rtabmap_viz-11] [INFO] [1763280059.637773944] [rtabmap_viz]: rtabmap_viz: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap_viz-11] [INFO] [1763280059.637777424] [rtabmap_viz]: rtabmap_viz: subscribe_sensor_data = false
+[rtabmap_viz-11] [INFO] [1763280059.637788821] [rtabmap_viz]: rtabmap_viz: subscribe_odom_info = true
+[rtabmap_viz-11] [INFO] [1763280059.637791636] [rtabmap_viz]: rtabmap_viz: subscribe_user_data = false
+[rtabmap_viz-11] [INFO] [1763280059.637794349] [rtabmap_viz]: rtabmap_viz: subscribe_scan = true
+[rtabmap_viz-11] [INFO] [1763280059.637796986] [rtabmap_viz]: rtabmap_viz: subscribe_scan_cloud = false
+[rtabmap_viz-11] [INFO] [1763280059.637799471] [rtabmap_viz]: rtabmap_viz: subscribe_scan_descriptor = false
+[rtabmap_viz-11] [INFO] [1763280059.637802202] [rtabmap_viz]: rtabmap_viz: topic_queue_size = 10
+[rtabmap_viz-11] [INFO] [1763280059.637805156] [rtabmap_viz]: rtabmap_viz: sync_queue_size  = 10
+[rtabmap_viz-11] [INFO] [1763280059.637813224] [rtabmap_viz]: rtabmap_viz: qos_image       = 0
+[rtabmap_viz-11] [INFO] [1763280059.637816140] [rtabmap_viz]: rtabmap_viz: qos_camera_info = 0
+[rtabmap_viz-11] [INFO] [1763280059.637818832] [rtabmap_viz]: rtabmap_viz: qos_scan        = 0
+[rtabmap_viz-11] [INFO] [1763280059.637821502] [rtabmap_viz]: rtabmap_viz: qos_odom        = 0
+[rtabmap_viz-11] [INFO] [1763280059.637824756] [rtabmap_viz]: rtabmap_viz: qos_user_data   = 0
+[rtabmap_viz-11] [INFO] [1763280059.637827361] [rtabmap_viz]: rtabmap_viz: approx_sync     = true
+[rtabmap_viz-11] [INFO] [1763280059.637842990] [rtabmap_viz]: Setup rgbd callback
+[rtabmap_viz-11] [WARN] [1763280059.639330282] [rtabmap_viz]: subscribe_odom_info ignored...
+[rtabmap_viz-11] [INFO] [1763280059.639426529] [rtabmap_viz]: 
+[rtabmap_viz-11] rtabmap_viz subscribed to (approx sync):
+[rtabmap_viz-11]    /rgbd_image \
+[rtabmap_viz-11]    /scan
+[rtabmap_viz-11] [INFO] [1763280059.640938900] [rtabmap_viz]: rtabmap_viz started.
+[rviz2-15] [INFO] [1763280059.748479429] [rviz2]: Message Filter dropping message: frame 'odom' at time 1522.700 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280059.845032386] [rviz2]: Message Filter dropping message: frame 'odom' at time 1522.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280059.908987277] [rviz2]: Message Filter dropping message: frame 'odom' at time 1522.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280059.972449153] [rviz2]: Message Filter dropping message: frame 'odom' at time 1522.852 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280060.024930334] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.184000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280060.036766876] [rviz2]: Message Filter dropping message: frame 'odom' at time 1522.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.068946028] [rviz2]: Message Filter dropping message: frame 'odom' at time 1522.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.133048012] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.004 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.196618027] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.228885094] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.100 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280060.247856430] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.216000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280060.292915296] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.356157961] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.420377735] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.484565168] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.300 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280060.511895450] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.280000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280060.548975684] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.352 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.613016303] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.676284964] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.452 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.740900397] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.500 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280060.748658918] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.512000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280060.804121239] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.837033092] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.600 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.900710217] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280060.932726320] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.700 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280060.960976902] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.544000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280060.996097248] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.060963088] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.124684466] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.188755305] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.900 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280061.194134216] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.580000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280061.253347011] [rviz2]: Message Filter dropping message: frame 'odom' at time 1523.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.316668442] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.348902391] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.412188348] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.100 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280061.438522182] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1523.908000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280061.476458333] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.540026121] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.573036112] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.636915663] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.300 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280061.652228914] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1524.108000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280061.668153737] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.352 for reason 'discarding message because the queue is full'
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:00:58.886) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Lookup would require extrapolation into the past.  Requested time 1522.424000 but the earliest data is at time 1522.472000, when looking up transform from frame [x500_rtab_0/base_footprint] to frame [x500_rtab_0/odom] (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:00:59.204) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:00:59.461) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:00:59.849) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:00.086) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:00.304) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:00.568) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:00.801) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:01.016) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:01.262) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:01.498) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Lookup would require extrapolation into the past.  Requested time 1524.140000 but the earliest data is at time 1524.668000, when looking up transform from frame [x500_rtab_0/base_footprint] to frame [x500_rtab_0/odom] (wait_for_transform=0.200000)[0m
+[rviz2-15] [INFO] [1763280061.732224573] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.796674361] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.452 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.860895158] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.500 for reason 'discarding message because the queue is full'
+[rtabmap_viz-11] [WARN] [1763280061.895565022] [rtabmap_viz]: Could not get odometry pose from TF for stamp 1524.172000, aborting! To show red screen in rtabmap_viz when this happens (indicating potentially lost), set subscribe_odom to true.
+[rviz2-15] [INFO] [1763280061.924895124] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280061.988755063] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.600 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763280062.047793198] [rtabmap]: rtabmap (1): Rate=1.00s, Limit=0.000s, Conversion=0.0022s, RTAB-Map=0.0643s, Maps update=0.0047s pub=0.0017s delay=0.3960s (local map=1, WM=1)
+[rviz2-15] [INFO] [1763280062.052955281] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.084841864] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.700 for reason 'discarding message because the queue is full'
+[rviz2-12] [INFO] [1763280062.090327374] [rviz2]: Trying to create a map of size 487 x 383 using 1 swatches
+[rviz2-15] [INFO] [1763280062.148466434] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.212473899] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.276539106] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.309032849] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.372878311] [rviz2]: Message Filter dropping message: frame 'odom' at time 1524.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.436517435] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.500218350] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.532067287] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.100 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.596370986] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.660479180] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.725283644] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.788862320] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.300 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.852672521] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.352 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763280062.865513582] [rtabmap]: rtabmap (2): Rate=1.00s, Limit=0.000s, Conversion=0.0028s, RTAB-Map=0.0708s, Maps update=0.0017s pub=0.0006s delay=0.0800s (local map=1, WM=1)
+[rviz2-15] [INFO] [1763280062.916492486] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280062.980640062] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.452 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.012638347] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.500 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.076961614] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.140599506] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.600 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.204871123] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.236821158] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.700 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.300533172] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.364631032] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.428431770] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.460876079] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.524367837] [rviz2]: Message Filter dropping message: frame 'odom' at time 1525.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.588202701] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.652971949] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.685030037] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.100 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.748569716] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.812339552] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.876304520] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.908373467] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.300 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280063.972150288] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.352 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763280063.997510702] [rtabmap]: rtabmap (3): Rate=1.00s, Limit=0.000s, Conversion=0.0010s, RTAB-Map=0.0755s, Maps update=0.0016s pub=0.0007s delay=0.0880s (local map=1, WM=1)
+[rviz2-15] [INFO] [1763280064.004128781] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.068698030] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.452 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.133070828] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.500 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.196466952] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.260412318] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.600 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.324714589] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.388995028] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.700 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.453147571] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.516150797] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.580350665] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.612728983] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.676619485] [rviz2]: Message Filter dropping message: frame 'odom' at time 1526.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.708069019] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.772405800] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.837154224] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.100 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.901392451] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280064.964346322] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.028785049] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.060047612] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.300 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.124584260] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.352 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763280065.164858631] [rtabmap]: rtabmap (4): Rate=1.00s, Limit=0.000s, Conversion=0.0014s, RTAB-Map=0.0544s, Maps update=0.0011s pub=0.0006s delay=0.0600s (local map=1, WM=1)
+[rviz2-15] [INFO] [1763280065.188353530] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.252766995] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.452 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.316158943] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.500 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.348971734] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.413316556] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.600 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.477117486] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.540216454] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.700 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.572271716] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.636956694] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.700500093] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.764974223] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.828497775] [rviz2]: Message Filter dropping message: frame 'odom' at time 1527.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.860254854] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.956747189] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280065.989075180] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.100 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.084875724] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.116969962] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.180631678] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.244676722] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.300 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.308674868] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.352 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.340964232] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.404166945] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.452 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763280066.450660862] [rtabmap]: rtabmap (5): Rate=1.00s, Limit=0.000s, Conversion=0.0015s, RTAB-Map=0.0577s, Maps update=0.0013s pub=0.0005s delay=0.0680s (local map=1, WM=1)
+[rviz2-15] [INFO] [1763280066.471245181] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.500 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.532608894] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.596587703] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.600 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.660668784] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.692677736] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.700 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.756996872] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.820775907] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.884544379] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.948797229] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280066.980169200] [rviz2]: Message Filter dropping message: frame 'odom' at time 1528.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.044632229] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.108693419] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.172803897] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.100 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.237316817] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.152 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.301012071] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.200 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.364688706] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.252 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.429056464] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.300 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.460191294] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.352 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.524744396] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.400 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.589000442] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.452 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.652403110] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.500 for reason 'discarding message because the queue is full'
+[rtabmap-10] [INFO] [1763280067.652494733] [rtabmap]: rtabmap (6): Rate=1.00s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.0493s, Maps update=0.0015s pub=0.0011s delay=0.0640s (local map=1, WM=1)
+[rviz2-15] [INFO] [1763280067.718019477] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.552 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.780115906] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.600 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.844804183] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.652 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.908666387] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.700 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280067.940638151] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.752 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.004965060] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.800 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.069047766] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.852 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.133176392] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.900 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.164564435] [rviz2]: Message Filter dropping message: frame 'odom' at time 1529.952 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.228853805] [rviz2]: Message Filter dropping message: frame 'odom' at time 1530.000 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.292763679] [rviz2]: Message Filter dropping message: frame 'odom' at time 1530.052 for reason 'discarding message because the queue is full'
+[rviz2-15] [INFO] [1763280068.356563538] [rviz2]: Message Filter dropping message: frame 'odom' at time 1530.100 for reason 'discarding message because the queue is full'
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[rtabmap-10] [INFO] [1763280068.393585477] [rclcpp]: signal_handler(signum=2)
+[rviz2-12] [INFO] [1763280068.393585173] [rclcpp]: signal_handler(signum=2)
+[parameter_bridge-4] [INFO] [1763280068.393604326] [rclcpp]: signal_handler(signum=2)
+[rviz2-15] [INFO] [1763280068.393605691] [rclcpp]: signal_handler(signum=2)
+[rgbd_sync-9] [INFO] [1763280068.393616916] [rclcpp]: signal_handler(signum=2)
+[visualizer-13] Traceback (most recent call last):
+[visualizer-13]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/visualizer", line 33, in <module>
+[robot_state_publisher-1] [INFO] [1763280068.393893271] [rclcpp]: signal_handler(signum=2)
+[velocity_transform.py-7] Traceback (most recent call last):
+[velocity_transform.py-7]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py", line 158, in <module>
+[velocity_transform.py-7]     main()
+[velocity_transform.py-7]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py", line 152, in main
+[velocity_transform.py-7]     rclpy.spin(node)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[velocity_transform.py-7]     executor.spin_once()
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[velocity_transform.py-7]     self._spin_once_impl(timeout_sec)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[velocity_transform.py-7]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[velocity_transform.py-7]     return next(self._cb_iter)
+[velocity_transform.py-7]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[velocity_transform.py-7]     wait_set.wait(timeout_nsec)
+[velocity_transform.py-7] KeyboardInterrupt
+[offboard_control-14] Traceback (most recent call last):
+[offboard_control-14]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/offboard_control", line 33, in <module>
+[offboard_control-14]     sys.exit(load_entry_point('px4-offboard==0.0.0', 'console_scripts', 'offboard_control')())
+[offboard_control-14]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/offboard_control.py", line 121, in main
+[offboard_control-14]     rclpy.spin(offboard_control)
+[offboard_control-14]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[offboard_control-14]     executor.spin_once()
+[offboard_control-14]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[offboard_control-14]     self._spin_once_impl(timeout_sec)
+[offboard_control-14]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[offboard_control-14]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[offboard_control-14]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[offboard_control-14]     return next(self._cb_iter)
+[offboard_control-14]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[offboard_control-14]     wait_set.wait(timeout_nsec)
+[offboard_control-14] KeyboardInterrupt
+[relay-5] [INFO] [1763280068.394153162] [rclcpp]: signal_handler(signum=2)
+[image_transform.py-6] Traceback (most recent call last):
+[image_transform.py-6]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py", line 54, in <module>
+[image_transform.py-6]     main()
+[image_transform.py-6]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py", line 49, in main
+[image_transform.py-6]     rclpy.spin(node)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[image_transform.py-6]     executor.spin_once()
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[image_transform.py-6]     self._spin_once_impl(timeout_sec)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 740, in _spin_once_impl
+[image_transform.py-6]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 723, in wait_for_ready_callbacks
+[image_transform.py-6]     return next(self._cb_iter)
+[image_transform.py-6]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 620, in _wait_for_ready_callbacks
+[image_transform.py-6]     wait_set.wait(timeout_nsec)
+[image_transform.py-6] KeyboardInterrupt
+[visualizer-13]     sys.exit(load_entry_point('px4-offboard==0.0.0', 'console_scripts', 'visualizer')())
+[visualizer-13]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/visualizer.py", line 232, in main
+[visualizer-13]     rclpy.spin(px4_visualizer)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[visualizer-13]     executor.spin_once()
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 751, in spin_once
+[visualizer-13]     self._spin_once_impl(timeout_sec)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 746, in _spin_once_impl
+[visualizer-13]     handler()
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 254, in __call__
+[visualizer-13]     self._handler.send(None)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 447, in handler
+[visualizer-13]     await call_coroutine(entity, arg)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 361, in _execute_timer
+[visualizer-13]     await await_or_execute(tmr.callback)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+[visualizer-13]     return callback(*args)
+[visualizer-13]   File "/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/visualizer.py", line 214, in cmdloop_callback
+[visualizer-13]     self.vehicle_path_pub.publish(self.vehicle_path_msg)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+[visualizer-13]     self.__publisher.publish(msg)
+[visualizer-13]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/geometry_msgs/msg/_pose_stamped.py", line 129, in header
+[visualizer-13]     @builtins.property
+[visualizer-13] KeyboardInterrupt
+[odom_baselink_publisher.py-3] Traceback (most recent call last):
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 110, in <module>
+[odom_baselink_publisher.py-3]     main()
+[odom_baselink_publisher.py-3]   File "/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py", line 107, in main
+[odom_baselink_publisher.py-3]     rclpy.shutdown()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[odom_baselink_publisher.py-3]     _shutdown(context=context)
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[odom_baselink_publisher.py-3]     return context.shutdown()
+[odom_baselink_publisher.py-3]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+[odom_baselink_publisher.py-3]     self.__context.shutdown()
+[odom_baselink_publisher.py-3] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[rtabmap_viz-11] [INFO] [1763280068.425732753] [rtabmap_viz]: rtabmap_viz stopping spinner...
+[rtabmap_viz-11] [INFO] [1763280068.427333839] [rtabmap_viz]: rtabmap_viz: All done! Closing...
+[rtabmap-10] [INFO] [1763280068.444498174] [rtabmap]: Parameters are not saved (No configuration file provided...)
+[ERROR] [image_transform.py-6]: process has died [pid 43476, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/image_transform.py --ros-args -r __node:=image_transform --params-file /tmp/launch_params_cne0y5jj'].
+[ERROR] [velocity_transform.py-7]: process has died [pid 43478, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/velocity_transform.py --ros-args -r __node:=velocity_transform --params-file /tmp/launch_params_6_ovs7tc'].
+[ERROR] [offboard_control-14]: process has died [pid 43491, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/offboard_control --ros-args -r __node:=control -r __ns:=/px4_offboard -p use_sim_time:=True --params-file /tmp/launch_params_vcqq6jcj --params-file /tmp/launch_params_vcrkzton --params-file /tmp/launch_params_jcs3b8zv --params-file /tmp/launch_params_selkde1e'].
+[ERROR] [visualizer-13]: process has died [pid 43489, exit code -2, cmd '/home/ubuntu/nav2_slam_px4/install/px4_offboard/lib/px4_offboard/visualizer --ros-args -r __node:=visualizer -r __ns:=/px4_offboard -p use_sim_time:=True --params-file /tmp/launch_params_qt53ylrk'].
+[INFO] [parameter_bridge-4]: process has finished cleanly [pid 43472]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 43466]
+[INFO] [relay-5]: process has finished cleanly [pid 43474]
+[INFO] [rgbd_sync-9]: process has finished cleanly [pid 43481]
+[INFO] [joint_state_publisher-2]: process has finished cleanly [pid 43468]
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:00.024) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:00.247) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:00.511) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:00.748) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:00.960) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:01.194) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:01.438) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Could not find a connection between 'x500_rtab_0/odom' and 'x500_rtab_0/base_footprint' because they are not part of the same tree.Tf has two or more unconnected trees. (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:01.652) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Lookup would require extrapolation into the past.  Requested time 1524.108000 but the earliest data is at time 1524.668000, when looking up transform from frame [x500_rtab_0/base_footprint] to frame [x500_rtab_0/odom] (wait_for_transform=0.200000)[0m
+[rtabmap_viz-11] [33m[ WARN] (2025-11-16 08:01:01.895) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Lookup would require extrapolation into the past.  Requested time 1524.172000 but the earliest data is at time 1524.668000, when looking up transform from frame [x500_rtab_0/base_footprint] to frame [x500_rtab_0/odom] (wait_for_transform=0.200000)[0m
+[ERROR] [odom_baselink_publisher.py-3]: process has died [pid 43470, exit code 1, cmd '/home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/lib/rtabmap_nav2_px4/odom_baselink_publisher.py --ros-args -r __node:=map_baselink_publisher --params-file /tmp/launch_params_21nwt1a4'].
+[INFO] [rviz2-15]: process has finished cleanly [pid 43494]
+[ERROR] [rtabmap_viz-11]: process has died [pid 43485, exit code 255, cmd '/opt/ros/humble/lib/rtabmap_viz/rtabmap_viz --ros-args -p use_sim_time:=True --params-file /tmp/launch_params_4f0rr2sz -r rgb/image:=/camera/image -r depth/image:=/camera/depth_image -r rgb/camera_info:=/camera/image/camera_info -r scan:=/scan -r odom:=/odom -r imu:=/imu'].
+[ERROR] [rviz2-12]: process has died [pid 43487, exit code -11, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /home/ubuntu/nav2_slam_px4/install/rtabmap_nav2_px4/share/rtabmap_nav2_px4/rviz/nav2.rviz --ros-args -r __node:=rviz2 -p use_sim_time:=True'].
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:01.712) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Lookup would require extrapolation into the past.  Requested time 1524.372000 but the earliest data is at time 1524.668000, when looking up transform from frame [x500_rtab_0/base_footprint] to frame [x500_rtab_0/odom] (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:01.969) MsgConversion.cpp:2010::getTransform() (getting transform x500_rtab_0/odom -> x500_rtab_0/base_footprint) Lookup would require extrapolation into the past.  Requested time 1524.568000 but the earliest data is at time 1524.668000, when looking up transform from frame [x500_rtab_0/base_footprint] to frame [x500_rtab_0/odom] (wait_for_transform=0.200000)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:01.988) Memory.cpp:5917::createSignature() Mem/SaveDepth16Format is set to false to use 32bits format but this is not compatible with the compressed depth format chosen (Mem/DepthCompressionFormat=".rvl"), depth images will be compressed in ".png" format instead. Explicitly set Mem/SaveDepth16Format to true to keep using ".rvl" format and images will be converted to 16bits for convenience (warning: that would remove all depth values over 65 meters). Explicitly set Mem/DepthCompressionFormat=".png" to suppress this warning. This warning is only printed once.[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:05.162) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 1 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] [33m[ WARN] (2025-11-16 08:01:07.649) Rtabmap.cpp:4603::process() Republishing data of requested node(s) 1 (Rtabmap/MaxRepublished=2)[0m
+[rtabmap-10] rtabmap: Saving database/long-term memory... (located at /home/ubuntu/.ros/rtabmap.db)
+[rtabmap-10] rtabmap: 2D occupancy grid map saved.
+[rtabmap-10] rtabmap: Saving database/long-term memory...done! (located at /home/ubuntu/.ros/rtabmap.db, 3 MB)
+[INFO] [rtabmap-10]: process has finished cleanly [pid 43483]
