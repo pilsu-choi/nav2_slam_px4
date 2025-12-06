@@ -90,7 +90,7 @@ def generate_launch_description():
             condition=IfCondition(localization),
             package='rtabmap_slam', executable='rtabmap', output='screen',
             parameters=[parameters,
-              {'Mem/IncrementalMemory':'True',#'False',
+              {'Mem/IncrementalMemory':'False',  # False = 데이터베이스 업데이트 안 함 (Localization 모드)
                'Mem/InitWMWithAllNodes':'True'}],
             remappings=remappings),
 
